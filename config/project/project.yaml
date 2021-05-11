@@ -1,0 +1,17 @@
+dateModified: 1620694660
+email:
+  fromEmail: me@levizitting.com
+  fromName: 'Motherhood Reclaimed'
+  transportType: craft\mail\transportadapters\Sendmail
+system:
+  edition: solo
+  live: true
+  name: 'Motherhood Reclaimed'
+  schemaVersion: 3.6.8
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: 'Motherhood Reclaimed'
+primary: true
+siteGroup: 1836fba8-55b8-42fb-8430-7d9c83a04600 # Motherhood Reclaimed
+sortOrder: 1
