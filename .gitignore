@@ -5,3 +5,8 @@
 storage/**
 !storage/.gitkeep
 config/license.key
+/node_modules
+web/**
+!web/index.php
+!web/.htaccess
+!web/web.config
