@@ -1,1 +1,3 @@
-console.log('js');
+import $ from 'jquery';
+
+console.log($);
