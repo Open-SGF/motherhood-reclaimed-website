@@ -1,6 +1,7 @@
 {
   "require": {
-    "craftcms/cms": "^3.6.4",
+    "craftcms/cms": "3.6.16",
+    "misterbk/mix": "1.5.2",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {

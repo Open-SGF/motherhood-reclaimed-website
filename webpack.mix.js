@@ -5,4 +5,8 @@ mix.js('assets/js/main.js', 'web')
     .setPublicPath('web')
     .extract(['jquery'])
     .sourceMaps()
-    .version();
+    .version()
+    .browserSync({
+        proxy: 'localhost:8000',
+        files: ['templates/**/*', 'web/*.css', 'web/*.js'],
+    });
