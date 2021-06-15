@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "mix",
+    "watch": "mix watch",
+    "production": "mix --production"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/glitchedmob/motherhood-reclaimed-website/issues"
   },
-  "homepage": "https://github.com/glitchedmob/motherhood-reclaimed-website#readme"
+  "homepage": "https://github.com/glitchedmob/motherhood-reclaimed-website#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.19",
+    "postcss": "^8.3.4",
+    "resolve-url-loader": "^3.1.3",
+    "sass": "^1.34.1",
+    "sass-loader": "^11.1.1"
+  }
 }
