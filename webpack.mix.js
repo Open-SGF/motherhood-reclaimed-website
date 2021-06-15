@@ -9,4 +9,5 @@ mix.js('assets/js/main.js', 'web')
     .browserSync({
         proxy: 'localhost:8000',
         files: ['templates/**/*', 'web/*.css', 'web/*.js'],
+        open: false,
     });
