@@ -1,0 +1,187 @@
+
+// Added by Ethan Zitting for the badger accordion.
+// I am not very familiar with SCSS, so exercise skepticism
+.badger-accordion {
+
+}
+
+.badger-accordion__panel {
+    max-height: 75vh !important;
+    overflow: hidden;
+
+    // scss-lint:disable ImportantRule
+    &.-ba-is-hidden {
+        max-height: 0 !important;
+        visibility: hidden;
+    }
+
+    // transition is added via `badger-accordion--initalised` to stop animation on initalition
+    .badger-accordion--initalised & { transition: max-height ease-in-out 0.2s; }
+}
+
+/*
+=======================================================================
+Most of this seems like it will be deleted or overwritten in the future
+=======================================================================
+*/
+
+/* Fonts and Colors */
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300&family=Patrick+Hand&display=swap');
+
+.accordion-title {
+    color: white;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 24px;
+}
+
+.badger-accordion__panel-inner {
+    background-color: white;
+}
+
+.accordion-container {
+    font-family: 'Halant', serif;
+}
+
+@mixin color1 {
+    background-color: #9488A7;
+}
+
+.color2 {
+    background-color: #9F75E1;
+}
+
+@mixin color3 {
+    background-color: #C8B8E1;
+}
+
+.color4 {
+    background-color: #694D95;
+}
+
+.accordion-container {
+    background-image: url('https://assets.v7-io.invisionapp.com/assets/A_MGFjZjlkZDY2YjhlM2JmOXc05kL9PkURdiQv4nPbqaXNp5fBPujh-x3Xjs5Qru2Ed5f0sST4vvoo9XGcPfumgpqSSkOzp3Dmv_HTAvWOoGUI4ZqvX5a_kv3exO5ws0Xd?format=auto');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.badger-accordion__trigger {
+    @include color3;
+    color: #000;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.badger-accordion__trigger:focus, .badger-accordion__trigger:hover {
+    background-color: #9F75E1;
+}
+
+.badger-accordion__trigger-icon:after, .badger-accordion__trigger-icon:before {
+    background-color: #333;
+}
+
+
+
+    /* Spacing and Layout */
+.badger-accordion {
+    margin: 17px;
+}
+
+.accordion-title {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.badger-accordion__panel-inner {
+    padding: 20px 20px 40px;
+    overflow: visible;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.badger-accordion__trigger-title {
+    max-width: 80%;
+}
+
+.accordion-container {
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+.badger-accordion__trigger {
+    align-content: space-between;
+    align-items: center;
+    border: 0;
+    border-radius: 3px;
+    display: flex;
+    padding: 2px;
+    text-align: left;
+    transition: all ease-in-out 0.2s;
+    width: 100%;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.badger-accordion__trigger:focus, .badger-accordion__trigger:hover {
+    cursor: pointer;
+    outline: none;
+}
+
+.badger-accordion__trigger-icon:after, .badger-accordion__trigger-icon:before {
+    content: "";
+    height: 3px;
+    position: absolute;
+    top: 10px;
+    transition: all ease-in-out 0.1333333333s;
+    width: 23px;
+}
+
+.badger-accordion__trigger-icon:before {
+    left: 1px;
+    transform: rotate(
+            45deg
+    ) translate3d(-11px, 25px, 0);
+    transform-origin: 100%;
+}
+
+.badger-accordion__trigger[aria-expanded=true] .badger-accordion__trigger-icon:before {
+    transform: rotate(
+            45deg
+    ) translate3d(-7px, 20px, 0);
+}
+.badger-accordion__trigger-icon:after {
+    transform: rotate(
+            -45deg
+    ) translate3d(-10px, 4px, 0);
+    right: 1px;
+    transform-origin: 0;
+}
+
+.badger-accordion__trigger[aria-expanded=true] .badger-accordion__trigger-icon:after {
+    transform: rotate(
+            -45deg
+    ) translate3d(-15px, -2px, 0);
+}
+
+.badger-accordion__trigger-icon {
+    display: block;
+    height: 25px;
+    margin-left: auto;
+    position: relative;
+    transition: all ease-in-out 0.2s;
+    width: 25px;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.badger-accordion__header {
+    margin-top: 5px;
+}
+
+
