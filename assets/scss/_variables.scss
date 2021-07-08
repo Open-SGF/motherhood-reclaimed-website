@@ -1,0 +1,34 @@
+$primary-font: 'Halant', serif;
+$secondary-font: grandma, sans-serif;
+
+$colors: (
+    primary: (
+        light: #C8B8E1,
+        base: #9F75E1,
+        mid-dark: #9488A7,
+        dark: #694D95,
+    ),
+    white: (
+        base: #FFF,
+    ),
+    black: (
+        base: #000,
+    )
+);
+
+$z-index: (
+    default: 0,
+);
+
+$breakpoints: (
+    x-tiny: 350,
+    tiny: 400,
+    x-small: 480,
+    mid-small: 600,
+    small: 768,
+    medium: 960,
+    mid-large: 1050,
+    large: 1224,
+    x-large: 1440,
+    xx-large: 1525
+);
