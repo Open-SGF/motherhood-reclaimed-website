@@ -17,8 +17,7 @@
     */
 
     font-family: $primary-font;
-    //background-color: $colors-primary-base;
-    background-color: #9F75E1;
+    background-color: getColor(primary, base);
 
     .accordion-title {
         color: white;
@@ -27,10 +26,6 @@
     }
 
     .badger-accordion {
-        &__panel-inner {
-            background-color: white;
-        }
-
         &__trigger {
             background-color: #694D95;
             color: #000;
@@ -41,12 +36,16 @@
             &:hover {
                 background-color: #9F75E1;
             }
+
+            &-icon {
+                &:after, &:before {
+                    background-color: #333;
+                }
+            }
         }
 
-        &__trigger-icon {
-            &:after, &:before {
-                background-color: #333;
-            }
+        &__panel-inner {
+            background-color: white;
         }
 
         // Sort of Important Stuff
@@ -83,6 +82,10 @@
     .badger-accordion {
         margin: 17px;
 
+        &__header {
+            margin-top: 5px;
+        }
+
         &__trigger {
             align-content: space-between;
             align-items: center;
@@ -100,10 +103,44 @@
                 cursor: pointer;
                 outline: none;
             }
-        }
 
-        &__trigger-title {
-            max-width: 80%;
+            &-title {
+                max-width: 80%;
+            }
+
+            &-icon {
+                display: block;
+                height: 25px;
+                margin-left: auto;
+                position: relative;
+                transition: all ease-in-out 0.2s;
+                width: 25px;
+
+                &:after, &:before {
+                    content: "";
+                    height: 3px;
+                    position: absolute;
+                    top: 10px;
+                    transition: all ease-in-out 0.1333333333s;
+                    width: 23px;
+                }
+
+                &:before {
+                    left: 1px;
+                    transform: rotate(
+                            45deg
+                    ) translate3d(-11px, 25px, 0);
+                    transform-origin: 100%;
+                }
+
+                &:after {
+                    transform: rotate(
+                            -45deg
+                    ) translate3d(-10px, 4px, 0);
+                    right: 1px;
+                    transform-origin: 0;
+                }
+            }
         }
 
         &__panel-inner {
@@ -115,39 +152,10 @@
     }
 
 
-    .badger-accordion__trigger:focus, .badger-accordion__trigger:hover {
-
-    }
-
-    .badger-accordion__trigger-icon:after, .badger-accordion__trigger-icon:before {
-        content: "";
-        height: 3px;
-        position: absolute;
-        top: 10px;
-        transition: all ease-in-out 0.1333333333s;
-        width: 23px;
-    }
-
-    .badger-accordion__trigger-icon:before {
-        left: 1px;
-        transform: rotate(
-                45deg
-        ) translate3d(-11px, 25px, 0);
-        transform-origin: 100%;
-    }
-
     .badger-accordion__trigger[aria-expanded=true] .badger-accordion__trigger-icon:before {
         transform: rotate(
                 45deg
         ) translate3d(-7px, 20px, 0);
-    }
-
-    .badger-accordion__trigger-icon:after {
-        transform: rotate(
-                -45deg
-        ) translate3d(-10px, 4px, 0);
-        right: 1px;
-        transform-origin: 0;
     }
 
     .badger-accordion__trigger[aria-expanded=true] .badger-accordion__trigger-icon:after {
@@ -156,23 +164,9 @@
         ) translate3d(-15px, -2px, 0);
     }
 
-    .badger-accordion__trigger-icon {
-        display: block;
-        height: 25px;
-        margin-left: auto;
-        position: relative;
-        transition: all ease-in-out 0.2s;
-        width: 25px;
-    }
-
 
     .text-center {
         text-align: center;
     }
-
-    .badger-accordion__header {
-        margin-top: 5px;
-    }
-
 }
 
