@@ -1,3 +1,53 @@
 .icon-callout-set {
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 
+    .title {
+        font-family: $secondary-font;
+        font-size: 2.2em;
+        font-weight: bold;
+
+        text-align: center;
+
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+
+    .icons {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+        @media screen and (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width: 300px) {
+            grid-template-columns: 1fr;
+        }
+        justify-content: space-around;
+        text-align: center;
+
+        img {
+            display: block;
+            border-radius: 50%;
+            margin: 5px auto;
+        }
+
+        h5 {
+            font-family: $secondary-font;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        p {
+            font-family: $primary-font;
+            font-size: .75em;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
 }
