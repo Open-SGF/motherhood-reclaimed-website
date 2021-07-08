@@ -1,4 +1,4 @@
-@function color($color, $tone: 'base') {
+@function getColor($color, $tone: 'base') {
     @if map-has-key($colors, $color) == true {
         @return map-get(map-get($colors, $color), $tone);
     } @else {
