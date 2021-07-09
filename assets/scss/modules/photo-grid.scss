@@ -9,7 +9,8 @@
     margin: 0 auto;
 
     .title {
-        font-size: 2em;
+        font-size: 32px;
+        margin-top: 50px;
     }
 
     .p-grid {
@@ -18,20 +19,26 @@
         justify-content: center;
         margin: 20px;
 
+        li {
+            margin: 20px;
+        }
+
         img {
             border-radius: 50%;
             margin: 10px;
+            margin-bottom: 20px;
         }
 
         p {
             font-family: $primary-font;
-            font-size: .7em;
+            font-size: 12px;
             font-weight: normal;
             margin: 5px;
+            margin-bottom: 12px;
         }
 
         h3 {
-            font-size: 1.5em;
+            font-size: 20px;
         }
     }
 }
