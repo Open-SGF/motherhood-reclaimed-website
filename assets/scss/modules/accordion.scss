@@ -22,19 +22,23 @@
     .accordion-title {
         color: white;
         font-family: $secondary-font;
-        font-size: 24px;
+        font-weight: bold;
+        font-size: 32px;
+        letter-spacing: .08em;
     }
 
     .badger-accordion {
         &__trigger {
-            background-color: getColor(primary, dark);
+            background-color: getColor(primary, light);
             color: #000;
             font-family: $secondary-font;
-            font-size: 20px;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: .07em;
             line-height: 1;
 
             &:hover {
-                background-color: getColor(primary, light);
+                background-color: getColor(primary, dark);
             }
 
             &-icon {
@@ -75,12 +79,12 @@
     padding: 5px;
 
     .accordion-title {
-        margin-top: 20px;
-        margin-bottom: 25px;
+        margin-top: 25px;
+        margin-bottom: 27px;
     }
 
     .badger-accordion {
-        margin: 17px;
+        margin: 24px;
 
         &__header {
             margin-top: 5px;
