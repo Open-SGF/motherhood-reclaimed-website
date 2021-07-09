@@ -1,2 +1,23 @@
 .footer {
+    background-color: getColor(primary, light);
+    color: getColor(white);
+    font-weight: bold;
+    font-size: 1.25em;
+    font-family: $secondary-font;
+    width: 100%;
+    padding: 30px;
+
+    .footer-grid {
+        display: flex;
+        @media screen and (max-width: 600px) {
+            display: block;
+        }
+        justify-content: space-between;
+    }
+
+    a, a:hover, a:active, a:visited, a:focus {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
 }
