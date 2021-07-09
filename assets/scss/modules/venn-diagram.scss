@@ -1,0 +1,47 @@
+.venn-diagram {
+    width: 100%;
+    height: 400px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    font-family: $primary-font;
+    color: getColor(white);
+    text-align: center;
+
+    .first-circle, .second-circle {
+        width: 30vw;
+        height: 30vw;
+        position: absolute;
+        top: 20px;
+        border-radius: 50%;
+
+        .text {
+            z-index: 3;
+            opacity: 100%;
+            margin: 40% 6% 0 6%;
+
+            h3 {
+                font-family: $secondary-font;
+                font-weight: bold;
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .first-circle {
+        left: 13%;
+        background-color: getColor(primary);
+        z-index: 2;
+        opacity: 70%;
+    }
+
+    .second-circle {
+        right: 13%;
+        background-color: getColor(primary, light);
+    }
+}
