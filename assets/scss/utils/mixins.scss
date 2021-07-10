@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin mq-below($breakpoint) {
     $value: breakpoint($breakpoint);
 
@@ -37,11 +39,11 @@
     $below: map-get($options, below);
     $browser: map-get($options, browser);
     @if $browser != null {
-        @if $browser == 'ie' {
+        @if $browser == "ie" {
             @include ie-only {
                 @include mq((above: $above, below: $below)) { @content }
             }
-        } @else if $browser == 'ios-safari' {
+        } @else if $browser == "ios-safari" {
             @include ios-safari-only {
                 @include mq((above: $above, below: $below)) { @content }
             }
@@ -55,10 +57,12 @@
     } @else if $below != null {
         @include mq-below($below) { @content; }
     } @else {
-        @warn 'mq must be passed a map with an above or below key';
+        @warn "mq must be passed a map with an above or below key";
     }
 }
 
+// TODO: Remove once Webstorm/Jetbrains scss plugin adds support for scss math.div function
+// noinspection CssInvalidFunction
 @mixin responsive-font($options) {
     $min-size: map-get($options, min-size);
     $max-size: map-get($options, max-size);
@@ -67,10 +71,10 @@
 
     $max-minus-min: strip-unit($max-size) - strip-unit($min-size);
 
-    @if(index('rem', unit($min-size)) != null and index('rem', unit($max-size)) != null) {
+    @if(index("rem", unit($min-size)) != null and index("rem", unit($max-size)) != null) {
         $base-rem: 10;
-        $upper-minus-lower: strip-unit($upper-bound / $base-rem) - strip-unit($lower-bound / $base-rem);
-        $lower-bound-rems: #{strip-unit($lower-bound / $base-rem)}rem;
+        $upper-minus-lower: strip-unit(math.div($upper-bound, $base-rem)) - strip-unit(math.div($lower-bound, $base-rem));
+        $lower-bound-rems: #{strip-unit(math.div($lower-bound, $base-rem))}rem;
 
         font-size: calc(#{$min-size} + #{$max-minus-min} * ((100vw - #{$lower-bound-rems}) / #{$upper-minus-lower}));
     } @else {

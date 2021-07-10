@@ -6,6 +6,7 @@ mix.js('assets/js/main.js', 'web')
     .extract(['jquery'])
     .sourceMaps()
     .version()
+    .disableSuccessNotifications()
     .browserSync({
         proxy: 'localhost:8000',
         files: ['templates/**/*', 'web/*.css', 'web/*.js'],
