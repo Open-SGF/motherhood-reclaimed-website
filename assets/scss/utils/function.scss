@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @function getColor($color, $tone: 'base') {
     @if map-has-key($colors, $color) == true {
         @return map-get(map-get($colors, $color), $tone);
@@ -25,9 +27,11 @@
     }
 }
 
+// TODO: Remove once Webstorm/Jetbrains scss plugin adds support for scss math.div function
+// noinspection CssInvalidFunction
 @function strip-unit($number) {
     @if type-of($number) == 'number' and not unitless($number) {
-        @return $number / ($number * 0 + 1);
+        @return math.div($number, ($number * 0 + 1));
     }
 
     @return $number;

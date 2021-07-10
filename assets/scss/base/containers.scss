@@ -1,0 +1,16 @@
+.container {
+    position: relative;
+    width: calc(100% - 8rem);
+    margin: 0 auto;
+    max-width: 1650px;
+
+    @include mq-below(x-small) {
+        width: calc(100% - 4rem);
+    }
+
+
+    @include mq-below(tiny) {
+        width: calc(100% - 2rem);
+    }
+
+}
