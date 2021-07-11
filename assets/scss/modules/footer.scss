@@ -1,5 +1,5 @@
 .footer {
-    background-color: getColor(primary, light);
+    background-color: getColor(primary, base);
     color: getColor(white);
     font-weight: bold;
     font-size: 1.25em;
@@ -7,16 +7,21 @@
     width: 100%;
     padding: 30px;
 
-    .footer-grid {
+    .footer-list {
         display: flex;
-        @media screen and (max-width: 600px) {
+        justify-content: space-between;
+
+        li {
+            margin-top: 5px;
+        }
+
+        @include mq-below(small) {
             display: block;
         }
-        justify-content: space-between;
     }
 
     a, a:hover, a:active, a:visited, a:focus {
-        text-decoration: none;
+        text-decoration: underline;
         color: inherit;
         cursor: pointer;
     }
