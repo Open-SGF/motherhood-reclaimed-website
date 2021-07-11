@@ -1,47 +1,83 @@
 .venn-diagram {
     width: 100%;
-    height: 400px;
     max-width: 800px;
     margin: 0 auto;
-    position: relative;
-    font-family: $primary-font;
-    color: getColor(white);
-    text-align: center;
 
-    .first-circle, .second-circle {
-        width: 30vw;
-        height: 30vw;
-        position: absolute;
-        top: 20px;
-        border-radius: 50%;
+    .guts {
+        width: 100%;
+        height: 0;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 50%;
 
-        .text {
-            z-index: 3;
-            opacity: 100%;
-            margin: 40% 6% 0 6%;
 
-            h3 {
-                font-family: $secondary-font;
-                font-weight: bold;
-                font-size: 32px;
-                margin-bottom: 20px;
-            }
 
-            p {
-                font-size: 12px;
+        @include responsive-font((
+            max-size: 12rem,
+            min-size: 3.5rem,
+            lower-bound: breakpoint(x-small),
+            upper-bound: breakpoint(xx-large),
+        ));
+
+        font-family: $primary-font;
+        color: getColor(white);
+        background-color: blue;
+        text-align: center;
+
+        // This flips the circles to vertical
+        @include mq-below(small) {
+
+        }
+
+        .first-circle, .second-circle {
+            background-color: red;
+            width: 32.5%;
+            padding-top: 32.5%;
+            position: absolute;
+            top: 17.5%;
+            border-radius: 50%;
+
+            .text {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 3;
+
+                opacity: 100%;
+
+                font-size: calc(3.8rem + 5.2 * ((100vw - 60rem) / 63));
+
+                @include responsive-font((
+                    max-size: 12rem,
+                    min-size: 3.5rem,
+                    lower-bound: breakpoint(x-small),
+                    upper-bound: breakpoint(xx-large),
+                ));
+
+                h3 {
+                    font-family: $secondary-font;
+                    font-weight: bold;
+                    font-size: 32px;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
             }
         }
-    }
 
-    .first-circle {
-        left: 13%;
-        background-color: getColor(primary);
-        z-index: 2;
-        opacity: 70%;
-    }
+        .first-circle {
+            left: calc(50% - 31%);
+            background-color: getColor(primary, mid-dark);
+        }
 
-    .second-circle {
-        right: 13%;
-        background-color: getColor(primary, light);
+        .second-circle {
+            right: calc(50% - 31%);
+            background-color: getColor(primary, translucent-dark);
+            z-index: 2;
+        }
     }
 }
