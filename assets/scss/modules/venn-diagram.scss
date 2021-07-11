@@ -1,41 +1,44 @@
 .venn-diagram {
+    // This container div helped me get the venn diagram circles to resize while
+    // maintaining their aspect ratio
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
 
     .guts {
+        // This is a funky means of setting a specific aspect
+        // ratio (width / padding-bottom) for the div
         width: 100%;
         height: 0;
-        margin: 0 auto;
-        position: relative;
         padding-bottom: 50%;
 
-
-
-        @include responsive-font((
-            max-size: 12rem,
-            min-size: 3.5rem,
-            lower-bound: breakpoint(x-small),
-            upper-bound: breakpoint(xx-large),
-        ));
+        margin: 0 auto;
+        position: relative;
 
         font-family: $primary-font;
         color: getColor(white);
-        background-color: blue;
         text-align: center;
 
-        // This flips the circles to vertical
+        // Mobile Styling
         @include mq-below(small) {
-
+            padding-bottom: 150%;
         }
 
         .first-circle, .second-circle {
-            background-color: red;
-            width: 32.5%;
-            padding-top: 32.5%;
+
+            width: 32.5%;    // Forces a 1:1 aspect ratio
+            padding-top: 32.5%;    // Forces a 1:1 aspect ratio
+
             position: absolute;
             top: 17.5%;
             border-radius: 50%;
+
+            // Mobile Styling
+            @include mq-below(small) {
+                top: inherit;
+                width: 65%;
+                padding-top: 65%;
+            }
 
             .text {
                 position: absolute;
@@ -44,17 +47,8 @@
                 bottom: 0;
                 right: 0;
                 z-index: 3;
-
                 opacity: 100%;
-
-                font-size: calc(3.8rem + 5.2 * ((100vw - 60rem) / 63));
-
-                @include responsive-font((
-                    max-size: 12rem,
-                    min-size: 3.5rem,
-                    lower-bound: breakpoint(x-small),
-                    upper-bound: breakpoint(xx-large),
-                ));
+                padding: 30% 10% 10% 10%;
 
                 h3 {
                     font-family: $secondary-font;
@@ -72,12 +66,24 @@
         .first-circle {
             left: calc(50% - 31%);
             background-color: getColor(primary, mid-dark);
+
+            // Mobile Styling
+            @include mq-below(small) {
+                left: calc(50% - 32.5%);
+                top: calc(75% - 66%);
+            }
         }
 
         .second-circle {
             right: calc(50% - 31%);
             background-color: getColor(primary, translucent-dark);
             z-index: 2;
+
+            // Mobile Styling
+            @include mq-below(small) {
+                right: calc(50% - 32.5%);
+                bottom: calc(75% - 66%);
+            }
         }
     }
 }
