@@ -8,12 +8,12 @@
     max-width: 800px;
     margin: 0 auto;
 
-    .title {
+    .grid-title {
         font-size: 32px;
         margin-top: 50px;
     }
 
-    .p-grid {
+    .grid {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -21,24 +21,22 @@
 
         li {
             margin: 20px;
-        }
 
-        img {
-            border-radius: 50%;
-            margin: 10px;
-            margin-bottom: 20px;
-        }
+            img {
+                border-radius: 50%;
+                margin: 10px 10px 20px 10px;
+            }
 
-        p {
-            font-family: $primary-font;
-            font-size: 12px;
-            font-weight: normal;
-            margin: 5px;
-            margin-bottom: 12px;
-        }
+            p {
+                font-family: $primary-font;
+                font-size: 12px;
+                font-weight: normal;
+                margin: 5px 5px 12px 5px;
+            }
 
-        h3 {
-            font-size: 20px;
+            h3 {
+                font-size: 20px;
+            }
         }
     }
 }
