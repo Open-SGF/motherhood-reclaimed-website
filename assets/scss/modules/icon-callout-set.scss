@@ -3,9 +3,6 @@
     text-align: center;
 
     .title {
-        font-size: 32px;
-        font-weight: bold;
-
         margin-top: 50px;
         margin-bottom: 40px;
     }
@@ -20,7 +17,7 @@
             flex-wrap: wrap;
         }
         li {
-            width: 30em; // Makes the icons act a bit nicer at various screen widths
+            width: 190px;
             margin-top: 20px;
 
             img {
@@ -33,15 +30,12 @@
             }
 
             h5 {
-                font-size: 25px;
-                font-weight: bold;
                 margin-top: 17px;
                 margin-bottom: 17px;
             }
 
             p {
                 font-family: $primary-font;
-                font-size: 13px;
                 max-width: 230px;
                 margin: 0 auto;
             }
