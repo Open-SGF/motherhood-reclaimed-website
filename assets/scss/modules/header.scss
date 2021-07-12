@@ -32,7 +32,7 @@
     }
 
     .dark-blob, .light-blob {
-        background-color: getColor(primary, base);
+        background-color: getColor(primary, mid-dark);
         height: 250%;
         width: 100%;
         min-width: 500px;
