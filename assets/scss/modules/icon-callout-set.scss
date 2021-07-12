@@ -1,10 +1,6 @@
 .icon-callout-set {
     font-family: $secondary-font;
     text-align: center;
-    width: 100%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 
     .title {
         font-size: 32px;
@@ -16,36 +12,39 @@
 
     .icons {
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-row-gap: 40px;
-        grid-column-gap: 20px;
-        @media screen and (max-width: 992px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        @media screen and (max-width: 300px) {
-            grid-template-columns: 1fr;
-        }
+        display: flex;
+        flex-wrap: nowrap;
         justify-content: space-around;
 
-        img {
-            display: block;
-            border-radius: 50%;
-            margin: 0 auto;
+        @include mq-below(small) {
+            flex-wrap: wrap;
         }
-
-        h5 {
-            font-size: 25px;
-            font-weight: bold;
+        li {
+            width: 30em; // Makes the icons act a bit nicer at various screen widths
             margin-top: 20px;
-            margin-bottom: 30px;
-        }
 
-        p {
-            font-family: $primary-font;
-            font-size: 13px;
-            max-width: 230px;
-            margin: 0 auto;
+            img {
+                display: block;
+                border-radius: 50%;
+                margin: 0 auto;
+                width: 6.5vw;
+                min-width: 60px;
+                height: auto;
+            }
+
+            h5 {
+                font-size: 25px;
+                font-weight: bold;
+                margin-top: 17px;
+                margin-bottom: 17px;
+            }
+
+            p {
+                font-family: $primary-font;
+                font-size: 13px;
+                max-width: 230px;
+                margin: 0 auto;
+            }
         }
     }
 }
