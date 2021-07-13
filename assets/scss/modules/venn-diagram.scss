@@ -8,30 +8,32 @@
         color: getColor(white);
         text-align: center;
 
-        // CSS Hack to force an aspect ratio on the div
-        width: 100%;
+        $container-width: 100%;
+        $container-height: $container-width / 2;
+        width: $container-width;
         height: 0;
-        padding-bottom: 50%;
+        padding-bottom: $container-height;
+        $circle-width: ($container-width / 2) * 0.4;
 
         // Heighten Div on mobiles
         @include mq-below(small) {
-            padding-bottom: 150%;
+            $container-height: $container-width * 1.5;
+            padding-bottom: $container-height;
+            $circle-width: $container-width * 0.395;
         }
 
         .first-circle, .second-circle {
             position: absolute;
-            top: 17.5%;
+            top: ($container-height - $circle-width) / 10;
             border-radius: 50%;
 
             // Forces a 1:1 aspect ratio
-            width: 32.5%;
-            padding-top: 32.5%;
+            width: $circle-width;
+            padding-top: $circle-width;
 
             // Mobile Styling
             @include mq-below(mid-small) {
                 top: inherit;
-                width: 65%;
-                padding-top: 65%;
             }
 
             .venn-text {
@@ -48,32 +50,29 @@
                     font-family: $secondary-font;
                     margin-bottom: 20px;
                 }
-
-                p {
-                }
             }
         }
 
         .first-circle {
-            left: calc(50% - 31%);
+            left: 50% - $circle-width;
             background-color: getColor(primary, mid-dark);
 
             // Mobile Styling
             @include mq-below(small) {
-                left: calc(50% - 32.5%);
-                top: calc(75% - 66%);
+                left: 50% - ($circle-width / 2);
+                top: 75% - $circle-width;
             }
         }
 
         .second-circle {
-            right: calc(50% - 31%);
+            right: 50% - $circle-width;
             background-color: getColor(primary, translucent-dark);
             z-index: 2;
 
             // Mobile Styling
             @include mq-below(small) {
-                right: calc(50% - 32.5%);
-                bottom: calc(75% - 66%);
+                right: 50% - ($circle-width / 2);
+                bottom: 75% - $circle-width;
             }
         }
     }
