@@ -1,10 +1,7 @@
 .footer {
     background-color: getColor(primary, base);
     color: getColor(white);
-    font-weight: bold;
-    font-size: 1.25em;
     font-family: $secondary-font;
-    width: 100%;
     padding: 30px;
 
     .footer-list {
