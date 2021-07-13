@@ -1,84 +1,18 @@
 // Added by Ethan Zitting for the badger accordion.
-.accordion-container {
-    /*
-    =======================================================================
-    TABLE OF CONTENTS
-    =======================================================================
-    - Fonts and Colors
-    - Core Components
-    - Animations
-    - Spacing and Layout
-    */
+.accordion {
+    $transition-time: 0.2s;
 
-    /*
-    =======================================================================
-    Fonts and Colors
-    =======================================================================
-    */
+    @mixin base-trans {
+        transition: all ease-in-out $transition-time;
+    }
 
     font-family: $primary-font;
-    background-color: getColor(primary, base);
+    background-color: getColor(primary, mid-dark);
+    padding: 5px;
 
     .accordion-title {
         color: white;
         font-family: $secondary-font;
-        font-weight: bold;
-        font-size: 32px;
-        letter-spacing: .08em;
-    }
-
-    .badger-accordion {
-        &__trigger {
-            background-color: getColor(primary, light);
-            color: #000;
-            font-family: $secondary-font;
-            font-weight: bold;
-            font-size: 24px;
-            letter-spacing: .07em;
-            line-height: 1;
-
-            &:hover {
-                background-color: getColor(primary, dark);
-            }
-
-            &-icon {
-                &:after, &:before {
-                    background-color: #333;
-                }
-            }
-        }
-
-        &__panel-inner {
-            background-color: white;
-        }
-
-        // Sort of Important Stuff
-        &__panel {
-            max-height: 75vh !important;
-            overflow: hidden;
-
-            // scss-lint:disable ImportantRule
-            &.-ba-is-hidden {
-                max-height: 0 !important;
-                visibility: hidden;
-            }
-
-            // transition is added via `badger-accordion--initalised` to stop animation on initalition
-            .badger-accordion--initalised & {
-                transition: max-height ease-in-out 0.2s;
-            }
-        }
-    }
-
-
-    /* Spacing and Layout */
-    width: 100%;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-
-    .accordion-title {
         margin-top: 25px;
         margin-bottom: 27px;
     }
@@ -91,25 +25,26 @@
         }
 
         &__trigger {
+            background-color: getColor(primary, light);
+            color: getColor(black);
+            font-family: $secondary-font;
+
+            display: flex;
             align-content: space-between;
             align-items: center;
             border: 0;
             border-radius: 3px;
-            display: flex;
             padding: 2px;
             text-align: left;
-            transition: all ease-in-out 0.2s;
+            @include base-trans;
             width: 100%;
             padding-left: 15px;
             margin-top: 10px;
 
             &:focus, &:hover {
+                background-color: getColor(primary, mid-gray);
                 cursor: pointer;
                 outline: none;
-            }
-
-            &-title {
-                max-width: 80%;
             }
 
             &-icon {
@@ -117,15 +52,16 @@
                 height: 25px;
                 margin-left: auto;
                 position: relative;
-                transition: all ease-in-out 0.2s;
+                @include base-trans;
                 width: 25px;
 
                 &:after, &:before {
+                    background-color: #333;
                     content: "";
                     height: 3px;
                     position: absolute;
                     top: 10px;
-                    transition: all ease-in-out 0.1333333333s;
+                    @include base-trans;
                     width: 23px;
                 }
 
@@ -145,16 +81,38 @@
                     transform-origin: 0;
                 }
             }
+
+            &-title {
+                max-width: 80%;
+            }
         }
 
         &__panel-inner {
+            background-color: white;
             padding: 20px 20px 40px;
             overflow: visible;
             border-bottom-right-radius: 3px;
             border-bottom-left-radius: 3px;
+            @include base-trans;
+        }
+
+        // Code from Badger Accordion Repo
+        &__panel {
+            max-height: 75vh !important;
+            overflow: hidden;
+
+            // scss-lint:disable ImportantRule
+            &.-ba-is-hidden {
+                max-height: 0 !important;
+                visibility: hidden;
+            }
+
+            // transition is added via `badger-accordion--initalised` to stop animation on initalition
+            .badger-accordion--initalised & {
+                transition: max-height ease-in-out 0.2s;
+            }
         }
     }
-
 
     .badger-accordion__trigger[aria-expanded=true] .badger-accordion__trigger-icon:before {
         transform: rotate(
@@ -171,6 +129,27 @@
 
     .text-center {
         text-align: center;
+    }
+}
+
+
+.badger-accordion {
+    overflow: hidden;
+    position: relative;
+
+    &__panel {
+        max-height: 75vh !important;
+        overflow: hidden;
+
+        // scss-lint:disable ImportantRule
+        &.-ba-is-hidden { max-height: 0 !important; }
+
+        // transition is added via `badger-accordion--initialized` to stop animation on initalition
+        .badger-accordion--initialized & { transition: max-height ease-in-out 0.2s; }
+    }
+
+    &__trigger-title {
+        transition: ease-in-out 0.3s;
     }
 }
 
