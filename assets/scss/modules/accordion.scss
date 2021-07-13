@@ -8,17 +8,17 @@
 
     font-family: $primary-font;
     background-color: getColor(primary, mid-dark);
-    padding: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 
     .accordion-title {
         color: white;
         font-family: $secondary-font;
-        margin-top: 25px;
         margin-bottom: 27px;
+        text-align: center;
     }
 
     .badger-accordion {
-        margin: 24px;
 
         &__header {
             margin-top: 5px;
@@ -28,15 +28,14 @@
             background-color: getColor(primary, light);
             color: getColor(black);
             font-family: $secondary-font;
+            text-align: left;
 
+            @include base-trans;
             display: flex;
             align-content: space-between;
-            align-items: center;
             border: 0;
             border-radius: 3px;
             padding: 2px;
-            text-align: left;
-            @include base-trans;
             width: 100%;
             padding-left: 15px;
             margin-top: 10px;
@@ -48,20 +47,20 @@
             }
 
             &-icon {
+                @include base-trans;
                 display: block;
                 height: 25px;
                 margin-left: auto;
                 position: relative;
-                @include base-trans;
                 width: 25px;
 
                 &:after, &:before {
+                    @include base-trans;
                     background-color: #333;
                     content: "";
                     height: 3px;
                     position: absolute;
                     top: 10px;
-                    @include base-trans;
                     width: 23px;
                 }
 
@@ -74,10 +73,10 @@
                 }
 
                 &:after {
+                    right: 1px;
                     transform: rotate(
                             -45deg
                     ) translate3d(-10px, 4px, 0);
-                    right: 1px;
                     transform-origin: 0;
                 }
             }
@@ -88,29 +87,12 @@
         }
 
         &__panel-inner {
+            @include base-trans;
             background-color: white;
             padding: 20px 20px 40px;
             overflow: visible;
             border-bottom-right-radius: 3px;
             border-bottom-left-radius: 3px;
-            @include base-trans;
-        }
-
-        // Code from Badger Accordion Repo
-        &__panel {
-            max-height: 75vh !important;
-            overflow: hidden;
-
-            // scss-lint:disable ImportantRule
-            &.-ba-is-hidden {
-                max-height: 0 !important;
-                visibility: hidden;
-            }
-
-            // transition is added via `badger-accordion--initalised` to stop animation on initalition
-            .badger-accordion--initalised & {
-                transition: max-height ease-in-out 0.2s;
-            }
         }
     }
 
@@ -125,13 +107,7 @@
                 -45deg
         ) translate3d(-15px, -2px, 0);
     }
-
-
-    .text-center {
-        text-align: center;
-    }
 }
-
 
 .badger-accordion {
     overflow: hidden;
@@ -152,4 +128,3 @@
         transition: ease-in-out 0.3s;
     }
 }
-
