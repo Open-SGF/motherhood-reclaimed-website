@@ -28,13 +28,13 @@
             padding-top: 32.5%;
 
             // Mobile Styling
-            @include mq-below(small) {
+            @include mq-below(mid-small) {
                 top: inherit;
                 width: 65%;
                 padding-top: 65%;
             }
 
-            .text {
+            .venn-text {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -46,13 +46,10 @@
 
                 h3 {
                     font-family: $secondary-font;
-                    font-weight: bold;
-                    font-size: 32px;
                     margin-bottom: 20px;
                 }
 
                 p {
-                    font-size: 12px;
                 }
             }
         }
