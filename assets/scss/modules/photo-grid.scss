@@ -2,12 +2,10 @@
     background-color: getColor(primary, base);
     color: getColor(white);
     font-family: $secondary-font;
-    font-weight: bold;
     text-align: center;
     padding: 20px 60px 20px 40px;
 
     .grid-title {
-        font-size: 32px;
         margin-top: 50px;
     }
 
@@ -18,7 +16,15 @@
         margin: 20px;
 
         li {
-            margin: 20px;
+            width: 33%;
+
+            @include mq-below(medium) {
+                width: 50%;
+            }
+
+            @include mq-below(small) {
+                width: 100%;
+            }
 
             img {
                 border-radius: 50%;
@@ -26,14 +32,7 @@
             }
 
             p {
-                font-family: $primary-font;
-                font-size: 12px;
-                font-weight: normal;
                 margin: 5px 5px 12px 5px;
-            }
-
-            h3 {
-                font-size: 20px;
             }
         }
     }
