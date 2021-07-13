@@ -1,47 +1,38 @@
 .venn-diagram {
-    // This utility container div helped me get the venn diagram circles to resize while
-    // maintaining their aspect ratio
+    // This wrapper is to separate the .container class from this display: flex;
     .util-container {
-        margin: 0 auto;
-        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
         font-family: $primary-font;
         color: getColor(white);
         text-align: center;
 
-        $container-width: 100%;
-        $container-height: $container-width / 2;
-        width: $container-width;
+        $vertical-breakpoint: medium;
+        width: 100%;
         height: 0;
-        padding-bottom: $container-height;
-        $circle-width: ($container-width / 2) * 0.4;
+        padding-bottom: 50%;
+        margin: 0 auto;
 
-        // Heighten Div on mobiles
-        @include mq-below(small) {
-            $container-height: $container-width * 1.5;
-            padding-bottom: $container-height;
-            $circle-width: $container-width * 0.395;
+        @include mq-below($vertical-breakpoint) {
+            padding-bottom: 170%;
+            padding-top: 10%;
         }
 
         .first-circle, .second-circle {
-            position: absolute;
-            top: ($container-height - $circle-width) / 10;
+            width: 40%;
+            height: 0;
+            padding-bottom: 40%;
+            position: relative;
             border-radius: 50%;
 
-            // Forces a 1:1 aspect ratio
-            width: $circle-width;
-            padding-top: $circle-width;
-
-            // Mobile Styling
-            @include mq-below(mid-small) {
-                top: inherit;
+            @include mq-below($vertical-breakpoint) {
+                width: 80%;
+                padding-bottom: 80%;
             }
 
             .venn-text {
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
                 z-index: 3;
                 opacity: 100%;
                 padding: 30% 10% 10% 10%;
@@ -54,25 +45,21 @@
         }
 
         .first-circle {
-            left: 50% - $circle-width;
             background-color: getColor(primary, mid-dark);
+            transform: translateY(10%) translateX(3.5%);
 
-            // Mobile Styling
-            @include mq-below(small) {
-                left: 50% - ($circle-width / 2);
-                top: 75% - $circle-width;
+            @include mq-below($vertical-breakpoint) {
+                transform: translateY(3.5%);
             }
         }
 
         .second-circle {
-            right: 50% - $circle-width;
             background-color: getColor(primary, translucent-dark);
             z-index: 2;
+            transform: translateY(10%) translateX(-3.5%);
 
-            // Mobile Styling
-            @include mq-below(small) {
-                right: 50% - ($circle-width / 2);
-                bottom: 75% - $circle-width;
+            @include mq-below($vertical-breakpoint) {
+                transform: translateY(-3.5%);
             }
         }
     }
