@@ -1,10 +1,10 @@
 .icon-callout-set {
     font-family: $secondary-font;
     text-align: center;
+    padding-top: 100px;
 
     .title {
-        margin-top: 50px;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
     }
 
     .icons {
@@ -15,9 +15,10 @@
 
         li {
             width: 25%;
-            padding-left: 10px;
-            padding-right: 10px;
-            margin-bottom: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 150px;
+            margin-top: 20px; // Collapses during desktop, shows during mobile
 
             @include mq-below(mid-large) {
                 width: 50%;
@@ -27,24 +28,21 @@
                 width: 100%;
             }
 
-            margin-top: 20px;
-
             img {
                 display: block;
                 border-radius: 50%;
-                margin: 0 auto 20px auto;
+                margin: 0 auto 40px auto;
                 width: 190px;
                 height: auto;
             }
 
             h5 {
-                margin-top: 17px;
-                margin-bottom: 17px;
+                margin-bottom: 50px;
+                margin: 0 auto;
             }
 
             p {
                 font-family: $primary-font;
-                max-width: 230px;
                 margin: 0 auto;
             }
         }
