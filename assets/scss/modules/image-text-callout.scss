@@ -1,26 +1,16 @@
 .image-text-callout {
+    $image-shadow-size: 40px;
+
     .callout {
         display: flex;
         flex-direction: row;
-        padding-top: 40px;
+        padding-top: $image-shadow-size;
+        align-items: center;
 
-        @include mq-below(medium) {
+        @include mq-below(mid-large) {
             flex-direction: column;
-        }
-
-        &.image-right {
-            flex-direction: row-reverse;
-
             .text-wrapper {
-                padding-right: 3%;
-            }
-
-            .image {
-                box-shadow: 40px 40px getColor(primary, dark);
-            }
-
-            @include mq-below(medium) {
-                flex-direction: column;
+                padding-left: 0;
             }
         }
     }
@@ -31,7 +21,7 @@
         // top: -40px;
         border-radius: 8px;
         width: 100%;
-        box-shadow: -40px 40px getColor(primary, dark);
+        box-shadow: -$image-shadow-size $image-shadow-size getColor(primary, dark);
 
 
         // .image::after {
@@ -44,8 +34,10 @@
     }
 
     .image-wrapper {
-        // max-width: 50%;
-        flex: 1;
+        @include mq-above(mid-large){
+            max-width: 50%;
+        }
+        padding-left: $image-shadow-size;
     }
 
     .text-wrapper {
@@ -67,5 +59,27 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    &.image-right {
+        .callout {
+            flex-direction: row-reverse;
+
+            @include mq-below(mid-large) {
+                flex-direction: column;
+                .text-wrapper {
+                    padding-left: 0;
+                }
+            }
+        }
+
+        .text-wrapper {
+            padding-right: 3%;
+        }
+
+        .image {
+            box-shadow: $image-shadow-size $image-shadow-size getColor(primary, dark);
+        }
+
     }
 }
