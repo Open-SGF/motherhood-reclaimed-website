@@ -17,20 +17,9 @@
 
     .image {
         position: relative;
-        // left: 40px;
-        // top: -40px;
         border-radius: 8px;
         width: 100%;
         box-shadow: -$image-shadow-size $image-shadow-size getColor(primary, dark);
-
-
-        // .image::after {
-        //     content: '';
-        //     position: absolute;
-        //     background-color: getColor(primary, dark);
-        //     width: 100%;
-        //     height: 100%;
-        // }
     }
 
     .image-wrapper {
