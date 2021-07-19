@@ -1,0 +1,66 @@
+.venn-diagram {
+    // This wrapper is to separate the .container class from this display: flex;
+    .util-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        font-family: $primary-font;
+        color: getColor(white);
+        text-align: center;
+
+        $vertical-breakpoint: medium;
+        width: 100%;
+        height: 0;
+        padding-bottom: 50%;
+        margin: 0 auto;
+
+        @include mq-below($vertical-breakpoint) {
+            padding-bottom: 170%;
+            padding-top: 10%;
+        }
+
+        .first-circle, .second-circle {
+            width: 40%;
+            height: 0;
+            padding-bottom: 40%;
+            position: relative;
+            border-radius: 50%;
+
+            @include mq-below($vertical-breakpoint) {
+                width: 80%;
+                padding-bottom: 80%;
+            }
+
+            .venn-text {
+                z-index: 3;
+                opacity: 100%;
+                padding: 30% 10% 10% 10%;
+
+                h3 {
+                    font-family: $secondary-font;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .first-circle {
+            background-color: getColor(primary, mid-dark);
+            transform: translateY(10%) translateX(3.5%);
+
+            @include mq-below($vertical-breakpoint) {
+                transform: translateY(3.5%);
+            }
+        }
+
+        .second-circle {
+            background-color: getColor(primary, translucent-dark);
+            z-index: 2;
+            transform: translateY(10%) translateX(-3.5%);
+
+            @include mq-below($vertical-breakpoint) {
+                transform: translateY(-3.5%);
+            }
+        }
+    }
+}
