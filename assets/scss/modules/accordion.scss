@@ -1,0 +1,129 @@
+.accordion {
+    $transition-time: 0.2s;
+
+    @mixin base-trans {
+        transition: all ease-in-out $transition-time;
+    }
+
+    font-family: $primary-font;
+    background-color: getColor(primary, mid-dark);
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .accordion-title {
+        color: white;
+        font-family: $secondary-font;
+        margin-bottom: 27px;
+        text-align: center;
+    }
+
+    .badger-accordion {
+
+        &__header {
+            margin-top: 5px;
+        }
+
+        &__trigger {
+            background-color: getColor(primary, light);
+            color: getColor(black);
+            font-family: $secondary-font;
+            text-align: left;
+
+            @include base-trans;
+            display: flex;
+            align-content: space-between;
+            border: 0;
+            border-radius: 3px;
+            padding: 2px;
+            width: 100%;
+            padding-left: 15px;
+            margin-top: 10px;
+
+            &:focus, &:hover {
+                background-color: getColor(primary, mid-gray);
+                cursor: pointer;
+                outline: none;
+            }
+
+            &-icon {
+                @include base-trans;
+                display: block;
+                height: 25px;
+                margin-left: auto;
+                position: relative;
+                width: 25px;
+
+                &:after, &:before {
+                    @include base-trans;
+                    background-color: #333;
+                    content: "";
+                    height: 3px;
+                    position: absolute;
+                    top: 10px;
+                    width: 23px;
+                }
+
+                &:before {
+                    left: 1px;
+                    transform: rotate(
+                            45deg
+                    ) translate3d(-11px, 25px, 0);
+                    transform-origin: 100%;
+                }
+
+                &:after {
+                    right: 1px;
+                    transform: rotate(
+                            -45deg
+                    ) translate3d(-10px, 4px, 0);
+                    transform-origin: 0;
+                }
+            }
+
+            &-title {
+                max-width: 80%;
+            }
+        }
+
+        &__panel-inner {
+            @include base-trans;
+            background-color: white;
+            padding: 20px 20px 40px;
+            overflow: visible;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+    }
+
+    .badger-accordion__trigger[aria-expanded=true] .badger-accordion__trigger-icon:before {
+        transform: rotate(
+                45deg
+        ) translate3d(-7px, 20px, 0);
+    }
+
+    .badger-accordion__trigger[aria-expanded=true] .badger-accordion__trigger-icon:after {
+        transform: rotate(
+                -45deg
+        ) translate3d(-15px, -2px, 0);
+    }
+}
+
+.badger-accordion {
+    overflow: hidden;
+    position: relative;
+
+    &__panel {
+        max-height: 75vh !important;
+        overflow: hidden;
+
+        // scss-lint:disable ImportantRule
+        &.-ba-is-hidden { max-height: 0 !important; }
+
+        // transition is added via `badger-accordion--initialized` to stop animation on initalition
+        .badger-accordion--initialized & { transition: max-height ease-in-out 0.2s; }
+    }
+
+    &__trigger-title {
+        transition: ease-in-out 0.3s;
+    }
+}
