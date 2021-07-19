@@ -16,6 +16,13 @@ p {
 }
 
 
+.text {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-family: $primary-font;
+}
+
+
 h1, .h1 {
     @extend %heading;
     font-size: $h1-font-size;

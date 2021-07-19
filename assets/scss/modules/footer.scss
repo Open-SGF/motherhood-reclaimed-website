@@ -1,2 +1,26 @@
 .footer {
+    background-color: getColor(primary, base);
+    color: getColor(white);
+    font-family: $secondary-font;
+    padding: 30px;
+    width: 100%;
+
+    .footer-list {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            margin-top: 5px;
+        }
+
+        @include mq-below(small) {
+            display: block;
+        }
+    }
+
+    a, a:hover, a:active, a:visited, a:focus {
+        text-decoration: underline;
+        color: inherit;
+        cursor: pointer;
+    }
 }
