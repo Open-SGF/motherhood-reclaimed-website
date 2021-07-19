@@ -1,0 +1,41 @@
+.prefooter-callout {
+
+    width: 100%;
+    height:400px;
+    font-family: $secondary-font;
+    color: getColor(white);
+    background-color: #7E55BE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    .pfc-background {
+        width: 100%;
+        height: 100%;
+        background-image: url(/img/flower.png);
+        background-repeat: no-repeat;
+        background-position: left;
+        opacity: .5;
+        position: absolute;
+
+        @include mq-below(xx-large) {
+            background-position: center;
+        }
+    }
+
+    .pfc-content {
+        text-align: center;
+        position: relative;
+    }
+
+    h2 {
+        font-size: 6.4rem;
+        margin: 0 0 25px 0;
+    }
+
+    a {
+        margin: 25px 0 0 0;
+    }
+}
