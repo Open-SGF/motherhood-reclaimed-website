@@ -31,5 +31,9 @@
     "badger-accordion": "^1.2.4",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1"
-  }
+  },
+  "browserslist": [
+      "defaults",
+      "IE 11"
+  ]
 }
