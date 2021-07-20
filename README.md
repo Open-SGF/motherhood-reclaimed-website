@@ -17,7 +17,7 @@ A website for Motherhood Reclaimed built with Craft CMS
 - Copy `.env.example` to `.env`
 - `composer install`
 - `npm install`
-- `php craft install`
+- `php craft setup`
     - Fill out your database information
     - Choose the default options for everything else
     - Create a username and password. These credentials are for your machine only. They don't need to be unique
