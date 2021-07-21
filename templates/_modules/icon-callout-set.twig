@@ -1,25 +1,12 @@
 <section class="icon-callout-set container">
-    <h2 class="title">4 Key Areas of Focus</h2>
+    <h2 class="title">{{ iconObj.title }}</h2>
     <ul class="icons">
+        {% for icon in iconObj.icons%}
         <li>
-            <img src="https://via.placeholder.com/60" alt="">
-            <h3>Rediscover Self</h3>
-            <p>A Developed Sense of Self</p>
+            <img src="{{ icon.imgSrc }}" alt="{{ icon.altText }}">
+            <h3>{{ icon.subtitle }}</h3>
+            <p>{{ icon.details }}</p>
         </li>
-        <li>
-            <img src="https://via.placeholder.com/60" alt="">
-            <h3>Find Healing</h3>
-            <p>Decrease Disruption Due to Past Trauma</p>
-        </li>
-        <li>
-            <img src="https://via.placeholder.com/60" alt="">
-            <h3>Understand Others</h3>
-            <p>Improving Quality of Relationships with Children and Partners</p>
-        </li>
-        <li>
-            <img src="https://via.placeholder.com/60" alt="">
-            <h3>Live Your Best Life</h3>
-            <p>Livable-Wage, Meaningful Employment with Ongoing Stability</p>
-        </li>
+        {% endfor %}
     </ul>
 </section>
