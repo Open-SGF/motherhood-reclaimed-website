@@ -31,7 +31,8 @@ Array.from(accordions).forEach((accordion) => {
                 breakpoint: 980,
                 settings: {
                     arrows: true,
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    draggable: true,
                 }
             }]
         });
