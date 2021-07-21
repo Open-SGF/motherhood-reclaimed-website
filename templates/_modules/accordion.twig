@@ -1,11 +1,12 @@
 <section class="accordion">
     <div class="container">
-        <h1 class="accordion-title">The Need</h1>
+        <h1 class="accordion-title">{{ accordionObj.title }}</h1>
         <dl class="badger-accordion js-badger-accordion">
+            {% for panel in accordionObj.panels %}
             <dt class="badger-accordion__header">
                 <button class="badger-accordion__trigger js-badger-accordion-header">
                     <div class="badger-accordion__trigger-title">
-                        Termination of Parental Rights & Reunification
+                        {{ panel.title }}
                     </div>
                     <div class="badger-accordion__trigger-icon">
                     </div>
@@ -13,70 +14,10 @@
             </dt>
             <dd class="badger-accordion__panel js-badger-accordion-panel">
                 <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
-                    According to statistical reports from
-                    <a href="https://fosteringcourtimprovement.org/mo/County/Greene/" target="_blank" rel=""noreferrer>
-                        Greene County for Fostering Court Improvements
-                    </a>
-                    , as of March of 2020 there were 665 children in foster care in Greene County. This rate is
-                    equal to 104 per 10K, a rate higher than the state overall average of 88 per 10K. While
-                    <a href="http://www.akleg.gov/basis/get_documents.asp?session=30&docid=54225" target="_blank" rel="noreferrer">
-                        research
-                    </a>
-                    indicates that “everyone agrees that the first goal is to reunite children and youth with their
-                    families as soon as possible,” rates of reunification still hover in Greene County, with less than
-                    half (42%) of all children removed from their parents’ custody ultimately being reunited
-                    with their parents. Overall, termination of parental rights within the first 15 months
-                    of a child coming into state care rates are more than three times higher in
-                    Greene County (59%) than they are in the State of Missouri’s overall (18%). The top
-                    three reasons for removal of children from their home and parents in Greene County are
-                    1) caretaker drug and alcohol use (55%), 2) neglect (49%), and 3) inadequate housing (27%).
-                    Motherhood Reclaimed believes that these are concerns that can be addressed and
-                    overcome with ongoing programming and support for parents.
+                    {{ panel.details }}
                 </div>
             </dd>
-            <dt class="badger-accordion__header">
-                <button class="badger-accordion__trigger js-badger-accordion-header">
-                    <div class="badger-accordion__trigger-title">
-                        Funding & Support Services
-                    </div>
-                    <div class="badger-accordion__trigger-icon">
-                    </div>
-                </button>
-            </dt>
-            <dd class="badger-accordion__panel js-badger-accordion-panel">
-                <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
-                    This program is in the early stages of securing funding and is exploring private, state,
-                    federal and grant funding to launch a 1-year pilot program with measured success rates.
-                    To find out more about funding considerations, please contact Motherhood Reclaimed.
-                </div>
-            </dd>
-            <dt class="badger-accordion__header">
-                <button class="badger-accordion__trigger js-badger-accordion-header">
-                    <div class="badger-accordion__trigger-title">
-                        Impact on Taxpayers
-                    </div>
-                    <div class="badger-accordion__trigger-icon">
-                    </div>
-                </button>
-            </dt>
-            <dd class="badger-accordion__panel js-badger-accordion-panel">
-                <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
-                    Children being removed from their parents' care has a large impact on the lives of these
-                    children and their mothers as well as a significant financial impact on the taxpayer burden.
-                    <a href="http://www.fosterfocusmag.com/articles/foster-care-affects-you-your-money-your-wallet#" target="_blank" rel="noreferrer">
-                        Average taxpayers spend
-                    </a>
-                    about $300,000 on public assistance and incarceration costs, over the lifetime of each
-                    individual that ages out of the foster care system. From
-                    <a href="https://fosteringcourtimprovement.org/mo/County/Greene" target="_blank" rel="noreferrer">
-                        April 2019 through March 2020, 22 children in Greene County care were discharged through emancipation.
-                    </a>
-                    Using cost estimates of $300,000 in public assistance needed to support these
-                    individuals, in this one year period alone, these 22 children will cost
-                    taxpayers $6.6 million over their lifetime. Spending money on reunification of children and
-                    their mothers not only reduces trauma for the child and mother but also saves taxpayers money.
-                </div>
-            </dd>
+            {% endfor %}
         </dl>
     </div>
 </section>
