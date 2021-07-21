@@ -9,7 +9,8 @@
     position: relative;
     z-index: 5;
     color: white;
-    background-color: getColor(primary);
+    background: #ffffff url("https://cdn.stocksnap.io/img-thumbs/960w/women-working_9XTJQQVAQM.jpg") no-repeat center/cover;
+    background-position: top 20% right 50%;
 
     .bg-img-container {
         position: absolute;
@@ -17,9 +18,7 @@
         width: 100%;
         overflow: hidden;
         z-index: 6;
-        background: #ffffff url("https://cdn.stocksnap.io/img-thumbs/960w/women-working_9XTJQQVAQM.jpg") no-repeat center/cover;
-        background-position: top 20% right 50%;
-        opacity: 60%;
+        background-color: #694F93B4;
     }
 
     .slider {
@@ -51,15 +50,13 @@
         }
 
         .slide-text {
-            background-color: #FFFFFF44;
             height: 100%;
+            padding-top: 13%;
 
             .text-centerer {
                 height: auto;
                 width: 50%;
-                margin: auto;
-                margin-top: 10%;
-                line-height: 10%;
+                margin: auto auto auto auto;
 
                 h3 {
                     font-family: $secondary-font;
