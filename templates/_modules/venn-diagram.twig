@@ -1,16 +1,26 @@
+{#
+/**
+* Available variables:
+* - vennOne: an object containing title and details variables
+* - vennTwo: an object containing title and details variables
+*/
+#}
+
+{% autoescape false %}
 <section class="venn-diagram container">
     <div class="util-container">
         <div class="first-circle">
             <div class="venn-text">
-                <h3>{{ vennObj.vennOne.title }}</h3>
-                <p>{{ vennObj.vennOne.details }}</p>
+                <h3>{{ vennOne.title }}</h3>
+                <p>{{ vennOne.details }}</p>
             </div>
         </div>
         <div class="second-circle">
             <div class="venn-text">
-                <h3>{{ vennObj.vennTwo.title }}</h3>
-                <p>{{ vennObj.vennTwo.details }}</p>
+                <h3>{{ vennTwo.title }}</h3>
+                <p>{{ vennTwo.details }}</p>
             </div>
         </div>
     </div>
 </section>
+{% endautoescape %}

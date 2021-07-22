@@ -1,8 +1,16 @@
+{#
+/**
+ * Available variables:
+ * - title: The main title of the accordion
+ * - panels: Array panel objects each containing a title and details property
+ */
+#}
+{% autoescape false %}
 <section class="accordion">
     <div class="container">
-        <h1 class="accordion-title">{{ accordionObj.title }}</h1>
+        <h1 class="accordion-title">{{ title }}</h1>
         <dl class="badger-accordion js-badger-accordion">
-            {% for panel in accordionObj.panels %}
+            {% for panel in panels %}
             <dt class="badger-accordion__header">
                 <button class="badger-accordion__trigger js-badger-accordion-header">
                     <div class="badger-accordion__trigger-title">
@@ -21,3 +29,4 @@
         </dl>
     </div>
 </section>
+{% endautoescape %}

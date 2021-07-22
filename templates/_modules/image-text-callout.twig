@@ -1,15 +1,28 @@
+{#
+/**
+ * Available variables:
+ * - diretionClass: determines if the image is on the left or right of the module, default is left, add 'image-right' to set it to right.
+ * - imgSrc: src to the main module image
+ * - altText: alt text for the main module image
+ * - title: main title for the module
+ * - details: main body of text for the module
+ * - button: an object containing href (button destination link) and text variables
+ */
+#}
+{% autoescape false %}
 <section class="image-text-callout">
-    <div class="container callout">
+    <div class="container callout {{ directionClass }}">
         <div class="image-wrapper">
-            <img  class="image" src="https://via.placeholder.com/400x400">
+            <img class="image" src="{{ imgSrc }}" alt="{{ altText }}">
         </div>
 
         <div class="text-wrapper">
-            <h2 class="centered">{{ imageTextObj.title }}</h2>
-            <p>{{ imageTextObj.paragraph }}</p>
+            <h2 class="centered">{{ title }}</h2>
+            <p>{{ details }}</p>
             <div class="centered">
-                <a href="{{ imageTextObj.button.href }}" class="btn btn-primary">{{ imageTextObj.button.buttonText }}</a>
+                <a href="{{ button.href }}" class="btn btn-primary">{{ button.text }}</a>
             </div>
         </div>
     </div>
 </section>
+{% endautoescape %}

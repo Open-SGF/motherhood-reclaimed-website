@@ -1,12 +1,21 @@
+{#
+/**
+ * Available variables:
+ * - title: The main title of the icon-callout-set
+ * - icons: icon objects in an array each conataining an imgSrc, altText, title, and details variables
+ */
+#}
+{% autoescape false %}
 <section class="icon-callout-set container">
-    <h2 class="title">{{ iconObj.title }}</h2>
+    <h2 class="title">{{ title }}</h2>
     <ul class="icons">
-        {% for icon in iconObj.icons%}
+        {% for icon in icons%}
         <li>
             <img src="{{ icon.imgSrc }}" alt="{{ icon.altText }}">
-            <h3>{{ icon.subtitle }}</h3>
+            <h3>{{ icon.title }}</h3>
             <p>{{ icon.details }}</p>
         </li>
         {% endfor %}
     </ul>
 </section>
+{% endautoescape %}
