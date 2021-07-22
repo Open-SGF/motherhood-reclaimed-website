@@ -3,34 +3,24 @@
     height: 600px;
     position: relative;
     overflow: hidden;
-    margin-bottom: 300%;
     background-color: getColor(primary, mid-dark);
 
     .container {
         height: 100%;
     }
 
-    .t-l-main-img, .t-r-main-img {
+    .main-img {
         position: absolute;
         top: 0;
         height: 100%;
         width: auto;
-        overflow: hidden;
-    }
-
-    .t-l-main-img {
-        right: -20%;
-    }
-
-    .t-r-main-img {
-        left: 0;
     }
 
     .text-div {
         position: absolute;
         height: 100%;
         width: 40%;
-        min-width: 210px;
+        min-width: 400px;
         z-index: 3;
         margin: 40px;
         color: getColor(white);
@@ -48,29 +38,30 @@
         top: -10%;
         height: 720px;
         width: 60%;
+        min-width: 600px;
 
-        .t-l-svg, .t-r-svg {
+        .main-svg {
             width: 100%;
             height: 100%;
         }
     }
 
     &.text-left {
+        .main-img {
+            right: 0;
+        }
         .text-div, .svg-div {
             left: 0;
-        }
-        .t-r-svg, t-r-main-img {
-            display: none;
         }
     }
 
     &.text-right {
+        .main-img {
+            left: 0;
+        }
         .text-div, .svg-div {
              right: 0;
          }
-        .t-l-svg, .t-l-main-img {
-            display: none;
-        }
     }
 }
 

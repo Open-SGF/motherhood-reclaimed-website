@@ -1,23 +1,12 @@
-<section class="header text-right">
-    <div class="container">
-        <img class="t-l-main-img" src="./img/pexels-cowomen-2041390.jpg" alt="">
-        <img class="t-r-main-img" src="./img/pexels-cowomen-2041390.jpg" alt="">
-        <div class="text-div">
-            <h2>Our Why</h2>
-            <p>According to statistical reports from Greene County for Fostering
-                Court Improvements, as of March of 2020 there were 665 children
-                in foster care in Greene County. This rate is equal to 104 per
-                10K, a rate higher than the state overall average of 88 per
-                10K. While research indicates that “everyone agrees that the
-                first goal is to reunite children and youth with their families
-                as soon as possible,” rates of reunification still hover in
-                Greene County, with less than half (42%) of all children removed
-                from their parents’ custody ultimately being reunited with their
-                parents...</p>
-        </div>
-        <div class="svg-div">
-            <img class="t-l-svg" src="./img/text-left.svg">
-            <img class="t-r-svg" src="./img/text-right.svg">
-        </div>
+<section class="header {{ style }}">
+    <img class="main-img" src="{{ imgSrc }}" alt="{{ imgAlt }}">
+
+    <div class="container text-div">
+        <h2>{{ title }}</h2>
+        <p>{{ details }}</p>
+    </div>
+
+    <div class="svg-div">
+        <img class="main-svg" src="{{ svgSrc }}" alt="{{ svgAlt }}">
     </div>
 </section>
