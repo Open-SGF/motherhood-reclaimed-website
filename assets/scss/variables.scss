@@ -22,6 +22,8 @@ $h5-line-height: 1.25;
 $h6-font-size: 2.8rem;
 $h6-line-height: 1.583;
 
+$navigation-desktop-height: 104px;
+
 $colors: (
     primary: (
         light: #C8B8E1,
@@ -40,6 +42,7 @@ $colors: (
 );
 
 $z-index: (
+    navigation: 10,
     default: 0,
 );
 
