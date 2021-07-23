@@ -27,6 +27,23 @@
     svgSrc: './img/text-left.svg',
 } %}
 
+{% set sliderObj = {
+    slides: [
+        {
+            quote: 'I love this program!',
+            person: 'Mary Barn'
+        },
+        {
+            quote: 'This program is great!',
+            person: 'Mary Barn'
+        },
+        {
+            quote: 'Help me! I\'m trapped in a door factory!',
+            person: 'Mary Barn'
+        }
+    ]
+} %}
+
 {% block main %}
     {% include '_modules/header.twig' with {
         style: headerTextLeftObj.style,
@@ -35,6 +52,7 @@
         imgAlt: headerTextLeftObj.imgAlt,
         svgSrc: headerTextLeftObj.svgSrc,
     } %}
+    
     {% include '_modules/header.twig' with {
         style: headerTextRightObj.style,
         title: headerTextRightObj.title,
@@ -43,5 +61,8 @@
         imgAlt: headerTextLeftObj.imgAlt,
         svgSrc: headerTextRightObj.svgSrc,
     }%}
-    {% include '_modules/slider.twig' %}
+
+    {% include '_modules/slider.twig' with {
+        slides: sliderObj.slides
+    }%}
 {% endblock %}

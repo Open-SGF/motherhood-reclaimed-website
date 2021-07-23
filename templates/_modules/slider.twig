@@ -1,23 +1,13 @@
 <section class="feature-slider container">
     <div class="purple-filter"></div>
     <section class="variable slider">
+        {% for slide in slides %}
         <div class="slide-text">
             <div class="text-centerer">
-                <p class="quote h3">I love this program!</p>
-                <p class="person-quoted">-Mary Barn</p>
+                <p class="quote h3">{{ slide.quote }}</p>
+                <p class="person-quoted">-{{ slide.person }}</p>
             </div>
         </div>
-        <div class="slide-text">
-            <div class="text-centerer">
-                <p class="quote h3">This program is great!</p>
-                <p class="person-quoted">-Mary Barn</p>
-            </div>
-        </div>
-        <div class="slide-text">
-            <div class="text-centerer">
-                <p class="quote h3">I'm trapped in a door factory!</p>
-                <p class="person-quoted">-Mary Barn</p>
-            </div>
-        </div>
+        {% endfor %}
     </section>
 </section>
