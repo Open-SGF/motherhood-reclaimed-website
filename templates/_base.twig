@@ -20,11 +20,12 @@
 </head>
 <body>
 {% include '_modules/navigation.twig' %}
+
 <main>
     {% block main %}{% endblock %}
+    {% include '_modules/prefooter-callout.twig' %}
 </main>
 
-{% include '_modules/prefooter-callout.twig' %}
 {% include '_modules/footer.twig' %}
 
 <script src="{{ mix('/manifest.js') }}"></script>

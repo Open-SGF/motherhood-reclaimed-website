@@ -1,13 +1,46 @@
+html, body, main {
+    min-height: 100vh;
+}
+
+main {
+    padding-bottom: $footer-desktop-height;
+    @include mq-below(small) {
+        padding-bottom: $footer-small-height;
+    }
+    @include mq-below(x-small) {
+        padding-bottom: $footer-xsmall-height;
+    }
+}
+
 .footer {
     background-color: getColor(primary, base);
     color: getColor(white);
     font-family: $secondary-font;
-    padding: 30px;
+    font-size: $h5-font-size;
+    line-height: $h5-line-height;
+
     width: 100%;
+    padding: 20px;
+    height: $footer-desktop-height;
+    margin-top: -$footer-desktop-height;
+    @include mq-below(small) {
+        height: $footer-small-height;
+        margin-top: -$footer-small-height;
+    }
+    @include mq-below(x-small) {
+        height: $footer-xsmall-height;
+        margin-top: -$footer-xsmall-height;
+    }
+
+    .container {
+        height: 100%;
+    }
 
     .footer-list {
+        height: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         li {
             margin-top: 5px;
