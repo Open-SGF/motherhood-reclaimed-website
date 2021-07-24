@@ -1,12 +1,25 @@
+{#
+/**
+ * Available variables:
+ * - style: either 'text-left' or 'text-right', toggles between header styles
+ * - title: an optional main title for the header
+ * - details: the main body of text for the module
+ * - imgSrc: the main image for the module
+ * - imgAlt: the alt text for the main img variable
+ * - svgSrc: the flourish separating the image and text
+ */
+#}
+
 <section class="header {{ style }}">
-    <img class="main-img" src="{{ imgSrc }}" alt="{{ imgAlt }}">
-
-    <div class="container text-div">
-        <h2>{{ title }}</h2>
-        <p>{{ details }}</p>
-    </div>
-
-    <div class="svg-div">
-        <img class="main-svg" src="{{ svgSrc }}" alt="{{ svgAlt }}">
+    <div class="image" style="background-image: url('{{ imgSrc }}');" role="img" arial-label="{{ imgAlt }}"></div>
+    <img class="flourish" src="{{ svgSrc }}">
+    <div class="background"></div>
+    <div class="container">
+        <div class="content">
+            <div class="text-wrapper">
+                <h2 class="h5">{{ title }}</h2>
+                <p>{{ details }}</p>
+            </div>
+        </div>
     </div>
 </section>
