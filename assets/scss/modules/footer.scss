@@ -10,17 +10,11 @@
     color: getColor(white);
     font-family: $secondary-font;
     width: 100%;
-    padding: 20px;
-
-    .container {
-        height: 100%;
-    }
+    padding: 30px 0;
 
     .footer-list {
-        height: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: center;
 
         li {
             margin-top: 5px;
