@@ -30,9 +30,13 @@
         color: getColor(white);
         font-family: $primary-font;
 
-        h2 {
+        h1 {
             text-align: center;
-            margin: 20px;
+            padding-bottom: 48px
+        }
+
+        p {
+            font-family: $primary-font;
         }
     }
 
@@ -58,21 +62,6 @@
 
         .content {
             justify-content: flex-start;
-
-            .text-wrapper {
-                font-family: $secondary-font;
-
-                h2 {
-                    display: none;
-                }
-
-                p {
-                    text-align: center;
-                    font-size: $h4-font-size;
-                    line-height: $h4-line-height;
-                    font-weight: bold;
-                }
-            }
         }
 
         .background {
@@ -102,5 +91,3 @@
         }
     }
 }
-
-

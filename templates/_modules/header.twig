@@ -17,8 +17,12 @@
     <div class="container">
         <div class="content">
             <div class="text-wrapper">
-                <h2>{{ title }}</h2>
-                <p>{{ details }}</p>
+                <h1 class="{% if title|length >= 20 %}h3{% endif %}">
+                    {{ title }}
+                </h1>
+                {% if details is defined and details != '' %}
+                    <p>{{ details }}</p>
+                {% endif %}
             </div>
         </div>
     </div>
