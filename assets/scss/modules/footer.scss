@@ -1,9 +1,16 @@
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 .footer {
     background-color: getColor(primary, base);
     color: getColor(white);
     font-family: $secondary-font;
-    padding: 30px;
     width: 100%;
+    padding: 30px 0;
 
     .footer-list {
         display: flex;

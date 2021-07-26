@@ -19,13 +19,16 @@
     <link rel="stylesheet" href="{{ mix('/main.css') }}">
 </head>
 <body>
-{% include '_modules/navigation.twig' %}
-<main>
-    {% block main %}{% endblock %}
-</main>
 
-{% include '_modules/prefooter-callout.twig' %}
-{% include '_modules/footer.twig' %}
+<div class="page-wrapper">
+    {% include '_modules/navigation.twig' %}
+
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+
+    {% include '_modules/footer.twig' %}
+</div>
 
 <script src="{{ mix('/manifest.js') }}"></script>
 <script src="{{ mix('/vendor.js') }}"></script>
