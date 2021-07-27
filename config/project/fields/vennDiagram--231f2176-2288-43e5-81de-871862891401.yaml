@@ -1,0 +1,49 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6e6939c4-3ced-47e1-856a-770599b5aa63 # Common
+handle: vennDiagram
+instructions: ''
+name: 'Venn Diagram'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - a3ae8ea3-e8c4-4b78-9e94-2f1b6c369c69 # Circle One Title
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 0e1c9034-ad6b-4cf2-91d5-e3e6c59643d9 # Circle One Details
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 1e4a47ce-b58a-4a80-b52e-f1fb3e62a74f # Circle Two Title
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - f1c46d56-d25f-4cbc-951e-a21750490f4c # Circle Two Detatils
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_venndiagram}}'
+  fieldLayout: row
+  maxRows: '1'
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: 'Add Venn Diagram'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

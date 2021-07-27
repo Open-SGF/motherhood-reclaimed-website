@@ -1,0 +1,110 @@
+field: 61022c53-1304-49ce-ba7c-0ed9a4127cc6 # Icon Callout Set
+fieldLayouts:
+  038fd9c0-933c-48ba-9302-1501aea8a90b:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 3472c050-802a-4ee5-8100-4f47a5ec45fa # Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2f1ebb54-897a-4e6b-82d9-8b56c7ae4aa2 # Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 02836994-516e-4348-a917-09890dead174 # Details
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2f1ebb54-897a-4e6b-82d9-8b56c7ae4aa2: # Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: customTitle
+    instructions: ''
+    name: Title
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  3472c050-802a-4ee5-8100-4f47a5ec45fa: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: ''
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:10d9884b-c6d1-4608-ad5d-2fc9aa2b92b6' # Public
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: 'Add an Image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:10d9884b-c6d1-4608-ad5d-2fc9aa2b92b6' # Public
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  02836994-516e-4348-a917-09890dead174: # Details
+    columnSuffix: hmnybszc
+    contentColumnType: text
+    fieldGroup: null
+    handle: details
+    instructions: ''
+    name: Details
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

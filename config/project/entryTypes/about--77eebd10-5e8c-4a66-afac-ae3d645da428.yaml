@@ -26,6 +26,60 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
+          -
+            fieldUid: f323fcb5-9626-4614-b8f7-fa9b438bb967 # Image Text Callout 3
+            instructions: ''
+            label: 'Image Text Callout'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 87f0eeb1-40ea-41d2-9ea6-ec6c509201ff # Title
+            instructions: ''
+            label: 'Icon Callout Set Title'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 61022c53-1304-49ce-ba7c-0ed9a4127cc6 # Icon Callout Set
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 231f2176-2288-43e5-81de-871862891401 # Venn Diagram
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0ba69eab-d56c-4035-ac72-04a24930d9c0 # Title 2
+            instructions: ''
+            label: 'Photo Grid Title'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2e8df2b6-8494-4d78-9623-dbd98f01ae2e # Icon Callout Set 2
+            instructions: ''
+            label: 'Photo Grid'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 handle: about

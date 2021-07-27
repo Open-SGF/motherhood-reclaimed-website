@@ -1,0 +1,125 @@
+field: 231f2176-2288-43e5-81de-871862891401 # Venn Diagram
+fieldLayouts:
+  c11a2287-f4d5-4bd2-95e9-485fee665339:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: a3ae8ea3-e8c4-4b78-9e94-2f1b6c369c69 # Circle One Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0e1c9034-ad6b-4cf2-91d5-e3e6c59643d9 # Circle One Details
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 1e4a47ce-b58a-4a80-b52e-f1fb3e62a74f # Circle Two Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f1c46d56-d25f-4cbc-951e-a21750490f4c # Circle Two Detatils
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0e1c9034-ad6b-4cf2-91d5-e3e6c59643d9: # Circle One Details
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: circleOneDetails
+    instructions: ''
+    name: 'Circle One Details'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  1e4a47ce-b58a-4a80-b52e-f1fb3e62a74f: # Circle Two Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: circleTwoTitle
+    instructions: ''
+    name: 'Circle Two Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a3ae8ea3-e8c4-4b78-9e94-2f1b6c369c69: # Circle One Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: circleOneTitle
+    instructions: ''
+    name: 'Circle One Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f1c46d56-d25f-4cbc-951e-a21750490f4c: # Circle Two Detatils
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: circleTwoDetatils
+    instructions: ''
+    name: 'Circle Two Detatils'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

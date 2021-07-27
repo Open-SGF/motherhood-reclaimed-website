@@ -1,4 +1,4 @@
-dateModified: 1627349519
+dateModified: 1627397740
 email:
   fromEmail: me@levizitting.com
   fromName: 'Motherhood Reclaimed'
@@ -7,25 +7,43 @@ meta:
   __names__:
     0a090d84-ad48-43e7-b8de-dc9a80c73722: 'Quote Slider' # Quote Slider
     0b015df8-5d6a-4736-a790-4edf66785af6: Header # Header
+    0ba69eab-d56c-4035-ac72-04a24930d9c0: 'Title 2' # Title 2
     0d2cda9a-4534-4181-b816-6a358edf853c: Image # Image
+    0e1c9034-ad6b-4cf2-91d5-e3e6c59643d9: 'Circle One Details' # Circle One Details
     1acaf2e5-572e-47d4-ad09-e21ea2272505: Heading # Heading
+    1e4a47ce-b58a-4a80-b52e-f1fb3e62a74f: 'Circle Two Title' # Circle Two Title
     2a845f9e-9189-43b8-ba9d-471e27939299: Text # Text
     2b8543ca-9853-4595-a460-022385356fb8: About # About
+    2e8df2b6-8494-4d78-9623-dbd98f01ae2e: 'Icon Callout Set 2' # Icon Callout Set 2
+    2f1ebb54-897a-4e6b-82d9-8b56c7ae4aa2: Title # Title
     4fa720a8-f11d-4303-b843-f5544f1a1299: Link # Link
     5c32995c-e7a7-4a60-b0da-9d1da2b2025f: Link # Link
     5c360890-b5b7-4b1b-8835-3098149ed3e1: 'Image Text Callout 2' # Image Text Callout 2
     6e6939c4-3ced-47e1-856a-770599b5aa63: Common # Common
+    7bd9f5d9-d14b-4a06-86a0-5abc9bc6698c: Title # Title
+    8eaed5cc-e1a0-424a-ab4c-38ee20fb77b7: Heading # Heading
     10d9884b-c6d1-4608-ad5d-2fc9aa2b92b6: Public # Public
     20c17dda-37d2-42f4-aa9e-1a35dc0f0c2f: Home # Home
     67f17e0c-cfbb-4727-8919-3dec852a482c: Style # Style
     72a09d08-9fda-45ca-aed7-ed78d15c7b8e: Title # Title
     77eebd10-5e8c-4a66-afac-ae3d645da428: About # About
+    87c9a6ff-d9f6-4b1f-8883-e3e6c74b283f: Image # Image
+    87f0eeb1-40ea-41d2-9ea6-ec6c509201ff: Title # Title
+    231f2176-2288-43e5-81de-871862891401: 'Venn Diagram' # Venn Diagram
     614d595f-9aa4-4f3f-802a-db563d4424b9: Style # Style
+    678bd57f-d7d2-4361-92f8-ad24db5ce811: Style # Style
     1836fba8-55b8-42fb-8430-7d9c83a04600: 'Motherhood Reclaimed' # Motherhood Reclaimed
+    3332d51b-dcf0-47fd-adfb-1da1eaabd10b: Text # Text
+    3472c050-802a-4ee5-8100-4f47a5ec45fa: Image # Image
     8748f9b3-2676-43c6-a13d-53f1d8c800ea: Text # Text
+    61022c53-1304-49ce-ba7c-0ed9a4127cc6: 'Icon Callout Set' # Icon Callout Set
+    02836994-516e-4348-a917-09890dead174: Details # Details
+    6378969d-bf97-46e5-afff-33585a3c0631: Details # Details
     22203198-8068-469b-8793-74e5f04db737: Home # Home
     31039678-dd5e-4a4b-a645-885b6691794c: Heading # Heading
     a1f3a88e-94a9-4194-ac86-2094f3139800: 'Alt Text' # Alt Text
+    a3ae8ea3-e8c4-4b78-9e94-2f1b6c369c69: 'Circle One Title' # Circle One Title
+    a3cdd999-c3fc-4d2f-a5de-301411ad5a70: Icon # Icon
     a4ee6e6a-5a0e-43ad-8895-cfbdd7fc380e: Quote # Quote
     a22d3a49-613c-4ee7-91fe-b7f53cee7c17: Image # Image
     a508584e-1ffe-40d0-b35f-99660c237718: Byline # Byline
@@ -35,9 +53,13 @@ meta:
     c45af8f2-0194-472a-aa1d-297d47f219dd: 'Image Text Callout' # Image Text Callout
     cd00da43-db7c-459e-abfb-146eee568442: Text # Text
     d56e90ea-7c5e-467d-98b5-21cd9da25265: Program # Program
+    d65488cf-da81-4f72-9bbe-fa5a431ea58c: Link # Link
     dc8aa44c-8bb9-4af8-9b34-7b36994436a6: 'Public Schema' # Public Schema
+    f1c46d56-d25f-4cbc-951e-a21750490f4c: 'Circle Two Detatils' # Circle Two Detatils
     f3e7b2d6-8552-4d6a-9ede-77aa7c23148f: Style # Style
+    f7ac697b-127d-45a2-9dfe-01eabcb03860: Image # Image
     f12cc11a-ba0b-4b6c-bdc2-1e3c06b236e5: Program # Program
+    f323fcb5-9626-4614-b8f7-fa9b438bb967: 'Image Text Callout 3' # Image Text Callout 3
 plugins:
   expanded-singles:
     edition: standard
