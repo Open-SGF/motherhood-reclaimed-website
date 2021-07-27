@@ -35,6 +35,10 @@
             padding-bottom: 48px
         }
 
+        .h3 {
+            text-align: left;
+        }
+
         p {
             font-family: $primary-font;
         }
@@ -69,7 +73,7 @@
         }
 
         .flourish {
-            right: 35%;
+            right: calc(35% + 1px);
         }
     }
 
@@ -87,7 +91,7 @@
         }
 
         .flourish {
-            left: 35%;
+            left: calc(35% + 1px);
         }
     }
 }
