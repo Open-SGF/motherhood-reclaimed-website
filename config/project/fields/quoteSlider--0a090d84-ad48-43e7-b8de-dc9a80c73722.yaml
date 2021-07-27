@@ -1,0 +1,42 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6e6939c4-3ced-47e1-856a-770599b5aa63 # Common
+handle: quoteSlider
+instructions: ''
+name: 'Quote Slider'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - a22d3a49-613c-4ee7-91fe-b7f53cee7c17 # Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - a4ee6e6a-5a0e-43ad-8895-cfbdd7fc380e # Quote
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - a508584e-1ffe-40d0-b35f-99660c237718 # Byline
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_quoteslider}}'
+  fieldLayout: row
+  maxRows: '5'
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: 'Add a slide'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

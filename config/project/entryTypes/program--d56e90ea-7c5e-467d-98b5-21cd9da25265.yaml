@@ -1,5 +1,5 @@
 fieldLayouts:
-  f4ad3938-1703-4590-8027-fe82cc4de596:
+  f1cb3374-19fe-44af-911d-36b1449051f1:
     tabs:
       -
         elements:
@@ -28,11 +28,11 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: pages
-hasTitleField: true
-name: Pages
-section: 70661057-ffc3-481e-8bb3-d78b17e48f12 # Pages
+handle: program
+hasTitleField: false
+name: Program
+section: f12cc11a-ba0b-4b6c-bdc2-1e3c06b236e5 # Program
 sortOrder: 1
-titleFormat: null
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

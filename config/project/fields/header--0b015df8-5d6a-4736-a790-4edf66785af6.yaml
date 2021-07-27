@@ -1,0 +1,49 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6e6939c4-3ced-47e1-856a-770599b5aa63 # Common
+handle: header
+instructions: ''
+name: Header
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 614d595f-9aa4-4f3f-802a-db563d4424b9 # Style
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - c15ef70e-1d8c-4426-971e-37f7b851236b # Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 72a09d08-9fda-45ca-aed7-ed78d15c7b8e # Title
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 8748f9b3-2676-43c6-a13d-53f1d8c800ea # Text
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_header}}'
+  fieldLayout: row
+  maxRows: '1'
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: 'Add Header'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

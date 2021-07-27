@@ -1,0 +1,56 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6e6939c4-3ced-47e1-856a-770599b5aa63 # Common
+handle: imageTextCallout2
+instructions: ''
+name: 'Image Text Callout 2'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 67f17e0c-cfbb-4727-8919-3dec852a482c # Style
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 0d2cda9a-4534-4181-b816-6a358edf853c # Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 31039678-dd5e-4a4b-a645-885b6691794c # Heading
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - cd00da43-db7c-459e-abfb-146eee568442 # Text
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 5c32995c-e7a7-4a60-b0da-9d1da2b2025f # Link
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_imagetextcallout2}}'
+  fieldLayout: row
+  maxRows: '1'
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: 'Add Image Text Callout'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

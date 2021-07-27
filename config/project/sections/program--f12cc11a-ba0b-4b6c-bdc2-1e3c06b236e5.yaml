@@ -1,14 +1,12 @@
+defaultPlacement: end
 enableVersioning: true
-handle: pages
-name: Pages
+handle: program
+name: Program
 propagationMethod: all
 siteSettings:
   aafb4ab4-f661-4486-8571-0def4630ed2c: # Motherhood Reclaimed
     enabledByDefault: true
     hasUrls: true
-    template: pages/_entry
-    uriFormat: '{slug}'
-structure:
-  maxLevels: null
-  uid: d308ed17-0cae-4b12-adb0-a0f1ef7de710
-type: structure
+    template: _pages/program
+    uriFormat: program
+type: single

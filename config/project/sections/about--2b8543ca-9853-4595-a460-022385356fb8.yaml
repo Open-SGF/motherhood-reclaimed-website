@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: about
+name: About
+propagationMethod: all
+siteSettings:
+  aafb4ab4-f661-4486-8571-0def4630ed2c: # Motherhood Reclaimed
+    enabledByDefault: true
+    hasUrls: true
+    template: _pages/about
+    uriFormat: about
+type: single
