@@ -1,5 +1,9 @@
 <footer>
-    {% include '_modules/prefooter-callout.twig' %}
+    {% include '_modules/prefooter-callout.twig' with {
+        text: prefooterObj.text,
+        button: prefooterObj.button
+    }%}
+
     <div class="footer h5">
         <div class="container">
             <div class="footer-list">
