@@ -1,0 +1,49 @@
+fieldLayouts:
+  2bdae3a9-4744-4d7a-9296-d446fdc52be1:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\AssetTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: a1f3a88e-94a9-4194-ac86-2094f3139800 # Alt Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: public
+hasUrls: true
+name: Public
+settings:
+  path: '@webroot/assets'
+sortOrder: 1
+titleTranslationKeyFormat: null
+titleTranslationMethod: null
+type: craft\volumes\Local
+url: $PRIMARY_SITE_URL/assets
