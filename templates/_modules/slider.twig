@@ -1,13 +1,15 @@
-<section class="feature-slider container">
+<section class="feature-slider">
     <div class="purple-filter"></div>
     <section class="js-slider slider">
         {% for slide in slides %}
-        <div class="slide-text">
-            <div class="text-centerer">
-                <p class="quote h3">{{ slide.quote }}</p>
-                <p class="person-quoted">-{{ slide.person }}</p>
+            <div class="container">
+                <div class="slide-text">
+                    <div class="text-centerer">
+                        <p class="quote h3">{{ slide.quote }}</p>
+                        <p class="person-quoted">-{{ slide.person }}</p>
+                    </div>
+                </div>
             </div>
-        </div>
         {% endfor %}
     </section>
 </section>
