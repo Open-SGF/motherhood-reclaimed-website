@@ -1,7 +1,8 @@
 .icon-callout-set {
     font-family: $secondary-font;
     text-align: center;
-    padding-top: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 
     .title {
         margin-bottom: 50px;
@@ -12,6 +13,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        margin-bottom: -150px;
 
         li {
             width: 25%;
