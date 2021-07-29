@@ -164,6 +164,9 @@
 
     .slick-prev {
         left: 30px;
+        @include mq-above(1650px) {
+            left: calc(((100vw - 1650px) / 2) + 30px);
+        }
         border-bottom: 3px solid white;
         border-left: 3px solid white;
         transform: rotate(45deg);
@@ -175,6 +178,9 @@
 
     .slick-next {
         right: 30px;
+        @include mq-above(1650px) {
+            right: calc(((100vw - 1650px) / 2) + 30px);
+        }
         border-bottom: 3px solid white;
         border-right: 3px solid white;
         transform: rotate(-45deg);
