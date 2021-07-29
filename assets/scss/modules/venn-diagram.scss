@@ -1,5 +1,9 @@
 .venn-diagram {
     // This wrapper is to separate the .container class from this display: flex;
+
+    margin-bottom: 75px;
+    margin-top: 100px;
+
     .util-container {
         display: flex;
         flex-wrap: wrap;
