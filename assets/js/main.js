@@ -10,8 +10,7 @@ Array.from(accordions).forEach((accordion) => {
 });
 
 /* Code for the Slick Carousel/Slider, based on https://jimfrenette.com/2019/04/slick-carousel-responsive-slides-to-show/ */
-(function () {
-    let $el = $('.variable');
+    let $el = $('.js-slider');
 
     init();
 
@@ -23,42 +22,13 @@ Array.from(accordions).forEach((accordion) => {
             autoplaySpeed: 4000,
             autoplay: true,
             arrows: true,
-            draggable: false,
+            draggable: true,
             dots: false,
             infinite: true,
             mobileFirst: true,
-            responsive: [{
-                breakpoint: 980,
-                settings: {
-                    arrows: true,
-                    slidesToShow: 1,
-                    draggable: true,
-                }
-            }]
+            slidesToShow: 1,
         });
-
-        let resizeTimeout;
-        $(window).on('resize', () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(setSlidesToShow(), 500);
-        })
     };
 
-    function carouselInit(event, slick) {
-        // https://github.com/kenwheeler/slick/issues/1802
-        setTimeout(() => setSlidesToShow(), 0);
-    };
-
-    function setSlidesToShow() {
-        if ($(window).width() >= 980) {
-            return;
-        }
-
-        $el.slick('slickSetOption', 'slidesToShow', 1);
-
-        // refresh to apply slick-slide classes, dots etc. as needed
-        $el.slick('resize');
-    };
-})();
 
 
