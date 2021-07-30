@@ -89,7 +89,7 @@ fields:
     translationMethod: site
     type: craft\fields\Assets
   02836994-516e-4348-a917-09890dead174: # Details
-    columnSuffix: hmnybszc
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: details

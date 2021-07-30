@@ -1,55 +1,41 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: 6e6939c4-3ced-47e1-856a-770599b5aa63 # Common
-handle: imageTextCallout3
+handle: photoGrid
 instructions: ''
-name: 'Image Text Callout 3'
+name: 'Photo Grid'
 searchable: false
 settings:
   columns:
     __assoc__:
       -
-        - f3e7b2d6-8552-4d6a-9ede-77aa7c23148f # Style
+        - 87c9a6ff-d9f6-4b1f-8883-e3e6c74b283f # Image
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - bb228fbb-ccae-4893-99ba-8942d82e8ac4 # Image
+        - 7bd9f5d9-d14b-4a06-86a0-5abc9bc6698c # Title
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 1acaf2e5-572e-47d4-ad09-e21ea2272505 # Heading
+        - 6378969d-bf97-46e5-afff-33585a3c0631 # Details
         -
           __assoc__:
             -
               - width
               - ''
-      -
-        - 2a845f9e-9189-43b8-ba9d-471e27939299 # Text
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 4fa720a8-f11d-4303-b843-f5544f1a1299 # Link
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-  contentTable: '{{%stc_imagetextcallout3}}'
+  contentTable: '{{%stc_photogrid}}'
   fieldLayout: row
-  maxRows: '1'
+  maxRows: ''
   minRows: ''
   placeholderKey: null
   propagationMethod: all
-  selectionLabel: 'Add Image Text Callout'
+  selectionLabel: 'Add a Photo'
   staticField: ''
 translationKeyFormat: null
 translationMethod: site

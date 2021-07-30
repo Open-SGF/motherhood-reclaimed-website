@@ -22,9 +22,16 @@ settings:
             -
               - width
               - ''
+      -
+        - 02836994-516e-4348-a917-09890dead174 # Details
+        -
+          __assoc__:
+            -
+              - width
+              - ''
   contentTable: '{{%stc_iconcalloutset}}'
   fieldLayout: row
-  maxRows: '8'
+  maxRows: '4'
   minRows: ''
   placeholderKey: null
   propagationMethod: all

@@ -1,4 +1,4 @@
-dateModified: 1627397740
+dateModified: 1627604005
 email:
   fromEmail: me@levizitting.com
   fromName: 'Motherhood Reclaimed'
@@ -14,7 +14,7 @@ meta:
     1e4a47ce-b58a-4a80-b52e-f1fb3e62a74f: 'Circle Two Title' # Circle Two Title
     2a845f9e-9189-43b8-ba9d-471e27939299: Text # Text
     2b8543ca-9853-4595-a460-022385356fb8: About # About
-    2e8df2b6-8494-4d78-9623-dbd98f01ae2e: 'Icon Callout Set 2' # Icon Callout Set 2
+    2e8df2b6-8494-4d78-9623-dbd98f01ae2e: 'Photo Grid' # Photo Grid
     2f1ebb54-897a-4e6b-82d9-8b56c7ae4aa2: Title # Title
     4fa720a8-f11d-4303-b843-f5544f1a1299: Link # Link
     5c32995c-e7a7-4a60-b0da-9d1da2b2025f: Link # Link
@@ -59,7 +59,6 @@ meta:
     f3e7b2d6-8552-4d6a-9ede-77aa7c23148f: Style # Style
     f7ac697b-127d-45a2-9dfe-01eabcb03860: Image # Image
     f12cc11a-ba0b-4b6c-bdc2-1e3c06b236e5: Program # Program
-    f323fcb5-9626-4614-b8f7-fa9b438bb967: 'Image Text Callout 3' # Image Text Callout 3
 plugins:
   expanded-singles:
     edition: standard
