@@ -25,6 +25,8 @@
 
     <main id="content">
         {% block main %}{% endblock %}
+        {% include '_modules/accordion.twig' %}
+        {% include '_modules/photo-grid.twig' %}
     </main>
 
     {% include '_modules/footer.twig' %}

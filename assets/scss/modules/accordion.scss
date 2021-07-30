@@ -28,6 +28,8 @@
             color: getColor(black);
             font-family: $secondary-font;
             text-align: left;
+            padding: 5px 15px !important;
+            font-weight: bold;
 
             @include base-trans;
             display: flex;
