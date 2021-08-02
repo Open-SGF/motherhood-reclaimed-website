@@ -9,28 +9,14 @@ settings:
   columns:
     __assoc__:
       -
-        - a3ae8ea3-e8c4-4b78-9e94-2f1b6c369c69 # Circle One Title
+        - a3ae8ea3-e8c4-4b78-9e94-2f1b6c369c69 # Circle Title
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 0e1c9034-ad6b-4cf2-91d5-e3e6c59643d9 # Circle One Details
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 1e4a47ce-b58a-4a80-b52e-f1fb3e62a74f # Circle Two Title
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - f1c46d56-d25f-4cbc-951e-a21750490f4c # Circle Two Detatils
+        - 0e1c9034-ad6b-4cf2-91d5-e3e6c59643d9 # Circle Details
         -
           __assoc__:
             -
@@ -38,11 +24,11 @@ settings:
               - ''
   contentTable: '{{%stc_venndiagram}}'
   fieldLayout: row
-  maxRows: '1'
+  maxRows: '2'
   minRows: ''
   placeholderKey: null
   propagationMethod: all
-  selectionLabel: 'Add Venn Diagram'
+  selectionLabel: 'Add Circle'
   staticField: ''
 translationKeyFormat: null
 translationMethod: site

@@ -1,4 +1,4 @@
-dateModified: 1627604005
+dateModified: 1627947031
 email:
   fromEmail: me@levizitting.com
   fromName: 'Motherhood Reclaimed'
@@ -9,7 +9,7 @@ meta:
     0b015df8-5d6a-4736-a790-4edf66785af6: Header # Header
     0ba69eab-d56c-4035-ac72-04a24930d9c0: 'Title 2' # Title 2
     0d2cda9a-4534-4181-b816-6a358edf853c: Image # Image
-    0e1c9034-ad6b-4cf2-91d5-e3e6c59643d9: 'Circle One Details' # Circle One Details
+    0e1c9034-ad6b-4cf2-91d5-e3e6c59643d9: 'Circle Details' # Circle Details
     1acaf2e5-572e-47d4-ad09-e21ea2272505: Heading # Heading
     1e4a47ce-b58a-4a80-b52e-f1fb3e62a74f: 'Circle Two Title' # Circle Two Title
     2a845f9e-9189-43b8-ba9d-471e27939299: Text # Text
@@ -42,7 +42,7 @@ meta:
     22203198-8068-469b-8793-74e5f04db737: Home # Home
     31039678-dd5e-4a4b-a645-885b6691794c: Heading # Heading
     a1f3a88e-94a9-4194-ac86-2094f3139800: 'Alt Text' # Alt Text
-    a3ae8ea3-e8c4-4b78-9e94-2f1b6c369c69: 'Circle One Title' # Circle One Title
+    a3ae8ea3-e8c4-4b78-9e94-2f1b6c369c69: 'Circle Title' # Circle Title
     a3cdd999-c3fc-4d2f-a5de-301411ad5a70: Icon # Icon
     a4ee6e6a-5a0e-43ad-8895-cfbdd7fc380e: Quote # Quote
     a22d3a49-613c-4ee7-91fe-b7f53cee7c17: Image # Image

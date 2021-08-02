@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: a3ae8ea3-e8c4-4b78-9e94-2f1b6c369c69 # Circle One Title
+            fieldUid: a3ae8ea3-e8c4-4b78-9e94-2f1b6c369c69 # Circle Title
             instructions: null
             label: null
             required: false
@@ -14,25 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 0e1c9034-ad6b-4cf2-91d5-e3e6c59643d9 # Circle One Details
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 1e4a47ce-b58a-4a80-b52e-f1fb3e62a74f # Circle Two Title
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: f1c46d56-d25f-4cbc-951e-a21750490f4c # Circle Two Detatils
+            fieldUid: 0e1c9034-ad6b-4cf2-91d5-e3e6c59643d9 # Circle Details
             instructions: null
             label: null
             required: false
@@ -43,73 +25,42 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  0e1c9034-ad6b-4cf2-91d5-e3e6c59643d9: # Circle One Details
+  0e1c9034-ad6b-4cf2-91d5-e3e6c59643d9: # Circle Details
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: circleOneDetails
+    handle: circleDetails
     instructions: ''
-    name: 'Circle One Details'
+    name: 'Circle Details'
     searchable: false
     settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: null
-      uiMode: normal
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
     translationKeyFormat: null
     translationMethod: none
-    type: craft\fields\PlainText
-  1e4a47ce-b58a-4a80-b52e-f1fb3e62a74f: # Circle Two Title
+    type: craft\redactor\Field
+  a3ae8ea3-e8c4-4b78-9e94-2f1b6c369c69: # Circle Title
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: circleTwoTitle
+    handle: circleTitle
     instructions: ''
-    name: 'Circle Two Title'
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  a3ae8ea3-e8c4-4b78-9e94-2f1b6c369c69: # Circle One Title
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: circleOneTitle
-    instructions: ''
-    name: 'Circle One Title'
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: ''
-      columnType: null
-      initialRows: '4'
-      multiline: ''
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\PlainText
-  f1c46d56-d25f-4cbc-951e-a21750490f4c: # Circle Two Detatils
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: circleTwoDetatils
-    instructions: ''
-    name: 'Circle Two Detatils'
+    name: 'Circle Title'
     searchable: false
     settings:
       byteLimit: null
