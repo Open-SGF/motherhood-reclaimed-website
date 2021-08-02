@@ -1,16 +1,34 @@
-
 import $ from 'jquery';
-
-console.log($);
-
-// Added by Ethan Zitting for the badger accordion html module
-// Importing accordion
 import BadgerAccordion from 'badger-accordion';
+import 'slick-carousel';
 
+/* Code for the BadgerAccordion */
 const accordions = document.querySelectorAll('.js-badger-accordion');
 
 Array.from(accordions).forEach((accordion) => {
     const ba = new BadgerAccordion(accordion);
-
-    // console.log(ba.getState([0]));
 });
+
+/* Code for the Slick Carousel/Slider, based on https://jimfrenette.com/2019/04/slick-carousel-responsive-slides-to-show/ */
+    let $el = $('.js-slider');
+
+    init();
+
+    function init() {
+        $el.on('init', (event, slick, currentSlide) => carouselInit(event, slick));
+
+        $el.slick({
+            accessibility: true,
+            autoplaySpeed: 4000,
+            autoplay: true,
+            arrows: true,
+            draggable: true,
+            dots: false,
+            infinite: true,
+            mobileFirst: true,
+            slidesToShow: 1,
+        });
+    };
+
+
+

@@ -1,0 +1,20 @@
+{#
+/**
+ * Available variables:
+ * - slides: an array of slide objects which have quote and person attributes
+ */
+#}
+
+<section class="feature-slider">
+    <div class="purple-filter"></div>
+    <section class="js-slider slider">
+        {% for slide in slides %}
+            <div class="slide-text container">
+                <div class="text-wrapper">
+                    <p class="quote h3">{{ slide.quote }}</p>
+                    <p class="person-quoted">-{{ slide.person }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+</section>
