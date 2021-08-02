@@ -2,6 +2,19 @@ main {
     padding-top: $navigation-desktop-height;
 }
 
+.skip-nav {
+    z-index: z-index(skip-nav);
+    position: absolute;
+    transform: translateY(-125%);
+    transition: transform 0.25s;
+    top: 15px;
+    left: 40px;
+
+    &:focus {
+        transform: translateY(0%);
+    }
+}
+
 .navigation {
     position: fixed;
     top: 0;
