@@ -1,0 +1,42 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6e6939c4-3ced-47e1-856a-770599b5aa63 # Common
+handle: iconCalloutSet
+instructions: ''
+name: 'Icon Callout Set'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 3472c050-802a-4ee5-8100-4f47a5ec45fa # Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 2f1ebb54-897a-4e6b-82d9-8b56c7ae4aa2 # Title
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 02836994-516e-4348-a917-09890dead174 # Details
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_iconcalloutset}}'
+  fieldLayout: row
+  maxRows: '4'
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: 'Add an Icon'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

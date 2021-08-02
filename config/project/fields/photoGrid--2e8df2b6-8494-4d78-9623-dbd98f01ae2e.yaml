@@ -1,0 +1,42 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6e6939c4-3ced-47e1-856a-770599b5aa63 # Common
+handle: photoGrid
+instructions: ''
+name: 'Photo Grid'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 87c9a6ff-d9f6-4b1f-8883-e3e6c74b283f # Image
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 7bd9f5d9-d14b-4a06-86a0-5abc9bc6698c # Title
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 6378969d-bf97-46e5-afff-33585a3c0631 # Details
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_photogrid}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationMethod: all
+  selectionLabel: 'Add a Photo'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField
