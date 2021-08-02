@@ -1,14 +1,22 @@
+{#
+/**
+* Available variables:
+* - text: the main body of text in the module
+* - button: object containing href and text variables
+*/
+#}
+{% autoescape false %}
 <section class="prefooter-callout">
     <div class="pfc-background">
     </div>
     <div class="container">
         <div class="pfc-content">
-            <h2>Want to Learn More?</h2>
+            <h2>{{ text }}</h2>
             <a
-                {# TODO: insert correct URL #}
-                href="#"
+                href="{{ button.href }}"
                 class="btn btn-outline">
-                Contact Us</a>
+                {{ button.text }}</a>
         </div>
     </div>
 </section>
+{% endautoescape %}

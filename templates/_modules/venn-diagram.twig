@@ -1,16 +1,26 @@
+{#
+/**
+* Available variables:
+* - circleOne: an object containing title and details variables
+* - circleTwo: an object containing title and details variables
+*/
+#}
+
+{% autoescape false %}
 <section class="venn-diagram container">
     <div class="util-container">
         <div class="first-circle">
-            <div class="venn-text">
-                <h3>Our Vision</h3>
-                <p>Motherhood Reclaimed seeks to support mothers as they work toward maintaining or regaining custody of their children.</p>
+            <div class="circle-text">
+                <h3>{{ circleOne.title }}</h3>
+                <p>{{ circleOne.details }}</p>
             </div>
         </div>
         <div class="second-circle">
-            <div class="venn-text">
-                <h3>Our Mission</h3>
-                <p>Providing judgement-free dignified resources, support, connection, classes, and guidance for mothers with Children’s Division involvement.</p>
+            <div class="circle-text">
+                <h3>{{ circleTwo.title }}</h3>
+                <p>{{ circleTwo.details }}</p>
             </div>
         </div>
     </div>
 </section>
+{% endautoescape %}
