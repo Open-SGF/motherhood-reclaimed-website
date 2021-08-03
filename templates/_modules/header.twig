@@ -3,16 +3,22 @@
  * Available variables:
  * - style: either 'text-left' or 'text-right', toggles between header styles
  * - title: an optional main title for the header
- * - details: the optional main body of text for the header
- * - imgSrc: the main image for the module
- * - imgAlt: the alt text for the main img variable
- * - svgSrc: the flourish separating the image and text
+ * - text: the optional main body of text for the header
+ * - image: the main image for the module
  */
 #}
 
-<section class="header {{ style }}">
-    <div class="image" style="background-image: url('{{ imgSrc }}');" role="img" arial-label="{{ imgAlt }}"></div>
-    <img class="flourish" src="{{ svgSrc }}">
+{% if style == 'style1' %}
+    {% set styleClass = 'text-left' %}
+    {% set svg = '/img/text-left.svg' %}
+{% else %}
+    {% set styleClass = 'text-right' %}
+    {% set svg = '/img/text-right.svg' %}
+{% endif %}
+
+<section class="header {{ styleClass }}">
+    <div class="image" style="background-image: url('{{ image.getUrl() }}');" role="img" arial-label="{{ image.altText }}"></div>
+    <img class="flourish" src="{{ svg }}">
     <div class="background"></div>
     <div class="container">
         <div class="content">
@@ -20,8 +26,8 @@
                 <h1 class="{% if title|length >= 20 %}h3{% endif %}">
                     {{ title }}
                 </h1>
-                {% if details is defined and details != '' %}
-                    <p>{{ details }}</p>
+                {% if text is defined and text != '' %}
+                    {{ text|raw }}
                 {% endif %}
             </div>
         </div>

@@ -1,4 +1,14 @@
 {% extends '_base.twig' %}
 
 {% block main %}
+    {% set header = entry.header.with(['image']).one() %}
+    {% if header %}
+        {% set image = header.image|first %}
+        {% include '_modules/header.twig' with {
+            style: header.style.value,
+            image: image,
+            title: header.customTitle,
+            text: header.text,
+        } %}
+    {% endif %}
 {% endblock %}
