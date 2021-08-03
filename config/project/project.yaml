@@ -1,4 +1,4 @@
-dateModified: 1627950345
+dateModified: 1627952306
 email:
   fromEmail: me@levizitting.com
   fromName: 'Motherhood Reclaimed'
@@ -55,6 +55,7 @@ meta:
     d56e90ea-7c5e-467d-98b5-21cd9da25265: Program # Program
     d65488cf-da81-4f72-9bbe-fa5a431ea58c: Link # Link
     dc8aa44c-8bb9-4af8-9b34-7b36994436a6: 'Public Schema' # Public Schema
+    e170d527-1ae4-4311-a168-e1e707fc1237: SEO # SEO
     f1c46d56-d25f-4cbc-951e-a21750490f4c: 'Circle Two Detatils' # Circle Two Detatils
     f3e7b2d6-8552-4d6a-9ede-77aa7c23148f: Style # Style
     f7ac697b-127d-45a2-9dfe-01eabcb03860: Image # Image
@@ -82,6 +83,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  seomatic:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.10
   super-table:
     edition: standard
     enabled: true
