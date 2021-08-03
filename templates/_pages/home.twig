@@ -24,6 +24,13 @@
         } %}
     {% endif %}
 
+    {% set quoteSlides = entry.quoteSlider.with(['image']).all() %}
+    {% if quoteSlides|length %}
+        {% include '_modules/slider.twig' with {
+            slides: quoteSlides,
+        } %}
+    {% endif %}
+
 
     {% set imageTextCallout2 = entry.imageTextCallout2.with(['image']).one() %}
     {% if imageTextCallout2 %}
