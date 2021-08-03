@@ -1,26 +1,29 @@
 {#
 /**
  * Available variables:
- * - directionClass: determines if the image is on the left or right of the module, default is left, add 'image-right' to set it to right.
- * - imgSrc: src to the main module image
- * - altText: alt text for the main module image
+ * - style: determines if the image is on the left or right of the module,
+ * - image: main module image
  * - title: main title for the module
- * - details: main body of text for the module
- * - button: an object containing href and text variables
+ * - text: main body of text for the module
+ * - link: an object containing link data
  */
 #}
+
+{% set directionClass = style == 'imageRight' ? 'image-right' : 'image-left' %}
 {% autoescape false %}
-<section class="image-text-callout">
-    <div class="container callout {{ directionClass }}">
+<section class="image-text-callout {{ directionClass }}">
+    <div class="container callout">
         <div class="image-wrapper">
-            <img class="image" src="{{ imgSrc }}" alt="{{ altText }}">
+            <img class="image" src="{{ image.getUrl() }}" alt="{{ image.altText }}">
         </div>
 
         <div class="text-wrapper">
             <h2 class="centered">{{ title }}</h2>
-            <p>{{ details }}</p>
+            <div>
+                {{ text|raw }}
+            </div>
             <div class="centered">
-                <a href="{{ button.href }}" class="btn btn-primary">{{ button.text }}</a>
+                {{ link.getLink({ class: 'btn btn-primary' }) }}
             </div>
         </div>
     </div>

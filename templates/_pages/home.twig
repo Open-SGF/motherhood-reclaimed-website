@@ -11,4 +11,29 @@
             text: header.text,
         } %}
     {% endif %}
+
+    {% set imageTextCallout = entry.imageTextCallout.with(['image']).one() %}
+    {% if imageTextCallout %}
+        {% set image = imageTextCallout.image|first %}
+        {% include '_modules/image-text-callout.twig' with {
+            style: imageTextCallout.style.value,
+            image: image,
+            title: imageTextCallout.heading,
+            text: imageTextCallout.text,
+            link: imageTextCallout.customLink,
+        } %}
+    {% endif %}
+
+
+    {% set imageTextCallout2 = entry.imageTextCallout2.with(['image']).one() %}
+    {% if imageTextCallout2 %}
+        {% set image = imageTextCallout2.image|first %}
+        {% include '_modules/image-text-callout.twig' with {
+            style: imageTextCallout2.style.value,
+            image: image,
+            title: imageTextCallout2.heading,
+            text: imageTextCallout2.text,
+            link: imageTextCallout2.customLink,
+        } %}
+    {% endif %}
 {% endblock %}
