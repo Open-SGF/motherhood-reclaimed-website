@@ -20,13 +20,33 @@
 </head>
 <body>
 
+{% set accordionObj = {
+    title: 'Lasagna',
+    panels: [
+        {
+            title: 'Bruh',
+            details: 'Its yah boy'
+        },
+        {
+            title: 'Bruh',
+            details: 'Its yah boy'
+        },
+        {
+            title: 'Bruh',
+            details: 'Its yah boy'
+        }
+    ]
+}%}
+
 <div class="page-wrapper">
     {% include '_modules/navigation.twig' %}
 
     <main id="content">
         {% block main %}{% endblock %}
-        {% include '_modules/accordion.twig' %}
-        {% include '_modules/photo-grid.twig' %}
+        {% include '_modules/accordion.twig' with {
+            title: accordionObj.title,
+            panels: accordionObj.panels
+        }%}
     </main>
 
     {% include '_modules/footer.twig' %}
