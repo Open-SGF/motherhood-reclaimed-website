@@ -7,6 +7,9 @@
 
     font-family: $primary-font;
     background-color: getColor(primary, mid-dark);
+    background-image: url(/img/flower.png);
+    background-repeat: no-repeat;
+    background-position: top left;
     padding-top: 75px;
     padding-bottom: 100px;
 
