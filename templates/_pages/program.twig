@@ -15,6 +15,7 @@
     {% endif %}
 
     {# Code for icon callout module #}
+<<<<<<< HEAD
 
     {% set iconTitle = entry.customTitle %}
     {% set iconCalloutSet = entry.iconCalloutSet.with(['image']).all() %}
@@ -36,6 +37,26 @@
         {% include '_modules/accordion.twig' with {
             tableTitle: accordionTitle,
             panel: accordion,
+=======
+    {% set iconCalloutSet = entry.iconCalloutSet.with(['image']).one() %}
+    {% if iconCalloutSet %}
+        {% set image = iconCalloutSet.image|first %}
+        {% include '_modules/icon-callout-set.twig' with {
+            style: iconCalloutSet.style.value,
+            image: image,
+            title: iconCalloutSet.customTitle,
+            text: iconCalloutSet.details
+        } %}
+    {% endif %}
+
+    {# Code for accordion module #}
+    {% set accordion = entry.accordionTable %}
+    {% if accordion %}
+        {% include '_modules/accordion.twig' with {
+            style: accordion.style.value,
+            panel.title: accordion.sectionTitle,
+            panel.details: accordion.sectionDetails
+>>>>>>> 4f7c60a... created twig file for program page
         } %}
     {% endif %}
 
