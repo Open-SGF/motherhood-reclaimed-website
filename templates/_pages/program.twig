@@ -27,12 +27,11 @@
     {% endif %}
 
     {# Code for accordion module #}
-    {% set accordion = entry.accordionTable %}
+    {% set accordion = entry.accordionTable.all() %}
     {% if accordion %}
         {% include '_modules/accordion.twig' with {
             style: accordion.style.value,
-            panel.title: accordion.sectionTitle,
-            panel.details: accordion.sectionDetails
+            panel: accordion,
         } %}
     {% endif %}
 
