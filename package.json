@@ -34,7 +34,7 @@
     "slick-carousel": "^1.8.1"
   },
   "browserslist": [
-      "defaults",
-      "IE 11"
+    "defaults",
+    "IE 11"
   ]
 }
