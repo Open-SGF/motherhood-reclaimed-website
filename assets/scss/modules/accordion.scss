@@ -1,4 +1,5 @@
 .accordion {
+    position: relative;
     $transition-time: 0.2s;
 
     @mixin base-trans {
@@ -9,6 +10,20 @@
     background-color: getColor(primary, mid-dark);
     padding-top: 75px;
     padding-bottom: 100px;
+
+    .flower-img-one {
+        position: absolute;
+        opacity: 50%;
+        top: -500px;
+        left: -240px;
+    }
+
+    .flower-img-two {
+        position: absolute;
+        opacity: 50%;
+        top: 40px;
+        left: 1000px;
+    }
 
     .accordion-title {
         color: white;
@@ -28,6 +43,8 @@
             color: getColor(black);
             font-family: $secondary-font;
             text-align: left;
+            padding: 5px 15px !important;
+            font-weight: bold;
 
             @include base-trans;
             display: flex;
@@ -43,6 +60,7 @@
                 background-color: getColor(primary, mid-gray);
                 cursor: pointer;
                 outline: none;
+                color: white;
             }
 
             &-icon {
