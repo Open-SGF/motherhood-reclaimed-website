@@ -1,4 +1,4 @@
-dateModified: 1628021531
+dateModified: 1628555466
 email:
   fromEmail: me@levizitting.com
   fromName: 'Motherhood Reclaimed'
@@ -56,6 +56,7 @@ meta:
     cc7f61af-8cf9-41ca-b8a7-d287e96e56c7: 'Accordion Table' # Accordion Table
     cd00da43-db7c-459e-abfb-146eee568442: Text # Text
     d56e90ea-7c5e-467d-98b5-21cd9da25265: Program # Program
+    d95c07b6-7cb8-4c7f-817e-f923af63e938: 'Table Title' # Table Title
     d65488cf-da81-4f72-9bbe-fa5a431ea58c: Link # Link
     dc8aa44c-8bb9-4af8-9b34-7b36994436a6: 'Public Schema' # Public Schema
     e170d527-1ae4-4311-a168-e1e707fc1237: SEO # SEO

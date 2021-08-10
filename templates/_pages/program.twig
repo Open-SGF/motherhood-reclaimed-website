@@ -3,7 +3,7 @@
 {% block main %}
 
     {# Code for header block #}
-    {% set header = entry.header.with(['image']).all() %}
+    {% set header = entry.header.with(['image']).one() %}
     {% if header %}
         {% set image = header.image|first %}
         {% include '_modules/header.twig' with {
@@ -15,22 +15,26 @@
     {% endif %}
 
     {# Code for icon callout module #}
-    {% set iconCalloutSet = entry.iconCalloutSet.with(['image']).one() %}
-    {% if iconCalloutSet %}
-        {% set image = iconCalloutSet.image|first %}
-        {% include '_modules/icon-callout-set.twig' with {
-            style: iconCalloutSet.style.value,
-            image: image,
-            title: iconCalloutSet.customTitle,
-            text: iconCalloutSet.details
-        } %}
-    {% endif %}
+
+    {% set iconTitle = entry.customTitle %}
+    {% set iconCalloutSet = entry.iconCalloutSet.with(['image']).all() %}
+        {% if iconCalloutSet %}
+            {% set image = entry.image|first %}
+            {% include '_modules/icon-callout-set.twig' with {
+                sectionTitle: iconTitle,
+                image: image,
+                title: entry.customTitle,
+                text: entry.details,
+            } %}
+        {% endif %}
 
     {# Code for accordion module #}
+
+    {% set accordionTitle = entry.tableTitle %}
     {% set accordion = entry.accordionTable.all() %}
     {% if accordion %}
         {% include '_modules/accordion.twig' with {
-            style: accordion.style.value,
+            tableTitle: accordionTitle,
             panel: accordion,
         } %}
     {% endif %}
