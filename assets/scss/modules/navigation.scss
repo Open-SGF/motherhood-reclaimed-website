@@ -37,9 +37,74 @@ main {
         }
     }
 
+    .nav-toggle {
+        $box-size: 75px;
+        $bar-size: 40px;
+
+        @extend %button-reset;
+        height: $box-size;
+        width: $box-size;
+        border: 4px solid getColor(white);
+        position: relative;
+        
+        @include mq-above(medium) {
+            display: none;
+        }
+
+        .icon {
+            transition-duration: 500ms;
+            position: absolute;
+            height: 0;
+            width: $bar-size;
+            background-color: getColor(white);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: getColor(white);
+                transition-duration: 500ms;
+
+            }
+
+            &::before {
+                width: $bar-size;
+                height: 4px;
+                top: -12px;
+                left: 0;
+            }
+
+            &::after {
+                width: $bar-size;
+                height: 4px;
+                top: 12px;
+                left: 0;
+            }
+        }
+
+        &.open {
+            .icon {
+                &::before {
+                    transform: rotateZ(135deg) scaleX(1.25) translate(6px, -8px);
+                }
+
+                &::after {
+                    transform: rotateZ(-135deg) scaleX(1.25) translate(7px, 9px);
+                }
+            }
+        }
+    }
+
     .nav-links {
         display: flex;
         align-items: center;
+
+        @include mq-below(medium) {
+            display: none;
+        }
 
         li {
             display: flex;
@@ -55,11 +120,17 @@ main {
         color: getColor(primary, light);
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 4rem;
         transition: border 250ms ease-in-out, color 250ms ease-in-out;
         border-bottom: 4px solid transparent;
         line-height: 1;
         margin-right: 50px;
+
+        @include responsive-font((
+            min-size: 2.4rem,
+            max-size: 4rem,
+            upper-bound: breakpoint(large),
+            lower-bound: breakpoint(x-small),
+        ));
 
         &.active,
         &:focus,
