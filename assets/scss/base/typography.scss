@@ -25,8 +25,14 @@ p {
 
 h1, .h1 {
     @extend %heading;
-    font-size: $h1-font-size;
     line-height: $h1-line-height;
+
+    @include responsive-font((
+        min-size: 4rem,
+        max-size: 6.4rem,
+        upper-bound: breakpoint(large),
+        lower-bound: breakpoint(x-small),
+    ));
 }
 
 h2, .h2 {
@@ -34,10 +40,10 @@ h2, .h2 {
     line-height: $h2-line-height;
 
     @include responsive-font((
-        min-size: 5rem,
+        min-size: 4rem,
         max-size: 6.4rem,
         upper-bound: breakpoint(large),
-        lower-bound: breakpoint(medium),
+        lower-bound: breakpoint(x-small),
     ));
 }
 
@@ -57,6 +63,13 @@ h5, .h5 {
     @extend %heading;
     font-size: $h5-font-size;
     line-height: $h5-line-height;
+
+    @include responsive-font((
+        min-size: 2.4rem,
+        max-size: 3.6rem,
+        upper-bound: breakpoint(large),
+        lower-bound: breakpoint(x-small),
+    ));
 }
 
 h6, .h6 {
