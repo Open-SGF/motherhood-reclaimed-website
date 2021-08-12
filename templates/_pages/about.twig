@@ -29,4 +29,13 @@
         } %}
     {% endif %}
 
+    {% set photoGridTitle = entry.customTitle2 %}
+    {% set photoGrid = entry.photoGrid.all() %}
+    {% if photoGrid|length %}
+        {% include '_modules/photo-grid.twig' with {
+            title: photoGridTitle,
+            photos: photoGrid,
+        } %}
+    {% endif %}
+
 {% endblock %}
