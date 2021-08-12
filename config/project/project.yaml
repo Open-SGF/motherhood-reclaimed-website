@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 dateModified: 1628555466
+=======
+dateModified: 1628739041
+>>>>>>> d49d34f (changed text image callout to header on about page, changed title2 in cms to customTitle2, added working header to about.twig, started icon callout set)
 email:
   fromEmail: me@levizitting.com
   fromName: 'Motherhood Reclaimed'
@@ -90,7 +94,11 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
+<<<<<<< HEAD
     licenseKey: ERIVZXMCEY8OV6ZR2BTEMLI1
+=======
+    licenseKey: U2YJ4Q0C5ISMMZLETR4DQI49
+>>>>>>> d49d34f (changed text image callout to header on about page, changed title2 in cms to customTitle2, added working header to about.twig, started icon callout set)
     schemaVersion: 3.0.10
   super-table:
     edition: standard
