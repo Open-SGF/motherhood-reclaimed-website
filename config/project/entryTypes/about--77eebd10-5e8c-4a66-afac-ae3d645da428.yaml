@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 0b015df8-5d6a-4736-a790-4edf66785af6 # Header
+            fieldUid: c45af8f2-0194-472a-aa1d-297d47f219dd # Image Text Callout
             instructions: null
             label: null
             required: false
