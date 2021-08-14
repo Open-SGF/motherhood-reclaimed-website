@@ -24,9 +24,11 @@
         } %}
     {% endif %}
 
-    {% set quoteSlides = entry.quoteSlider.with(['image']).all() %}
+    {% set quoteSlides = entry.quoteSlider.with(['image']) %}
     {% if quoteSlides|length %}
+        {% set image = quoteSlides.image|first %}
         {% include '_modules/slider.twig' with {
+            image: image,
             slides: quoteSlides,
         } %}
     {% endif %}

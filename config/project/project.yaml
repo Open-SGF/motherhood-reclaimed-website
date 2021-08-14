@@ -1,4 +1,4 @@
-dateModified: 1627952306
+dateModified: 1628948232
 email:
   fromEmail: me@levizitting.com
   fromName: 'Motherhood Reclaimed'
@@ -86,6 +86,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
+    licenseKey: 3VWWKOVWBX5I7DSFFUFNV8A2
     schemaVersion: 3.0.10
   super-table:
     edition: standard
