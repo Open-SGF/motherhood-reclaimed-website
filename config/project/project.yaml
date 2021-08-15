@@ -1,4 +1,4 @@
-dateModified: 1628948232
+dateModified: 1629036416
 email:
   fromEmail: me@levizitting.com
   fromName: 'Motherhood Reclaimed'
@@ -48,6 +48,7 @@ meta:
     a22d3a49-613c-4ee7-91fe-b7f53cee7c17: Image # Image
     a508584e-1ffe-40d0-b35f-99660c237718: Byline # Byline
     aafb4ab4-f661-4486-8571-0def4630ed2c: 'Motherhood Reclaimed' # Motherhood Reclaimed
+    babe8e61-1a61-4917-962b-ef04f2fa447c: simpleImage # simpleImage
     bb228fbb-ccae-4893-99ba-8942d82e8ac4: Image # Image
     c15ef70e-1d8c-4426-971e-37f7b851236b: Image # Image
     c45af8f2-0194-472a-aa1d-297d47f219dd: 'Image Text Callout' # Image Text Callout
