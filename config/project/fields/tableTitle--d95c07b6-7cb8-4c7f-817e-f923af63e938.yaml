@@ -1,9 +1,9 @@
-columnSuffix: flqxhoyf
+columnSuffix: oyaqtvio
 contentColumnType: text
 fieldGroup: 6e6939c4-3ced-47e1-856a-770599b5aa63 # Common
-handle: title2
+handle: tableTitle
 instructions: ''
-name: 'Title 2'
+name: 'Table Title'
 searchable: false
 settings:
   byteLimit: null

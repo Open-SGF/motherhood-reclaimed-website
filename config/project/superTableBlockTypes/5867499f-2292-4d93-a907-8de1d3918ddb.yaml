@@ -1,0 +1,76 @@
+field: cc7f61af-8cf9-41ca-b8a7-d287e96e56c7 # Accordion Table
+fieldLayouts:
+  e139c4ba-c71a-40d7-8a1e-f9a560f934d0:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 300195b7-e1e1-4f05-8c10-881ace9047c3 # Section Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6c7650cc-aa9a-43df-848a-234076503c56 # Section Details
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  6c7650cc-aa9a-43df-848a-234076503c56: # Section Details
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: sectionDetails
+    instructions: ''
+    name: 'Section Details'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: SimpleBullet.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  300195b7-e1e1-4f05-8c10-881ace9047c3: # Section Title
+    columnSuffix: null
+    contentColumnType: string(400)
+    fieldGroup: null
+    handle: sectionTitle
+    instructions: ''
+    name: 'Section Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 100
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
