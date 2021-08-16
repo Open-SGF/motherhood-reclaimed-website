@@ -7,16 +7,16 @@
 #}
 {% autoescape false %}
 <section class="icon-callout-set container">
-    <h2 class="title">{{ sectionTitle }}</h2>
+    <h2 class="title">{{ title }}</h2>
     <ul class="icons">
-    {% set icons = entry.iconCalloutSet.with(['image']).all() %}
-        {% for icon in icons%}
+        {% for icon in icons %}
+            {% set image = icon.image|first %}
 
-        <li>
-            <img src="{{ icon.image|first.getUrl() }}" alt="{{ icon.altText }}">
-            <h3>{{ icon.customTitle }}</h3>
-            <p>{{ icon.details }}</p>
-        </li>
+            <li>
+                <img src="{{ image.getUrl() }}" alt="{{ image.altText }}">
+                <h3>{{ icon.customTitle }}</h3>
+                <p>{{ icon.details }}</p>
+            </li>
         {% endfor %}
     </ul>
 </section>

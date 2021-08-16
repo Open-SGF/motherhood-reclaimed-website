@@ -17,9 +17,8 @@
         </div>
 
 
-        <h1 class="accordion-title">{{ entry.tableTitle }}</h1>
+        <h1 class="accordion-title">{{ title }}</h1>
         <dl class="badger-accordion js-badger-accordion">
-            {% set panels = entry.accordionTable.all() %}
             {% for panel in panels %}
             <dt class="badger-accordion__header">
                 <button class="badger-accordion__trigger js-badger-accordion-header">

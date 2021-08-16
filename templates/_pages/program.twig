@@ -16,26 +16,22 @@
 
     {# Code for icon callout module #}
 
-    {% set iconTitle = entry.customTitle %}
-    {% set iconCalloutSet = entry.iconCalloutSet.with(['image']).all() %}
-        {% if iconCalloutSet %}
-            {% set image = entry.image|first %}
-            {% include '_modules/icon-callout-set.twig' with {
-                sectionTitle: iconTitle,
-                image: image,
-                title: entry.customTitle,
-                text: entry.details,
-            } %}
-        {% endif %}
+    {% set icons = entry.iconCalloutSet.with(['image']).all() %}
+    {% if icons|length or entry.customTitle != '' %}
+        {% include '_modules/icon-callout-set.twig' with {
+            title: entry.customTitle,
+            text: entry.details,
+            icons: icons,
+        } %}
+    {% endif %}
 
     {# Code for accordion module #}
 
-    {% set accordionTitle = entry.tableTitle %}
-    {% set accordion = entry.accordionTable.all() %}
-    {% if accordion %}
+    {% set accordions = entry.accordionTable.all() %}
+    {% if accordions|length or entry.tableTitle %}
         {% include '_modules/accordion.twig' with {
-            tableTitle: accordionTitle,
-            panel: accordion,
+            title: entry.tableTitle,
+            panels: accordions,
         } %}
     {% endif %}
 
