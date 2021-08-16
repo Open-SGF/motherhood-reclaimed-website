@@ -1,0 +1,19 @@
+columnSuffix: oyaqtvio
+contentColumnType: text
+fieldGroup: 6e6939c4-3ced-47e1-856a-770599b5aa63 # Common
+handle: tableTitle
+instructions: ''
+name: 'Table Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

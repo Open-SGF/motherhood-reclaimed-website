@@ -1,4 +1,52 @@
 {% extends '_base.twig' %}
 
 {% block main %}
+
+    {# Code for header block #}
+    {% set header = entry.header.with(['image']).one() %}
+    {% if header %}
+        {% set image = header.image|first %}
+        {% include '_modules/header.twig' with {
+            style: header.style.value,
+            image: image,
+            title: header.customTitle,
+            text: header.text,
+        } %}
+    {% endif %}
+
+    {# Code for icon callout module #}
+
+    {% set icons = entry.iconCalloutSet.with(['image']).all() %}
+    {% if icons|length or entry.customTitle != '' %}
+        {% include '_modules/icon-callout-set.twig' with {
+            title: entry.customTitle,
+            text: entry.details,
+            icons: icons,
+        } %}
+    {% endif %}
+
+    {# Code for accordion module #}
+
+    {% set accordions = entry.accordionTable.all() %}
+    {% if accordions|length or entry.tableTitle %}
+        {% include '_modules/accordion.twig' with {
+            title: entry.tableTitle,
+            panels: accordions,
+        } %}
+    {% endif %}
+
+    {# Code for image text callout module #}
+    {% set imageTextCallout = entry.imageTextCallout.with(['image']).one() %}
+    {% if imageTextCallout %}
+        {% set image = imageTextCallout.image|first %}
+        {% include '_modules/image-text-callout.twig' with {
+            style: imageTextCallout.style.value,
+            image: image,
+            title: imageTextCallout.heading,
+            text: imageTextCallout.text,
+            link: imageTextCallout.customLink,
+        } %}
+    {% endif %}
+
+
 {% endblock %}

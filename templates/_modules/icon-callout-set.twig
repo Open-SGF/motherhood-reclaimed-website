@@ -9,12 +9,14 @@
 <section class="icon-callout-set container">
     <h2 class="title">{{ title }}</h2>
     <ul class="icons">
-        {% for icon in icons%}
-        <li>
-            <img src="{{ icon.imgSrc }}" alt="{{ icon.altText }}">
-            <h3>{{ icon.title }}</h3>
-            <p>{{ icon.details }}</p>
-        </li>
+        {% for icon in icons %}
+            {% set image = icon.image|first %}
+
+            <li>
+                <img src="{{ image.getUrl() }}" alt="{{ image.altText }}">
+                <h3>{{ icon.customTitle }}</h3>
+                <p>{{ icon.details }}</p>
+            </li>
         {% endfor %}
     </ul>
 </section>
