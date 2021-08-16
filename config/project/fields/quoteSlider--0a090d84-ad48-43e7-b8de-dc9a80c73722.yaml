@@ -9,13 +9,6 @@ settings:
   columns:
     __assoc__:
       -
-        - a22d3a49-613c-4ee7-91fe-b7f53cee7c17 # Image
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
         - a4ee6e6a-5a0e-43ad-8895-cfbdd7fc380e # Quote
         -
           __assoc__:
