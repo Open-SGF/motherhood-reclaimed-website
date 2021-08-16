@@ -45,6 +45,15 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: babe8e61-1a61-4917-962b-ef04f2fa447c # simpleImage
+            instructions: ''
+            label: 'Slider Background'
+            required: ''
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: 0a090d84-ad48-43e7-b8de-dc9a80c73722 # Quote Slider
             instructions: null
             label: null

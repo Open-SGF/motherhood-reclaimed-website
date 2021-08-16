@@ -1,34 +1,34 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: 6e6939c4-3ced-47e1-856a-770599b5aa63 # Common
-handle: quoteSlider
+handle: accordionTable
 instructions: ''
-name: 'Quote Slider'
+name: 'Accordion Table'
 searchable: false
 settings:
   columns:
     __assoc__:
       -
-        - a4ee6e6a-5a0e-43ad-8895-cfbdd7fc380e # Quote
+        - 300195b7-e1e1-4f05-8c10-881ace9047c3 # Section Title
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - a508584e-1ffe-40d0-b35f-99660c237718 # Byline
+        - 6c7650cc-aa9a-43df-848a-234076503c56 # Section Details
         -
           __assoc__:
             -
               - width
               - ''
-  contentTable: '{{%stc_quoteslider}}'
+  contentTable: '{{%stc_accordiontable}}'
   fieldLayout: row
-  maxRows: '5'
+  maxRows: '3'
   minRows: ''
   placeholderKey: null
   propagationMethod: all
-  selectionLabel: 'Add a slide'
+  selectionLabel: 'Add a Section'
   staticField: ''
 translationKeyFormat: null
 translationMethod: site

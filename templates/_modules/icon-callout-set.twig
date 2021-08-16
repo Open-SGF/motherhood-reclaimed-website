@@ -11,9 +11,12 @@
     <ul class="icons">
         {% for icon in icons%}
         <li>
-            <img src="{{ icon.imgSrc }}" alt="{{ icon.altText }}">
-            <h3>{{ icon.title }}</h3>
+            {% set image = icon.image|first %}
+            <img src="{{ image.getUrl() }}" alt="{{ image.altText }}">
+            <h3>{{ icon.customTitle }}</h3>
+            {% if icon.details %}
             <p>{{ icon.details }}</p>
+            {% endif %}
         </li>
         {% endfor %}
     </ul>
