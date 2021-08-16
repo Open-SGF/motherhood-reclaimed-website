@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'jquery-modal';
 import BadgerAccordion from 'badger-accordion';
 import 'slick-carousel';
 

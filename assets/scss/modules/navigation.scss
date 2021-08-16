@@ -69,3 +69,15 @@ main {
         }
     }
 }
+
+.modal {
+    max-width: 75%;
+
+    @include mq-below(medium) {
+        max-width: 100%;
+    }
+}
+
+#contactForm {
+    height: 750px;
+}
