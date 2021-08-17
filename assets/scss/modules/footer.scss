@@ -16,12 +16,12 @@
         display: flex;
         justify-content: space-between;
 
-        li {
-            margin-top: 5px;
-        }
-
-        @include mq-below(small) {
+        @include mq-below(medium) {
             display: block;
+
+            p:first-child {
+                margin-bottom: 15px;
+            }
         }
     }
 
