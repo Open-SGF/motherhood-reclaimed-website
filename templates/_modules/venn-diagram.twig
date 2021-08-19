@@ -1,11 +1,10 @@
 {#
 /**
 * Available variables:
-* - circleOne: an object containing title and details variables
-* - circleTwo: an object containing title and details variables
+* - vennDiagram: an array of two objects, each containing circleTitle and circleDetails values
 */
 #}
-
+{% if vennDiagram %}
 {% autoescape false %}
 <section class="venn-diagram container">
     <div class="util-container">
@@ -24,3 +23,5 @@
     </div>
 </section>
 {% endautoescape %}
+{% endif %}
+
