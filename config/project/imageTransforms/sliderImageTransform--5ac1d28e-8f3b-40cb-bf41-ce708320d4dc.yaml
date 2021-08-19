@@ -1,0 +1,9 @@
+format: jpg
+handle: sliderImageTransform
+height: 600
+interlace: none
+mode: crop
+name: 'Slider Image Transform'
+position: center-center
+quality: null
+width: 1850
