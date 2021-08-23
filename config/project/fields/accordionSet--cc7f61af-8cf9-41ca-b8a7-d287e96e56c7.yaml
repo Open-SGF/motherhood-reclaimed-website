@@ -1,28 +1,28 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: 6e6939c4-3ced-47e1-856a-770599b5aa63 # Common
-handle: accordionTable
+handle: accordionSet
 instructions: ''
-name: 'Accordion Table'
+name: 'Accordion Set'
 searchable: false
 settings:
   columns:
     __assoc__:
       -
-        - 300195b7-e1e1-4f05-8c10-881ace9047c3 # Section Title
+        - 300195b7-e1e1-4f05-8c10-881ace9047c3 # Title
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 6c7650cc-aa9a-43df-848a-234076503c56 # Section Details
+        - 6c7650cc-aa9a-43df-848a-234076503c56 # Details
         -
           __assoc__:
             -
               - width
               - ''
-  contentTable: '{{%stc_accordiontable}}'
+  contentTable: '{{%stc_accordionset}}'
   fieldLayout: row
   maxRows: '3'
   minRows: ''

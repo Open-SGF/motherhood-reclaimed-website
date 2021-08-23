@@ -2,7 +2,7 @@
 /**
  * Available variables:
  * - title: The main title of the accordion
- * - panels: Array panel objects each containing a title and details property
+ * - panels: Array panel objects each containing a sectionTitle and sectionDetails property
  */
 #}
 {% autoescape false %}
@@ -23,7 +23,7 @@
             <dt class="badger-accordion__header">
                 <button class="badger-accordion__trigger js-badger-accordion-header">
                     <div class="badger-accordion__trigger-title h3">
-                        {{ panel.sectionTitle }}
+                        {{ panel.customTitle }}
                     </div>
                     <div class="badger-accordion__trigger-icon">
                     </div>
@@ -31,7 +31,7 @@
             </dt>
             <dd class="badger-accordion__panel js-badger-accordion-panel">
                 <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
-                    {{ panel.sectionDetails }}
+                    {{ panel.details }}
                 </div>
             </dd>
             {% endfor %}

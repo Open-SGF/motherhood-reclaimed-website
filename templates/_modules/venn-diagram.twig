@@ -1,26 +1,33 @@
 {#
 /**
 * Available variables:
-* - circleOne: an object containing title and details variables
-* - circleTwo: an object containing title and details variables
+* - vennDiagram: an array of two objects, each containing circleTitle and circleDetails values
 */
 #}
-
+{% if vennDiagram %}
+{% set circleOne = vennDiagram|length >= 1 ? vennDiagram[0] : null %}
+{% set circleTwo = vennDiagram|length >= 2 ? vennDiagram[1] : null %}
 {% autoescape false %}
 <section class="venn-diagram container">
     <div class="util-container">
-        <div class="first-circle">
-            <div class="circle-text">
-                <h3>{{ vennDiagram[0].circleTitle }}</h3>
-                <p>{{ vennDiagram[0].circleDetails }}</p>
+        {% if circleOne %}
+            <div class="first-circle">
+                <div class="circle-text">
+                    <h3>{{ circleOne.circleTitle }}</h3>
+                    <p>{{ circleOne.circleDetails }}</p>
+                </div>
             </div>
-        </div>
-        <div class="second-circle">
-            <div class="circle-text">
-                <h3>{{ vennDiagram[1].circleTitle }}</h3>
-                <p>{{ vennDiagram[1].circleDetails }}</p>
+        {% endif %}
+        {% if circleTwo %}
+            <div class="second-circle">
+                <div class="circle-text">
+                    <h3>{{ circleTwo.circleTitle }}</h3>
+                    <p>{{ circleTwo.circleDetails }}</p>
+                </div>
             </div>
-        </div>
+        {% endif %}
     </div>
 </section>
 {% endautoescape %}
+{% endif %}
+
