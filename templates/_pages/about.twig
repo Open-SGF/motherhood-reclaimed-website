@@ -22,7 +22,7 @@
         } %}
     {% endif %}
 
-    {% set vennDiagram = entry.vennDiagram %}
+    {% set vennDiagram = entry.vennDiagram.all() %}
     {% if vennDiagram %}
         {% include '_modules/venn-diagram.twig' with {
             vennDiagram: vennDiagram,

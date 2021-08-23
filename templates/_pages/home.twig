@@ -26,7 +26,7 @@
 
     {% set quoteSlides = entry.quoteSlider.all() %}
     {% if quoteSlides|length %}
-        {% set quoteSliderBG = entry.simpleImage.one() %}
+        {% set quoteSliderBG = entry.image.one() %}
         {% include '_modules/slider.twig' with {
             image: quoteSliderBG,
             slides: quoteSlides,

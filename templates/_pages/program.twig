@@ -17,7 +17,7 @@
     {# Code for icon callout module #}
 
     {% set icons = entry.iconCalloutSet.with(['image']).all() %}
-    {% if icons|length or entry.customTitle != '' %}
+    {% if icons|length or entry.customTitle %}
         {% include '_modules/icon-callout-set.twig' with {
             title: entry.customTitle,
             text: entry.details,
@@ -27,10 +27,10 @@
 
     {# Code for accordion module #}
 
-    {% set accordions = entry.accordionTable.all() %}
-    {% if accordions|length or entry.tableTitle %}
+    {% set accordions = entry.accordionSet.all() %}
+    {% if accordions|length or entry.customTitle2 %}
         {% include '_modules/accordion.twig' with {
-            title: entry.tableTitle,
+            title: entry.customTitle2,
             panels: accordions,
         } %}
     {% endif %}
