@@ -1,9 +1,9 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: 6e6939c4-3ced-47e1-856a-770599b5aa63 # Common
-handle: simpleImage
+handle: image
 instructions: ''
-name: simpleImage
+name: Image
 searchable: false
 settings:
   allowSelfRelations: false

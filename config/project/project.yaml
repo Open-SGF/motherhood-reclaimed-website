@@ -1,4 +1,4 @@
-dateModified: 1629722155
+dateModified: 1629722473
 email:
   fromEmail: me@levizitting.com
   fromName: 'Motherhood Reclaimed'
@@ -19,7 +19,7 @@ meta:
     4fa720a8-f11d-4303-b843-f5544f1a1299: Link # Link
     5c32995c-e7a7-4a60-b0da-9d1da2b2025f: Link # Link
     5c360890-b5b7-4b1b-8835-3098149ed3e1: 'Image Text Callout 2' # Image Text Callout 2
-    6c7650cc-aa9a-43df-848a-234076503c56: 'Section Details' # Section Details
+    6c7650cc-aa9a-43df-848a-234076503c56: Details # Details
     6e6939c4-3ced-47e1-856a-770599b5aa63: Common # Common
     7bd9f5d9-d14b-4a06-86a0-5abc9bc6698c: Title # Title
     8eaed5cc-e1a0-424a-ab4c-38ee20fb77b7: Heading # Heading
@@ -38,7 +38,7 @@ meta:
     3472c050-802a-4ee5-8100-4f47a5ec45fa: Image # Image
     8748f9b3-2676-43c6-a13d-53f1d8c800ea: Text # Text
     61022c53-1304-49ce-ba7c-0ed9a4127cc6: 'Icon Callout Set' # Icon Callout Set
-    300195b7-e1e1-4f05-8c10-881ace9047c3: 'Section Title' # Section Title
+    300195b7-e1e1-4f05-8c10-881ace9047c3: Title # Title
     02836994-516e-4348-a917-09890dead174: Details # Details
     6378969d-bf97-46e5-afff-33585a3c0631: Details # Details
     22203198-8068-469b-8793-74e5f04db737: Home # Home
@@ -50,14 +50,13 @@ meta:
     a22d3a49-613c-4ee7-91fe-b7f53cee7c17: Image # Image
     a508584e-1ffe-40d0-b35f-99660c237718: Byline # Byline
     aafb4ab4-f661-4486-8571-0def4630ed2c: 'Motherhood Reclaimed' # Motherhood Reclaimed
-    babe8e61-1a61-4917-962b-ef04f2fa447c: simpleImage # simpleImage
+    babe8e61-1a61-4917-962b-ef04f2fa447c: Image # Image
     bb228fbb-ccae-4893-99ba-8942d82e8ac4: Image # Image
     c15ef70e-1d8c-4426-971e-37f7b851236b: Image # Image
     c45af8f2-0194-472a-aa1d-297d47f219dd: 'Image Text Callout' # Image Text Callout
-    cc7f61af-8cf9-41ca-b8a7-d287e96e56c7: 'Accordion Table' # Accordion Table
+    cc7f61af-8cf9-41ca-b8a7-d287e96e56c7: 'Accordion Set' # Accordion Set
     cd00da43-db7c-459e-abfb-146eee568442: Text # Text
     d56e90ea-7c5e-467d-98b5-21cd9da25265: Program # Program
-    d95c07b6-7cb8-4c7f-817e-f923af63e938: 'Table Title' # Table Title
     d65488cf-da81-4f72-9bbe-fa5a431ea58c: Link # Link
     dc8aa44c-8bb9-4af8-9b34-7b36994436a6: 'Public Schema' # Public Schema
     e170d527-1ae4-4311-a168-e1e707fc1237: SEO # SEO

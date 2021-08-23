@@ -38,8 +38,8 @@ fieldLayouts:
           -
             fieldUid: 87f0eeb1-40ea-41d2-9ea6-ec6c509201ff # Title
             instructions: ''
-            label: ''
-            required: '1'
+            label: 'Icon Callout Set Title'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
@@ -54,16 +54,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: d95c07b6-7cb8-4c7f-817e-f923af63e938 # Table Title
+            fieldUid: 0ba69eab-d56c-4035-ac72-04a24930d9c0 # Title 2
             instructions: ''
-            label: ''
-            required: '1'
+            label: 'Accordion Set Title'
+            required: ''
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: cc7f61af-8cf9-41ca-b8a7-d287e96e56c7 # Accordion Table
+            fieldUid: cc7f61af-8cf9-41ca-b8a7-d287e96e56c7 # Accordion Set
             instructions: null
             label: null
             required: false
