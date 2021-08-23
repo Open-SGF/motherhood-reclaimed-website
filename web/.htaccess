@@ -1,6 +1,11 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
+    RewriteCond %{HTTP_HOST} ^417motherhood.org$ [OR]
+    RewriteCond %{HTTP_HOST} ^www.417motherhood.org$
+    RewriteCond %{HTTP_HOST} ^motherhood.frb.io$
+    RewriteRule (.*)$ https://staging.motherhoodreclaimed.org/$1 [R=301,L]
+
     # Send would-be 404 requests to Craft
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
