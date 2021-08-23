@@ -1,4 +1,4 @@
-dateModified: 1629036416
+dateModified: 1629722155
 email:
   fromEmail: me@levizitting.com
   fromName: 'Motherhood Reclaimed'
@@ -92,7 +92,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 3VWWKOVWBX5I7DSFFUFNV8A2
-    schemaVersion: 3.0.10
+    schemaVersion: 3.0.11
   super-table:
     edition: standard
     enabled: true

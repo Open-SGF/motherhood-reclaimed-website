@@ -6,7 +6,7 @@
  */
 #}
 
-<section class="feature-slider" style="background-image: url('{{ image.url }}');">
+<section class="feature-slider" {% if image %}style="background-image: url('{{ image.url }}');"{% endif %}>
     <div class="purple-filter"></div>
     <section class="js-slider slider">
         {% for slide in slides %}
