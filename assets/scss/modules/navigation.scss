@@ -178,3 +178,17 @@ main {
         }
     }
 }
+
+.modal {
+    max-width: 125rem;
+
+    @include mq-below(medium) {
+        width: 100%;
+        padding: .25rem;
+    }
+}
+
+#contact {
+    top: 4.5rem;
+    height: 75vh;
+}
