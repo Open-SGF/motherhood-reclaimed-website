@@ -1,16 +1,15 @@
 .container {
     position: relative;
-    width: calc(100% - 8rem);
+    width: calc(100% - 80px);
     margin: 0 auto;
     max-width: 1650px;
 
     @include mq-below(x-small) {
-        width: calc(100% - 4rem);
+        width: calc(100% - 40px);
     }
 
 
     @include mq-below(tiny) {
-        width: calc(100% - 2rem);
+        width: calc(100% - 20px);
     }
-
 }
