@@ -8,6 +8,14 @@
  */
 #}
 
+{% set headerImageTransform = {
+    mode: 'crop',
+    width: 100,
+    height: 100,
+    quality: 75,
+    position: 'top-center'
+}%}
+
 {% if style == 'style1' %}
     {% set styleClass = 'text-left' %}
     {% set svg = '/img/text-left.svg' %}
@@ -17,7 +25,7 @@
 {% endif %}
 
 <section class="header {{ styleClass }}">
-    <div class="image" style="background-image: url('{{ image.getUrl('headerImageTransform') }}');" role="img" arial-label="{{ image.altText }}"></div>
+    <div class="image" style="background-image: url('{{ image.getUrl(headerImageTransform) }}');" role="img" arial-label="{{ image.altText }}"></div>
     <img class="flourish" src="{{ svg }}">
     <div class="background"></div>
     <div class="container">

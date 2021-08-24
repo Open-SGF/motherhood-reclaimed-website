@@ -5,6 +5,14 @@
  * - icons: icon objects in an array each conataining an image object, customTitle, and details variables
  */
 #}
+{% set iconCalloutImageTransform = {
+    mode: 'crop',
+    width: 100,
+    height: 100,
+    quality: 75,
+    position: 'top-center'
+}%}
+
 {% autoescape false %}
 <section class="icon-callout-set container">
     <h2 class="title">{{ title }}</h2>
