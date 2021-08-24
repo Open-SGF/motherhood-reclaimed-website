@@ -5,7 +5,7 @@ main {
 .skip-nav {
     z-index: z-index(skip-nav);
     position: absolute;
-    transform: translateY(-125%);
+    transform: translateY(-125%) translateY(-15px);
     transition: transform 0.25s;
     top: 15px;
     left: 40px;
@@ -46,9 +46,13 @@ main {
         width: $box-size;
         border: 4px solid getColor(white);
         position: relative;
-        
+
         @include mq-above(medium) {
             display: none;
+        }
+
+        @include mq-below(mid-small) {
+            transform: scale(.7);
         }
 
         .icon {
@@ -99,15 +103,49 @@ main {
     }
 
     .nav-links {
-        display: flex;
-        align-items: center;
-
         @include mq-below(medium) {
-            display: none;
+            position: fixed;
+            background-color: getColor(primary, dark);
+            width: 100%;
+            left: 0;
+            top: $navigation-desktop-height;
+            transition: max-height 500ms ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+
+            &.open {
+                max-height: 600px;
+                visibility: visible;
+            }
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+
+            @include mq-below(medium) {
+                flex-direction: column;
+                align-items: start;
+                padding-left: 85px;
+                padding-bottom: 40px;
+                padding-top: 20px;
+
+                @include mq-below(x-small) {
+                    padding-left: 65px;
+                }
+
+
+                @include mq-below(tiny) {
+                    padding-left: 55px;
+                }
+            }
         }
 
         li {
             display: flex;
+            @include mq-below(medium) {
+                padding-bottom: 15px;
+            }
         }
 
         .btn {
