@@ -142,13 +142,15 @@ main {
 }
 
 .modal {
-    max-width: 75%;
+    max-width: 125rem;
 
     @include mq-below(medium) {
-        max-width: 100%;
+        width: 100%;
+        padding: .25rem;
     }
 }
 
 #contact {
-    height: 750px;
+    top: 4.5rem;
+    height: 75vh;
 }
