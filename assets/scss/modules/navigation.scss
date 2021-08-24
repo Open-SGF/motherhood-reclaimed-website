@@ -103,37 +103,41 @@ main {
     }
 
     .nav-links {
-        display: flex;
-        align-items: center;
-
         @include mq-below(medium) {
             position: fixed;
-            flex-direction: column;
             background-color: getColor(primary, dark);
             width: 100%;
             left: 0;
             top: $navigation-desktop-height;
-            transition: max-height 250ms ease-in-out, visibility 250ms ease-in-out;
+            transition: max-height 500ms ease-in-out;
             max-height: 0;
-            visibility: hidden;
-            align-items: start;
-            padding-left: 85px;
-            padding-bottom: 40px;
-            padding-top: 20px;
             overflow: hidden;
-
-            @include mq-below(x-small) {
-                padding-left: 65px;
-            }
-
-
-            @include mq-below(tiny) {
-                padding-left: 55px;
-            }
 
             &.open {
                 max-height: 600px;
                 visibility: visible;
+            }
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+
+            @include mq-below(medium) {
+                flex-direction: column;
+                align-items: start;
+                padding-left: 85px;
+                padding-bottom: 40px;
+                padding-top: 20px;
+
+                @include mq-below(x-small) {
+                    padding-left: 65px;
+                }
+
+
+                @include mq-below(tiny) {
+                    padding-left: 55px;
+                }
             }
         }
 
