@@ -5,7 +5,7 @@ main {
 .skip-nav {
     z-index: z-index(skip-nav);
     position: absolute;
-    transform: translateY(-125%);
+    transform: translateY(-125%) translateY(-15px);
     transition: transform 0.25s;
     top: 15px;
     left: 40px;
