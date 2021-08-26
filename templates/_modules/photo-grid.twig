@@ -5,16 +5,24 @@
 * - photos: array of objects each containing an image object and customTitle and details values
 */
 #}
-{% set photogridImageTransform = {
-    mode: 'crop',
+
+{% set tinyTransform = {
     width: 100,
-    height: 100,
-    quality: 75,
-    position: 'top-center'
+    position: 'center-center'
+}%}
+
+{% set mediumTransform = {
+    width: 400,
+    position: 'center-center'
+}%}
+
+{% set largeTransform = {
+    width: 800,
+    position: 'center-center'
 }%}
 
 {% autoescape false %}
-<section class="photo-grid">
+<section class="photo-grid">S
     <div class="container">
         <h2 class="grid-title">{{ title }}</h2>
         <div class="grid">
