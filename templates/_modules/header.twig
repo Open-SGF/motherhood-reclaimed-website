@@ -8,12 +8,22 @@
  */
 #}
 
-{% set headerImageTransform = {
-    mode: 'crop',
+{% set tinyTransform = {
     width: 100,
     height: 100,
-    quality: 75,
-    position: 'top-center'
+    position: 'center-center'
+}%}
+
+{% set mediumTransform = {
+    width: 400,
+    height: 400,
+    position: 'center-center'
+}%}
+
+{% set largeTransform = {
+    width: 800,
+    height: 800,
+    position: 'center-center'
 }%}
 
 {% if style == 'style1' %}
@@ -25,7 +35,26 @@
 {% endif %}
 
 <section class="header {{ styleClass }}">
-    <div class="image" style="background-image: url('{{ image.getUrl(headerImageTransform) }}');" role="img" arial-label="{{ image.altText }}"></div>
+    <script>
+        function loadJS(u){var r=document.getElementsByTagName("script")[0],s=document.createElement("script");s.src=u;r.parentNode.insertBefore(s,r);}
+
+        if(!window.HTMLPictureElement || !('sizes' in document.createElement('img'))){
+            loadJS("ls.respimg.min.js");
+        }
+    </script>
+
+    <div 
+        class="image lazyload"
+        role="img" 
+        arial-label="{{ image.altText }}"
+        data-bgset="
+        https://via.placeholder.com/200/0000FF/808080 [(max-width: 399px)] |
+        https://via.placeholder.com/400/FF0000/FFFFFF [(max-width: 799px)] |
+        https://via.placeholder.com/800/FFFF00/000000 [(max-width: 1599px)] |
+        https://via.placeholder.com/1600/0000FF/808080 1600w
+        "
+        data-sizes="auto"
+    ></div>
     <img class="flourish" src="{{ svg }}">
     <div class="background"></div>
     <div class="container">

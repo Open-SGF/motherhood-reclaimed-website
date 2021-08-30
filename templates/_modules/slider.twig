@@ -6,15 +6,31 @@
  */
 #}
 
-{% set sliderImageTransform = {
-    mode: 'crop',
+{% set tinyTransform = {
     width: 100,
-    height: 100,
-    quality: 75,
-    position: 'top-center'
+    position: 'center-center'
 }%}
 
-<section class="feature-slider" style="background-image: url('{{ image.getUrl(sliderImageTransform) }}');">
+{% set mediumTransform = {
+    width: 400,
+    position: 'center-center'
+}%}
+
+{% set largeTransform = {
+    width: 800,
+    position: 'center-center'
+}%}
+
+<section 
+    class="feature-slider lazyload" 
+    data-bgset="
+        https://via.placeholder.com/200/0000FF/808080 [(max-width: 399px)] |
+        https://via.placeholder.com/400/FF0000/FFFFFF [(max-width: 799px)] |
+        https://via.placeholder.com/800/FFFF00/000000 [(max-width: 1599px)] |
+        https://via.placeholder.com/1600/0000FF/808080 1600w
+    "
+    data-sizes="auto"
+>
     <div class="purple-filter"></div>
     <section class="js-slider slider">
         {% for slide in slides %}

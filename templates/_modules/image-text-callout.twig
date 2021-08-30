@@ -9,12 +9,19 @@
  */
 #}
 
-{% set imageTextImageTransform = {
-    mode: 'crop',
+{% set tinyTransform = {
     width: 100,
-    height: 100,
-    quality: 75,
-    position: 'top-center'
+    position: 'center-center'
+}%}
+
+{% set mediumTransform = {
+    width: 400,
+    position: 'center-center'
+}%}
+
+{% set largeTransform = {
+    width: 800,
+    position: 'center-center'
 }%}
 
 {% set directionClass = style == 'imageRight' ? 'image-right' : 'image-left' %}
@@ -22,12 +29,18 @@
 <section class="image-text-callout {{ directionClass }}">
     <div class="container callout">
         <div class="image-wrapper">
-            {# <img class="image" 
-                src="{{ image.getUrl(imageTextImageTransform)}}"
-                srcset="/src/to/img.jpeb 480w, etc"
-                sizes="(max-width: 600px) 480px"
-                alt="{{ image.altText }}"
-            > #}
+            <img 
+                class="image lazyload"
+                data-src="{{ image.getUrl() }}" 
+                data-srcset="
+                    https://via.placeholder.com/200/0000FF/808080 200w, 
+                    https://via.placeholder.com/400/FF0000/FFFFFF 400w,
+                    https://via.placeholder.com/800/FFFF00/000000 800w,
+                    https://via.placeholder.com/1600/0000FF/808080 1600w,
+                " 
+                data-sizes="auto"
+                alt="MDN Web Docs"
+            >
         </div>
 
         <div class="text-wrapper">

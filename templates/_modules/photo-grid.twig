@@ -31,10 +31,20 @@
                     {% set image = photo.image|first %}
                     {% if image %}
                         <div class="image-wrapper">
-                            <img src="{{ image.getUrl() }}" alt="{{ image.altText }}">
+                            <img 
+                                class="lazyload" 
+                                data-src="https://via.placeholder.com/200/0000FF/808080" 
+                                data-srcset="
+                                    https://via.placeholder.com/200/0000FF/808080 200w, 
+                                    https://via.placeholder.com/400/FF0000/FFFFFF 400w,
+                                    https://via.placeholder.com/800/FFFF00/000000 800w,
+                                    https://via.placeholder.com/1600/0000FF/808080 1600w,
+                                " 
+                                data-sizes="auto"
+                            >
                         </div>
                     {% endif %}
-                    <p class="text">{{ photo.customTitle }}</p>
+                    <p class="text-wrapper">{{ photo.customTitle }}</p>
                     <p class="h3">{{ photo.details }}</p>
                 </div>
             {% endfor %}
