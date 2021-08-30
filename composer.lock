@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d1d23156008a6f971baefee4b3292571",
+    "content-hash": "3717e4ad87f371f81f23a4a2a6151322",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1614,11 +1614,11 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.4.2",
+            "version": "3.4.6",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/166f7cac4417576cb8bdcd0b1a77995c60ed5839",
-                "reference": "166f7cac4417576cb8bdcd0b1a77995c60ed5839",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/bc43327cbf16bf138ce19151e410bd665d4b2f2b",
+                "reference": "bc43327cbf16bf138ce19151e410bd665d4b2f2b",
                 "shasum": ""
             },
             "require": {
@@ -1668,7 +1668,7 @@
                 "docs": "https://nystudio107.com/plugins/seomatic/documentation",
                 "issues": "https://nystudio107.com/plugins/seomatic/support"
             },
-            "time": "2021-08-20T14:24:39+00:00"
+            "time": "2021-08-30T19:18:23+00:00"
         },
         {
             "name": "opis/closure",

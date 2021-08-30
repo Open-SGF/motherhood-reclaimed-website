@@ -21,6 +21,9 @@ A website for Motherhood Reclaimed built with Craft CMS
     - Fill out your database information
     - Choose the default options for everything else
     - Create a username and password. These credentials are for your machine only. They don't need to be unique
+- Setup system email env values
+  - Create an [app password](https://myaccount.google.com/apppasswords) using a gmail account
+  - Fill out SYSTEM_EMAIL_ADDRESS, GMAIL_USERNAME, and GMAIL_PASSWORD
 - `php craft migrate/all`
 - `php craft project-config/apply`
 

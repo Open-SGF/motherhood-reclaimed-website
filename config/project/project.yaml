@@ -1,8 +1,14 @@
-dateModified: 1629722473
+dateModified: 1630360896
 email:
-  fromEmail: me@levizitting.com
+  fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: 'Motherhood Reclaimed'
-  transportType: craft\mail\transportadapters\Sendmail
+  replyToEmail: $SYSTEM_EMAIL_ADDRESS
+  template: null
+  transportSettings:
+    password: $GMAIL_PASSWORD
+    timeout: '10'
+    username: $GMAIL_USERNAME
+  transportType: craft\mail\transportadapters\Gmail
 meta:
   __names__:
     0a090d84-ad48-43e7-b8de-dc9a80c73722: 'Quote Slider' # Quote Slider
