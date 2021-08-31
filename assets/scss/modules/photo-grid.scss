@@ -5,6 +5,14 @@
     text-align: center;
     padding: 150px 0 100px 0;
 
+    @include mq-below(medium) {
+        padding: 100px 0px 75px 0;
+    }
+
+    @include mq-below(small) {
+        padding: 75px 0px 50px 0;
+    }
+
     .grid-title {
         margin-bottom: 50px;
     }
@@ -20,11 +28,11 @@
         width: 33%;
         padding-bottom: 20px;
 
-        @include mq-below(large) {
+        @include mq-below(medium) {
             width: 50%;
         }
 
-        @include mq-below(medium) {
+        @include mq-below(small) {
             width: 100%;
         }
 
@@ -36,13 +44,23 @@
             margin-bottom: 50px;
         }
     }
-    
+
     .image-wrapper {
         width: 200px;
         height: 200px;
         border-radius: 50%;
         margin: 0 auto 20px auto;
         overflow: hidden;
+
+        @include mq-below(small) {
+            width: 250px;
+            height: 250px;
+        }
+
+        @include mq-below(x-small) {
+            width: 200px;
+            height: 200px;
+        }
 
         img {
             width: 100%;
