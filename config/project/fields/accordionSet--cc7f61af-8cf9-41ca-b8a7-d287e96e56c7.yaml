@@ -24,7 +24,7 @@ settings:
               - ''
   contentTable: '{{%stc_accordionset}}'
   fieldLayout: row
-  maxRows: '3'
+  maxRows: ''
   minRows: ''
   placeholderKey: null
   propagationMethod: all
