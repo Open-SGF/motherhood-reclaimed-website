@@ -1,6 +1,6 @@
 .accordion {
     position: relative;
-    $transition-time: 0.2s;
+    $transition-time: 0.3s;
 
     @mixin base-trans {
         transition: all ease-in-out $transition-time;
@@ -36,7 +36,11 @@
     .badger-accordion {
 
         &__header {
-            margin-top: 5px;
+            margin-top: 20px;
+
+            &:first-child {
+                margin-top: 0;
+            }
         }
 
         &__trigger {
@@ -107,23 +111,49 @@
         &__panel-inner {
             @include base-trans;
             background-color: white;
-            padding: 20px 20px 40px;
+            padding: 20px 40px 40px;
             overflow: visible;
             border-bottom-right-radius: 3px;
             border-bottom-left-radius: 3px;
+
+            @include mq-below(mid-small){
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            @include mq-below(tiny){
+                padding-left: 10px;
+                padding-right: 10px;
+            }
         }
     }
 
-    .badger-accordion__trigger[aria-expanded=true] .badger-accordion__trigger-icon:before {
-        transform: rotate(
-                45deg
-        ) translate3d(-7px, 20px, 0);
+    .badger-accordion__trigger[aria-expanded=true] {
+        .badger-accordion__trigger-icon {
+            &::before {
+                transform: rotate(45deg) translate3d(-7px, 20px, 0);
+            }
+
+            &::after {
+                transform: rotate(-45deg) translate3d(-15px, -2px, 0);
+            }
+        }
     }
 
-    .badger-accordion__trigger[aria-expanded=true] .badger-accordion__trigger-icon:after {
-        transform: rotate(
-                -45deg
-        ) translate3d(-15px, -2px, 0);
+    ul {
+        list-style: disc;
+    }
+
+    ol {
+        list-style: decimal;
+    }
+
+    ol, ul {
+        padding-left: 40px;
+
+        @include mq-below(x-small){
+            padding-left: 30px;
+        }
     }
 }
 
@@ -132,7 +162,7 @@
     position: relative;
 
     &__panel {
-        max-height: 75vh !important;
+        max-height: 1500px !important;
         overflow: hidden;
 
         // scss-lint:disable ImportantRule
