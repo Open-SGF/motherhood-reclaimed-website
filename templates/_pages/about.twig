@@ -14,7 +14,7 @@
     {% endif %}
 
     {% set iconCalloutSetTitle = entry.customTitle %}
-    {% set iconCalloutSet = entry.iconCalloutSet.all() %}
+    {% set iconCalloutSet = entry.iconCalloutSet.with(['image']).all() %}
     {% if iconCalloutSet|length %}
         {% include '_modules/icon-callout-set.twig' with {
             title: iconCalloutSetTitle,
@@ -30,7 +30,7 @@
     {% endif %}
 
     {% set photoGridTitle = entry.customTitle2 %}
-    {% set photoGrid = entry.photoGrid.all() %}
+    {% set photoGrid = entry.photoGrid.with(['image']).all() %}
     {% if photoGrid|length %}
         {% include '_modules/photo-grid.twig' with {
             title: photoGridTitle,
