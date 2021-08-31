@@ -8,6 +8,27 @@
  */
 #}
 
+{% set smallTransform = {
+    mode: 'crop',
+    width: 400,
+    position: 'center-center',
+    format: 'jpg',
+}%}
+
+{% set mediumTransform = {
+    mode: 'crop',
+    width: 800,
+    position: 'center-center',
+    format: 'jpg',
+}%}
+
+{% set largeTransform = {
+    mode: 'crop',
+    width: 1200,
+    position: 'center-center',
+    format: 'jpg'
+}%}
+
 {% if style == 'style1' %}
     {% set styleClass = 'text-left' %}
 {% else %}
@@ -19,11 +40,11 @@
         class="image lazyload"
         role="img" 
         arial-label="{{ image.altText }}"
-        data-src="{{ image.getUrl(width400Transform) }}"
+        data-src="{{ image.getUrl(smallTransform) }}"
         data-bgset="
-        {{ image.getUrl(width400Transform) }} [(max-width: 400px)] |
-        {{ image.getUrl(width800Transform) }} [(max-width: 800px)] |
-        {{ image.getUrl(width1200Transform) }}
+        {{ image.getUrl(smallTransform) }} [(max-width: 400px)] |
+        {{ image.getUrl(mediumTransform) }} [(max-width: 800px)] |
+        {{ image.getUrl(largeTransform) }}
         "
         data-sizes="auto"
     ></div>

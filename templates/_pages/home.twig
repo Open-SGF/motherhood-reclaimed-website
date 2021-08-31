@@ -1,38 +1,7 @@
 {% extends '_base.twig' %}
 
-{% set width400Transform = {
-    mode: 'crop',
-    width: 400,
-    position: 'center-center',
-    format: 'jpg',
-} %}
-
-{% set width800Transform = {
-    mode: 'crop',
-    width: 800,
-    position: 'center-center',
-    format: 'jpg'
-} %}
-
-{% set width1200Transform = {
-    mode: 'crop',
-    width: 1200,
-    position: 'center-center',
-    format: 'jpg'
-} %}
-
-
 {% block main %}
-
-
-
-    {% set header = entry.header
-        .with([
-            'image'
-        ])
-        .one() 
-    %}
-
+    {% set header = entry.header.with(['image']).one() %}
     {% if header %}
         {% if header.image %}
             {% set image = header.image|first %}
@@ -42,9 +11,6 @@
             image: image,
             title: header.customTitle,
             text: header.text,
-            width400Transform: width400Transform,
-            width800Transform: width800Transform,
-            width1200Transform: width1200Transform
         } %}
     {% endif %}
 
