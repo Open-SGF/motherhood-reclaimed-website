@@ -8,6 +8,7 @@
 
 {# The Icons will be between 250px and 600px #}
 {% set smallTransform = {
+    mode: 'crop',
     width: 400,
     height: 400,
     position: 'center-center',
@@ -15,6 +16,7 @@
 }%}
 
 {% set largeTransform = {
+    mode: 'crop',
     width: 600,
     height: 600,
     position: 'center-center',
@@ -32,7 +34,7 @@
                     <div class="image-wrapper">
                         <img 
                             class="lazyload" 
-                            data-src="{{ image.getUrl(largeTransform) }}" 
+                            data-src="{{ image.getUrl(smallTransform) }}" 
                             data-srcset="
                                 {# {{ image.getUrl(smallTransform) 400w, }} #}
                                 https://via.placeholder.com/400/FF0000/FFFFFF 400w,

@@ -9,19 +9,25 @@
  */
 #}
 
-{% set tinyTransform = {
-    width: 100,
-    position: 'center-center'
+{% set smallTransform = {
+    mode: 'crop',
+    width: 300,
+    position: 'center-center',
+    format: 'jpg'
 }%}
 
 {% set mediumTransform = {
-    width: 400,
-    position: 'center-center'
+    mode: 'crop',
+    width: 600,
+    position: 'center-center',
+    format: 'jpg'
 }%}
 
 {% set largeTransform = {
-    width: 800,
-    position: 'center-center'
+    mode: 'crop',
+    width: 1000,
+    position: 'center-center',
+    format: 'jpg'
 }%}
 
 {% set directionClass = style == 'imageRight' ? 'image-right' : 'image-left' %}
@@ -31,12 +37,14 @@
         <div class="image-wrapper">
             <img 
                 class="image lazyload"
-                data-src="{{ image.getUrl() }}" 
+                data-src="{{ image.getUrl(smallTransform) }}" 
                 data-srcset="
-                    https://via.placeholder.com/200/0000FF/808080 200w, 
-                    https://via.placeholder.com/400/FF0000/FFFFFF 400w,
-                    https://via.placeholder.com/800/FFFF00/000000 800w,
-                    https://via.placeholder.com/1600/00FFFF/808080 1600w,
+                    {# {{ image.getUrl(smallTransform) }} 300w, #}
+                    https://via.placeholder.com/300/0000FF/808080 300w, 
+                    {# {{ image.getUrl(mediumTransform) }} 600w, #}
+                    https://via.placeholder.com/600/FF0000/FFFFFF 600w,
+                    {# {{ image.getUrl(largeTransform) }} 1000w, #}
+                    https://via.placeholder.com/1000/FFFF00/000000 1000w,
                 " 
                 data-sizes="auto"
                 alt="MDN Web Docs"

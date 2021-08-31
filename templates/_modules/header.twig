@@ -9,18 +9,21 @@
 #}
 
 {% set smallTransform = {
+    mode: 'crop',
     width: 400,
     position: 'center-center',
     format: 'jpg',
 }%}
 
 {% set mediumTransform = {
+    mode: 'crop',
     width: 800,
     position: 'center-center',
     format: 'jpg',
 }%}
 
 {% set largeTransform = {
+    mode: 'crop',
     width: 1200,
     position: 'center-center',
     format: 'jpg',
@@ -36,25 +39,17 @@
 {% endif %}
 
 <section class="header {{ styleClass }}">
-    <script>
-        function loadJS(u){var r=document.getElementsByTagName("script")[0],s=document.createElement("script");s.src=u;r.parentNode.insertBefore(s,r);}
-
-        if(!window.HTMLPictureElement || !('sizes' in document.createElement('img'))){
-            loadJS("ls.respimg.min.js");
-        }
-    </script>
-
     <div 
         class="image lazyload"
         role="img" 
         arial-label="{{ image.altText }}"
-        data-src="{{ image.getUrl(largeTransform) }}"
+        data-src="{{ image.getUrl(smallTransform) }}"
         data-bgset="
-        {# {{ image.getUrl(smallTransform) }} 400w, #}
+        {# {{ image.getUrl(smallTransform) }} [(max-width: 400px)] | #}
         https://via.placeholder.com/400/0000FF/808080 [(max-width: 600px)] |
-        {# {{ image.getUrl(mediumTransform) }} 800w, #}
+        {# {{ image.getUrl(mediumTransform) }} [(max-width: 800px)] | #}
         https://via.placeholder.com/800/FF0000/FFFFFF [(max-width: 1000px)] |
-        {# {{ image.getUrl(largeTransform) }} 1200w, #}
+        {# {{ image.getUrl(largeTransform) }} #}
         https://via.placeholder.com/1200/FFFF00/000000
         "
         data-sizes="auto"

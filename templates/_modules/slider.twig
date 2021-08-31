@@ -6,28 +6,44 @@
  */
 #}
 
-{% set tinyTransform = {
-    width: 100,
-    position: 'center-center'
+{% set smallTransform = {
+    mode: 'crop',
+    width: 400,
+    position: 'center-center',
+    format: 'jpg',
 }%}
 
 {% set mediumTransform = {
-    width: 400,
-    position: 'center-center'
+    mode: 'crop',
+    width: 800,
+    position: 'center-center',
+    format: 'jpg',
 }%}
 
 {% set largeTransform = {
-    width: 800,
-    position: 'center-center'
+    mode: 'crop',
+    width: 1200,
+    position: 'center-center',
+    format: 'jpg',
+}%}
+
+{% set maxTransform = {
+    mode: 'crop',
+    position: 'center-center',
+    format: 'jpg',
 }%}
 
 <section 
     class="feature-slider lazyload" 
     data-bgset="
-        https://via.placeholder.com/200/0000FF/808080 [(max-width: 399px)] |
-        https://via.placeholder.com/400/FF0000/FFFFFF [(max-width: 799px)] |
-        https://via.placeholder.com/800/FFFF00/000000 [(max-width: 1599px)] |
-        https://via.placeholder.com/1600/00FFFF/808080 1600w
+        {# {{ image.getUrl(smallTransform) }} [(max-width: 400px)] | #}
+        https://via.placeholder.com/400/0000FF/808080 [(max-width: 400px)] |
+        {# {{ image.getUrl(mediumTransform) }} [(max-width: 800px)] | #}
+        https://via.placeholder.com/800/FF0000/FFFFFF [(max-width: 800px)] |
+        {# {{ image.getUrl(largeTransform) }} [(max-width: 1200px)] | #}
+        https://via.placeholder.com/1200/FF00FF/FFFFFF [(max-width: 1200px)] |
+        {# {{ image.getUrl(maxTransform) }} #}
+        https://via.placeholder.com/2400/FFFF00/000000
     "
     data-sizes="auto"
 >
