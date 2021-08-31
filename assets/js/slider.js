@@ -4,8 +4,6 @@ import 'slick-carousel';
 export default function() {
     let $el = $('.js-slider');
 
-    $el.on('init', (event, slick, currentSlide) => carouselInit(event, slick));
-
     $el.slick({
         accessibility: true,
         autoplaySpeed: 4000,
