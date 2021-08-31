@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="800"
+   height="250"
+   version="1.1"
+   id="svg4053"
+   sodipodi:docname="text-bottom-2.svg"
+   inkscape:version="1.1 (ce6663b3b7, 2021-05-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview4055"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="0.84142065"
+     inkscape:cx="460.53065"
+     inkscape:cy="61.800242"
+     inkscape:window-width="1640"
+     inkscape:window-height="899"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4053" />
+  <defs
+     id="defs4041">
+    <filter
+       id="a"
+       x="0"
+       y="0"
+       width="1140.6689"
+       height="828.12701"
+       filterUnits="userSpaceOnUse">
+      <feOffset
+         dy="3"
+         id="feOffset4019" />
+      <feGaussianBlur
+         stdDeviation="3"
+         result="blur"
+         id="feGaussianBlur4021" />
+      <feFlood
+         flood-opacity=".161"
+         id="feFlood4023" />
+      <feComposite
+         operator="in"
+         in2="blur"
+         result="result1"
+         id="feComposite4025" />
+      <feComposite
+         in="SourceGraphic"
+         in2="result1"
+         id="feComposite4027" />
+    </filter>
+    <filter
+       id="b"
+       x="71.991997"
+       y="23.127001"
+       width="1138"
+       height="838.203"
+       filterUnits="userSpaceOnUse">
+      <feOffset
+         dy="3"
+         id="feOffset4030" />
+      <feGaussianBlur
+         stdDeviation="3"
+         result="blur-2"
+         id="feGaussianBlur4032" />
+      <feFlood
+         flood-opacity=".161"
+         id="feFlood4034" />
+      <feComposite
+         operator="in"
+         in2="blur-2"
+         result="result1"
+         id="feComposite4036" />
+      <feComposite
+         in="SourceGraphic"
+         in2="result1"
+         id="feComposite4038" />
+    </filter>
+  </defs>
+  <g
+     data-name="Group 69"
+     id="g4051"
+     transform="matrix(0,0.96554789,-1.2047711,0,926.53705,92.030629)">
+    <g
+       filter="url(#a)"
+       transform="translate(-5.792,-31.12)"
+       id="g4045">
+      <path
+         data-name="Path 7"
+         d="m 147.355,816.123 107.86101,2.1216 -0.64805,-799.504394 C 254.56796,18.740206 56.421,-22.738 39.286,29.052 22.151,80.842 -5.368,303.336 18.024,494.038 41.416,684.74 147.355,816.123 147.355,816.123 Z"
+         fill="#c8b8e1"
+         opacity="0.796"
+         id="path4043"
+         sodipodi:nodetypes="cccssc" />
+    </g>
+    <g
+       filter="url(#b)"
+       transform="translate(-5.792,-31.12)"
+       id="g4049">
+      <path
+         data-name="Path 6"
+         d="m 254.56796,18.740206 v 0 l 0.47659,839.575534 c 0,0 -126.66555,19.79426 -143.80055,-31.99574 C 94.109,774.53 66.632,541.92 90.024,351.215 113.416,160.51 254.56796,18.740206 254.56796,18.740206 Z"
+         fill="#7e55be"
+         id="path4047"
+         sodipodi:nodetypes="cccssc" />
+    </g>
+  </g>
+</svg>

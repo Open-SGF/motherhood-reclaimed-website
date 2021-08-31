@@ -26,16 +26,13 @@
     mode: 'crop',
     width: 1200,
     position: 'center-center',
-    format: 'jpg',
-
+    format: 'jpg'
 }%}
 
 {% if style == 'style1' %}
     {% set styleClass = 'text-left' %}
-    {% set svg = '/img/text-left.svg' %}
 {% else %}
     {% set styleClass = 'text-right' %}
-    {% set svg = '/img/text-right.svg' %}
 {% endif %}
 
 <section class="header {{ styleClass }}">
@@ -46,7 +43,7 @@
         data-src="{{ image.getUrl(smallTransform) }}"
         data-bgset="
         {# {{ image.getUrl(smallTransform) }} [(max-width: 400px)] | #}
-        https://via.placeholder.com/400/0000FF/808080 [(max-width: 600px)] |
+        https://via.placeholder.com/400/0000FF/808080 [(max-width: 400px)] |
         {# {{ image.getUrl(mediumTransform) }} [(max-width: 800px)] | #}
         https://via.placeholder.com/800/FF0000/FFFFFF [(max-width: 1000px)] |
         {# {{ image.getUrl(largeTransform) }} #}
@@ -54,7 +51,7 @@
         "
         data-sizes="auto"
     ></div>
-    <img class="flourish" src="{{ svg }}">
+    <img class="flourish" src="">
     <div class="background"></div>
     <div class="container">
         <div class="content">
