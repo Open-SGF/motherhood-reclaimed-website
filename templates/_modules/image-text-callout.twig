@@ -9,12 +9,44 @@
  */
 #}
 
+{% set smallTransform = {
+    mode: 'crop',
+    width: 300,
+    position: 'center-center',
+    format: 'jpg'
+}%}
+
+{% set mediumTransform = {
+    mode: 'crop',
+    width: 600,
+    position: 'center-center',
+    format: 'jpg'
+}%}
+
+{% set largeTransform = {
+    mode: 'crop',
+    width: 1000,
+    position: 'center-center',
+    format: 'jpg'
+}%}
+
 {% set directionClass = style == 'imageRight' ? 'image-right' : 'image-left' %}
 {% autoescape false %}
 <section class="image-text-callout {{ directionClass }}">
     <div class="container callout">
         <div class="image-wrapper">
-            <img class="image" src="{{ image.getUrl() }}" alt="{{ image.altText }}">
+            <img 
+                class="image lazyload"
+                data-src="{{ image.getUrl(smallTransform) }}" 
+                data-srcset="
+                    {# {{ image.getUrl(smallTransform) }} 300w, #}
+                    https://via.placeholder.com/300/0000FF/808080 300w, 
+                    {# {{ image.getUrl(mediumTransform) }} 600w, #}
+                    https://via.placeholder.com/600/FF0000/FFFFFF 600w,
+                    {# {{ image.getUrl(largeTransform) }} 1000w, #}
+                    https://via.placeholder.com/1000/FFFF00/000000 1000w,
+                "
+            >
         </div>
 
         <div class="text-wrapper">

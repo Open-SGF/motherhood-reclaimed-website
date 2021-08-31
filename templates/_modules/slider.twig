@@ -6,7 +6,47 @@
  */
 #}
 
-<section class="feature-slider" {% if image %}style="background-image: url('{{ image.url }}');"{% endif %}>
+{% set smallTransform = {
+    mode: 'crop',
+    width: 400,
+    position: 'center-center',
+    format: 'jpg',
+}%}
+
+{% set mediumTransform = {
+    mode: 'crop',
+    width: 800,
+    position: 'center-center',
+    format: 'jpg',
+}%}
+
+{% set largeTransform = {
+    mode: 'crop',
+    width: 1200,
+    position: 'center-center',
+    format: 'jpg',
+}%}
+
+{% set maxTransform = {
+    mode: 'crop',
+    position: 'center-center',
+    format: 'jpg',
+}%}
+
+<section 
+    class="feature-slider lazyload" 
+    data-bgset="
+        {# {{ image.getUrl(smallTransform) }} [(max-width: 400px)] | #}
+        https://via.placeholder.com/400/0000FF/808080 [(max-width: 400px)] |
+        {# {{ image.getUrl(mediumTransform) }} [(max-width: 800px)] | #}
+        https://via.placeholder.com/800/FF0000/FFFFFF [(max-width: 800px)] |
+        {# {{ image.getUrl(largeTransform) }} [(max-width: 1200px)] | #}
+        https://via.placeholder.com/1200/FF00FF/FFFFFF [(max-width: 1200px)] |
+        {# {{ image.getUrl(maxTransform) }} #}
+        https://via.placeholder.com/2400/FFFF00/000000
+    "
+    data-sizes="auto"
+>
     <div class="purple-filter"></div>
     <section class="js-slider slider">
         {% for slide in slides %}

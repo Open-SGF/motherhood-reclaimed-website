@@ -6,8 +6,24 @@
 */
 #}
 
+{% set smallTransform = {
+    mode: 'crop',
+    width: 400,
+    height: 400,
+    position: 'center-center',
+    format: 'jpg'
+}%}
+
+{% set largeTransform = {
+    mode: 'crop',
+    width: 600,
+    height: 600,
+    position: 'center-center',
+    format: 'jpg'
+}%}
+
 {% autoescape false %}
-<section class="photo-grid">
+<section class="photo-grid">S
     <div class="container">
         <h2 class="grid-title">{{ title }}</h2>
         <div class="grid">
@@ -16,10 +32,20 @@
                     {% set image = photo.image|first %}
                     {% if image %}
                         <div class="image-wrapper">
-                            <img src="{{ image.getUrl() }}" alt="{{ image.altText }}">
+                            <img 
+                                class="lazyload" 
+                                data-src="{{ image.getUrl(smallTransform) }}" 
+                                data-srcset="
+                                    {# {{ image.getUrl(smallTransform) 400w, }} #} 
+                                    https://via.placeholder.com/400/FF0000/FFFFFF 400w,
+                                    {# {{ image.getUrl(largeTransform)800w, }} #} 
+                                    https://via.placeholder.com/600/FFFF00/000000 600w
+                                "  
+                                data-sizes="auto"
+                            >
                         </div>
                     {% endif %}
-                    <p class="text">{{ photo.customTitle }}</p>
+                    <p class="text-wrapper">{{ photo.customTitle }}</p>
                     <p class="h3">{{ photo.details }}</p>
                 </div>
             {% endfor %}

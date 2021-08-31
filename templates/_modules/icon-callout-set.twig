@@ -5,23 +5,50 @@
  * - icons: icon objects in an array each conataining an image object, customTitle, and details variables
  */
 #}
+
+{# The Icons will be between 250px and 600px #}
+{% set smallTransform = {
+    mode: 'crop',
+    width: 400,
+    height: 400,
+    position: 'center-center',
+    format: 'jpg'
+}%}
+
+{% set largeTransform = {
+    mode: 'crop',
+    width: 600,
+    height: 600,
+    position: 'center-center',
+    format: 'jpg'
+}%}
+
 {% autoescape false %}
 <section class="icon-callout-set container">
     <h2 class="title">{{ title }}</h2>
     <div class="icons">
         {% for icon in icons%}
-        <div class="icon-wrapper">
-            {% if icon.image|first %}
-                {% set image = icon.image|first %}
-                <div class="image-wrapper">
-                    <img src="{{ image.getUrl() }}" alt="{{ image.altText }}">
-                </div>
-            {% endif %}
-            <h3>{{ icon.customTitle }}</h3>
-            {% if icon.details %}
-                <p>{{ icon.details }}</p>
-            {% endif %}
-        </div>
+            <div class="icon-wrapper">
+                {% if icon.image|first %}
+                    {% set image = icon.image|first %}
+                    <div class="image-wrapper">
+                        <img 
+                            class="lazyload" 
+                            data-src="{{ image.getUrl(smallTransform) }}" 
+                            data-srcset="
+                                {# {{ image.getUrl(smallTransform) 400w, }} #}
+                                https://via.placeholder.com/400/FF0000/FFFFFF 400w,
+                                {# {{ image.getUrl(largeTransform) 600w }} #}
+                                https://via.placeholder.com/600/FFFF00/000000 600w
+                            " 
+                        >
+                    </div>
+                {% endif %}
+                <h3>{{ icon.customTitle }}</h3>
+                {% if icon.details %}
+                    <p>{{ icon.details }}</p>
+                {% endif %}
+            </div>
         {% endfor %}
     </udiv>
 </section>

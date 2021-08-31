@@ -8,6 +8,28 @@
  */
 #}
 
+{% set smallTransform = {
+    mode: 'crop',
+    width: 400,
+    position: 'center-center',
+    format: 'jpg',
+}%}
+
+{% set mediumTransform = {
+    mode: 'crop',
+    width: 800,
+    position: 'center-center',
+    format: 'jpg',
+}%}
+
+{% set largeTransform = {
+    mode: 'crop',
+    width: 1200,
+    position: 'center-center',
+    format: 'jpg',
+
+}%}
+
 {% if style == 'style1' %}
     {% set styleClass = 'text-left' %}
     {% set svg = '/img/text-left.svg' %}
@@ -17,7 +39,21 @@
 {% endif %}
 
 <section class="header {{ styleClass }}">
-    <div class="image" style="background-image: url('{{ image.getUrl() }}');" role="img" arial-label="{{ image.altText }}"></div>
+    <div 
+        class="image lazyload"
+        role="img" 
+        arial-label="{{ image.altText }}"
+        data-src="{{ image.getUrl(smallTransform) }}"
+        data-bgset="
+        {# {{ image.getUrl(smallTransform) }} [(max-width: 400px)] | #}
+        https://via.placeholder.com/400/0000FF/808080 [(max-width: 600px)] |
+        {# {{ image.getUrl(mediumTransform) }} [(max-width: 800px)] | #}
+        https://via.placeholder.com/800/FF0000/FFFFFF [(max-width: 1000px)] |
+        {# {{ image.getUrl(largeTransform) }} #}
+        https://via.placeholder.com/1200/FFFF00/000000
+        "
+        data-sizes="auto"
+    ></div>
     <img class="flourish" src="{{ svg }}">
     <div class="background"></div>
     <div class="container">

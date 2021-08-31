@@ -1,0 +1,9 @@
+format: png
+handle: photoGridImageTransform
+height: 200
+interlace: none
+mode: crop
+name: 'Photo Grid Image Transform'
+position: center-center
+quality: 82
+width: 200
