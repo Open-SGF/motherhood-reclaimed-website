@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="790.33">
+    <defs>
+        <filter id="a" x="0" y="0" width="1140.669" height="828.127" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur" result="result1"/>
+            <feComposite in="SourceGraphic" in2="result1"/>
+        </filter>
+        <filter id="b" x="71.992" y="23.127" width="1138" height="838.203" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="3" result="blur-2"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur-2" result="result1"/>
+            <feComposite in="SourceGraphic" in2="result1"/>
+        </filter>
+    </defs>
+    <g data-name="Group 69">
+        <g filter="url(#a)" transform="translate(-5.792 -31.12)">
+            <path data-name="Path 7" d="M-304.123 147.355l0 981.639 787.221 2.676s51.64-1075.249-.15-1092.384C431.158 22.151 208.664-5.368 17.962 18.024-172.74 41.416-304.123 147.355-304.123 147.355z" fill="#c8b8e1" opacity=".796"/>
+        </g>
+        <g filter="url(#b)" transform="translate(-5.792 -31.12)">
+            <path data-name="Path 6" d="M482.87 219.355l0 981.639-797.19 0s-51.79-1072.615 0-1089.75c51.79-17.135 284.4-44.612 475.105-21.22C351.49 113.416 482.87 219.355 482.87 219.355z" fill="#7e55be"/>
+        </g>
+    </g>
+</svg>
