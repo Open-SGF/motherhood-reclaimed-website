@@ -39,12 +39,9 @@
                 class="image lazyload"
                 data-src="{{ image.getUrl(smallTransform) }}" 
                 data-srcset="
-                    {# {{ image.getUrl(smallTransform) }} 300w, #}
-                    https://via.placeholder.com/300/0000FF/808080 300w, 
-                    {# {{ image.getUrl(mediumTransform) }} 600w, #}
-                    https://via.placeholder.com/600/FF0000/FFFFFF 600w,
-                    {# {{ image.getUrl(largeTransform) }} 1000w, #}
-                    https://via.placeholder.com/1000/FFFF00/000000 1000w,
+                    {{ image.getUrl(smallTransform) }} 300w,
+                    {{ image.getUrl(mediumTransform) }} 600w,
+                    {{ image.getUrl(largeTransform) }} 1000w,
                 "
             >
         </div>
