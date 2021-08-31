@@ -8,22 +8,23 @@
  */
 #}
 
-{% set tinyTransform = {
-    width: 100,
-    height: 100,
-    position: 'center-center'
+{% set smallTransform = {
+    width: 400,
+    position: 'center-center',
+    format: 'jpg',
 }%}
 
 {% set mediumTransform = {
-    width: 400,
-    height: 400,
-    position: 'center-center'
+    width: 800,
+    position: 'center-center',
+    format: 'jpg',
 }%}
 
 {% set largeTransform = {
-    width: 800,
-    height: 800,
-    position: 'center-center'
+    width: 1200,
+    position: 'center-center',
+    format: 'jpg',
+
 }%}
 
 {% if style == 'style1' %}
@@ -47,11 +48,14 @@
         class="image lazyload"
         role="img" 
         arial-label="{{ image.altText }}"
+        data-src="{{ image.getUrl(largeTransform) }}"
         data-bgset="
-        https://via.placeholder.com/200/0000FF/808080 [(max-width: 399px)] |
-        https://via.placeholder.com/400/FF0000/FFFFFF [(max-width: 799px)] |
-        https://via.placeholder.com/800/FFFF00/000000 [(max-width: 1599px)] |
-        https://via.placeholder.com/1600/00FFFF/808080 1600w
+        {# {{ image.getUrl(smallTransform) }} 400w, #}
+        https://via.placeholder.com/400/0000FF/808080 [(max-width: 600px)] |
+        {# {{ image.getUrl(mediumTransform) }} 800w, #}
+        https://via.placeholder.com/800/FF0000/FFFFFF [(max-width: 1000px)] |
+        {# {{ image.getUrl(largeTransform) }} 1200w, #}
+        https://via.placeholder.com/1200/FFFF00/000000
         "
         data-sizes="auto"
     ></div>
