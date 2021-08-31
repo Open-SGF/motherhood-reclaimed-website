@@ -1,9 +1,0 @@
-format: jpg
-handle: headerImageTransform
-height: 500
-interlace: none
-mode: crop
-name: 'Header Image Transform'
-position: center-center
-quality: null
-width: 500

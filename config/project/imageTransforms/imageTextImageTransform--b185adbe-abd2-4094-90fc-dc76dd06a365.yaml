@@ -1,9 +1,0 @@
-format: jpg
-handle: imageTextImageTransform
-height: 500
-interlace: none
-mode: crop
-name: 'Image Text Image Transform'
-position: center-center
-quality: null
-width: 500
