@@ -30,6 +30,8 @@
             max-width: 50%;
         }
         padding-left: $image-shadow-size;
+        // Hotfix locking the image-wrapper and text-wrapper to identical widths
+        flex: 1;
     }
 
     .text-wrapper {
