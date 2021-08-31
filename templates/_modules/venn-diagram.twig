@@ -8,24 +8,26 @@
 {% set circleOne = vennDiagram|length >= 1 ? vennDiagram[0] : null %}
 {% set circleTwo = vennDiagram|length >= 2 ? vennDiagram[1] : null %}
 {% autoescape false %}
-<section class="venn-diagram container">
-    <div class="util-container">
-        {% if circleOne %}
-            <div class="first-circle">
-                <div class="circle-text">
-                    <h3>{{ circleOne.circleTitle }}</h3>
-                    <p>{{ circleOne.circleDetails }}</p>
+<section class="venn-diagram">
+    <div class="container small">
+        <div class="circles-wrapper">
+            {% if circleOne %}
+                <div class="first-circle">
+                    <div class="circle-text">
+                        <h3>{{ circleOne.circleTitle }}</h3>
+                        <p>{{ circleOne.circleDetails }}</p>
+                    </div>
                 </div>
-            </div>
-        {% endif %}
-        {% if circleTwo %}
-            <div class="second-circle">
-                <div class="circle-text">
-                    <h3>{{ circleTwo.circleTitle }}</h3>
-                    <p>{{ circleTwo.circleDetails }}</p>
+            {% endif %}
+            {% if circleTwo %}
+                <div class="second-circle">
+                    <div class="circle-text">
+                        <h3>{{ circleTwo.circleTitle }}</h3>
+                        <p>{{ circleTwo.circleDetails }}</p>
+                    </div>
                 </div>
-            </div>
-        {% endif %}
+            {% endif %}
+        </div>
     </div>
 </section>
 {% endautoescape %}

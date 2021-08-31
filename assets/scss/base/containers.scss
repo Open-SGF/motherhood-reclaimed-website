@@ -4,6 +4,10 @@
     margin: 0 auto;
     max-width: 1650px;
 
+    &.small {
+        max-width: 1320px;
+    }
+
     @include mq-below(x-small) {
         width: calc(100% - 40px);
     }

@@ -4,42 +4,51 @@
     margin-bottom: 75px;
     margin-top: 100px;
 
-    .util-container {
+    .circles-wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-
         font-family: $primary-font;
         color: getColor(white);
         text-align: center;
+        padding: 0;
 
         $vertical-breakpoint: medium;
         width: 100%;
-        height: 0;
-        padding-bottom: 50%;
         margin: 0 auto;
 
-        @include mq-below($vertical-breakpoint) {
-            padding-bottom: 170%;
-            padding-top: 10%;
+        @include mq-below(mid-large) {
+            max-width: 600px;
         }
 
         .first-circle, .second-circle {
-            width: 40%;
+            display: block;
+            width: 50%;
             height: 0;
-            padding-bottom: 40%;
+            padding-bottom: 50%;
             position: relative;
             border-radius: 50%;
 
-            @include mq-below($vertical-breakpoint) {
-                width: 80%;
-                padding-bottom: 80%;
+            @include mq-below(mid-large) {
+                width: 100%;
+                padding-bottom: 100%;
             }
 
             .circle-text {
                 z-index: 3;
                 opacity: 100%;
                 padding: 30% 10% 10% 10%;
+
+                @include mq-below(large) {
+                    padding-top: 20%;
+                }
+
+                @include mq-below(mid-large){
+                    padding-top: 10%;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
 
                 h3 {
                     font-family: $secondary-font;
@@ -50,9 +59,9 @@
 
         .first-circle {
             background-color: getColor(primary, mid-dark);
-            transform: translateY(10%) translateX(3.5%);
+            transform: translateX(3.5%);
 
-            @include mq-below($vertical-breakpoint) {
+            @include mq-below(mid-large) {
                 transform: translateY(3.5%);
             }
         }
@@ -60,9 +69,9 @@
         .second-circle {
             background-color: getColor(primary, translucent-dark);
             z-index: 2;
-            transform: translateY(10%) translateX(-3.5%);
+            transform: translateX(-3.5%);
 
-            @include mq-below($vertical-breakpoint) {
+            @include mq-below(mid-large) {
                 transform: translateY(-3.5%);
             }
         }
