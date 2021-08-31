@@ -2,7 +2,18 @@
     font-family: $secondary-font;
     text-align: center;
     margin-top: 100px;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
+
+    @include mq-below(medium) {
+        margin-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    @include mq-below(mid-small) {
+        margin-top: 50px;
+        padding-bottom: 50px;
+    }
+
 
     .title {
         margin-bottom: 50px;
@@ -19,7 +30,7 @@
             width: 25%;
             padding-left: 15px;
             padding-right: 15px;
-            margin-bottom: 150px;
+            padding-bottom: 75px;
             margin-top: 20px; // Collapses during desktop, shows during mobile
 
             @include mq-below(mid-large) {
@@ -47,6 +58,16 @@
             border-radius: 50%;
             margin: 0 auto 40px auto;
             overflow: hidden;
+
+            @include mq-below(mid-small) {
+                width: 250px;
+                height: 250px;
+            }
+
+            @include mq-below(x-small) {
+                width: 200px;
+                height: 200px;
+            }
 
             img {
                 height: 100%;
