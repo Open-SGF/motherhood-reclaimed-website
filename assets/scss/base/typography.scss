@@ -1,8 +1,14 @@
 body {
-    font-size: $base-font-size;
     font-family: $primary-font;
     font-weight: 400;
-    line-height: $base-line-height;
+    line-height: 1.583;
+
+    @include responsive-font((
+        min-size: 1.6rem,
+        max-size: 2.4rem,
+        upper-bound: breakpoint(large),
+        lower-bound: breakpoint(x-small),
+    ));
 }
 
 p {
@@ -17,15 +23,21 @@ p {
 
 
 .text {
-    font-size: $base-font-size;
-    line-height: $base-line-height;
+    line-height: 1.583;
     font-family: $primary-font;
+
+    @include responsive-font((
+        min-size: 1.6rem,
+        max-size: 2.4rem,
+        upper-bound: breakpoint(large),
+        lower-bound: breakpoint(x-small),
+    ));
 }
 
 
 h1, .h1 {
     @extend %heading;
-    line-height: $h1-line-height;
+    line-height: 1.22;
 
     @include responsive-font((
         min-size: 4rem,
@@ -37,7 +49,7 @@ h1, .h1 {
 
 h2, .h2 {
     @extend %heading;
-    line-height: $h2-line-height;
+    line-height: 1.22;
 
     @include responsive-font((
         min-size: 4rem,
@@ -49,20 +61,31 @@ h2, .h2 {
 
 h3, .h3 {
     @extend %heading;
-    font-size: $h3-font-size;
-    line-height: $h3-line-height;
+    line-height: 1.20;
+
+    @include responsive-font((
+        min-size: 3rem,
+        max-size: 4.8rem,
+        upper-bound: breakpoint(large),
+        lower-bound: breakpoint(x-small),
+    ));
 }
 
 h4, .h4 {
     @extend %heading;
-    font-size: $h4-font-size;
-    line-height: $h4-line-height;
+    line-height: 1.20;
+
+    @include responsive-font((
+        min-size: 2.8rem,
+        max-size: 4.2rem,
+        upper-bound: breakpoint(large),
+        lower-bound: breakpoint(x-small),
+    ));
 }
 
 h5, .h5 {
     @extend %heading;
-    font-size: $h5-font-size;
-    line-height: $h5-line-height;
+    line-height: 1.25;
 
     @include responsive-font((
         min-size: 2.4rem,
@@ -74,6 +97,12 @@ h5, .h5 {
 
 h6, .h6 {
     @extend %heading;
-    font-size: $h6-font-size;
-    line-height: $h6-line-height;
+    line-height: 1.583;
+
+    @include responsive-font((
+        min-size: 2rem,
+        max-size: 2.8rem,
+        upper-bound: breakpoint(large),
+        lower-bound: breakpoint(x-small),
+    ));
 }
