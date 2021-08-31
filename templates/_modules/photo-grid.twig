@@ -10,18 +10,20 @@
 <section class="photo-grid">
     <div class="container">
         <h2 class="grid-title">{{ title }}</h2>
-        <ul class="grid">
+        <div class="grid">
             {% for photo in photos %}
-            <li>
-                {% set image = photo.image|first %}
-                {% if image %}
-                    <img src="{{ image.getUrl() }}" alt="{{ image.altText }}">
-                {% endif %}
-                <p class="text">{{ photo.customTitle }}</p>
-                <p class="h3">{{ photo.details }}</p>
-            </li>
+                <div class="photo-wrapper">
+                    {% set image = photo.image|first %}
+                    {% if image %}
+                        <div class="image-wrapper">
+                            <img src="{{ image.getUrl() }}" alt="{{ image.altText }}">
+                        </div>
+                    {% endif %}
+                    <p class="text">{{ photo.customTitle }}</p>
+                    <p class="h3">{{ photo.details }}</p>
+                </div>
             {% endfor %}
-        </ul>
+        </div>
     </div>
 </section>
 {% endautoescape %}

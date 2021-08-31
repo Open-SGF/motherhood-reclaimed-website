@@ -8,17 +8,21 @@
 {% autoescape false %}
 <section class="icon-callout-set container">
     <h2 class="title">{{ title }}</h2>
-    <ul class="icons">
+    <div class="icons">
         {% for icon in icons%}
-        <li>
-            {% set image = icon.image|first %}
-            <img src="{{ image.getUrl() }}" alt="{{ image.altText }}">
+        <div class="icon-wrapper">
+            {% if icon.image|first %}
+                {% set image = icon.image|first %}
+                <div class="image-wrapper">
+                    <img src="{{ image.getUrl() }}" alt="{{ image.altText }}">
+                </div>
+            {% endif %}
             <h3>{{ icon.customTitle }}</h3>
             {% if icon.details %}
-            <p>{{ icon.details }}</p>
+                <p>{{ icon.details }}</p>
             {% endif %}
-        </li>
+        </div>
         {% endfor %}
-    </ul>
+    </udiv>
 </section>
 {% endautoescape %}

@@ -15,7 +15,7 @@
         justify-content: space-around;
         margin-bottom: -150px;
 
-        li {
+        .icon-wrapper {
             width: 25%;
             padding-left: 15px;
             padding-right: 15px;
@@ -30,14 +30,6 @@
                 width: 100%;
             }
 
-            img {
-                display: block;
-                border-radius: 50%;
-                margin: 0 auto 40px auto;
-                width: 190px;
-                height: auto;
-            }
-
             h5 {
                 margin-bottom: 50px;
                 margin: 0 auto;
@@ -46,6 +38,19 @@
             p {
                 font-family: $primary-font;
                 margin: 0 auto;
+            }
+        }
+
+        .image-wrapper {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 40px auto;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: auto;
             }
         }
     }
