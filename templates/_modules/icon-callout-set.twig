@@ -5,22 +5,20 @@
  * - icons: icon objects in an array each conataining an image object, customTitle, and details variables
  */
 #}
-{% set tinyTransform = {
-    width: 100,
-    height: 100,
-    position: 'center-center'
-}%}
 
-{% set mediumTransform = {
+{# The Icons will be between 250px and 600px #}
+{% set smallTransform = {
     width: 400,
     height: 400,
-    position: 'center-center'
+    position: 'center-center',
+    format: 'jpeg'
 }%}
 
 {% set largeTransform = {
-    width: 800,
-    height: 800,
-    position: 'center-center'
+    width: 600,
+    height: 600,
+    position: 'center-center',
+    format: 'jpeg'
 }%}
 
 {% autoescape false %}
@@ -34,12 +32,12 @@
                     <div class="image-wrapper">
                         <img 
                             class="lazyload" 
-                            data-src="{{ image.getUrl() }}" 
+                            data-src="{{ image.getUrl(largeTransform) }}" 
                             data-srcset="
-                                https://via.placeholder.com/200/0000FF/808080 200w, 
+                                {# {{ image.getUrl(smallTransform) 400w, }} #}
                                 https://via.placeholder.com/400/FF0000/FFFFFF 400w,
-                                https://via.placeholder.com/800/FFFF00/000000 800w,
-                                https://via.placeholder.com/1600/00FFFF/808080 1600w,
+                                {# {{ image.getUrl(largeTransform) 600w }} #}
+                                https://via.placeholder.com/600/FFFF00/000000 600w
                             " 
                             data-sizes="auto"
                         >
