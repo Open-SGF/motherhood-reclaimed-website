@@ -189,6 +189,14 @@ main {
 }
 
 #contact {
-    top: 4.5rem;
+    top: auto;
     height: 75vh;
+
+    @include mq-below(medium) {
+        height: 90vh;
+    }
+}
+
+.blocker {
+    z-index: 99;
 }
