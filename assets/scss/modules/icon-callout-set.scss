@@ -24,14 +24,13 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        margin-bottom: -150px;
+        margin-bottom: -75px;
 
         .icon-wrapper {
             width: 25%;
             padding-left: 15px;
             padding-right: 15px;
             padding-bottom: 75px;
-            margin-top: 20px; // Collapses during desktop, shows during mobile
 
             @include mq-below(mid-large) {
                 width: 50%;
@@ -39,10 +38,11 @@
 
             @include mq-below(mid-small) {
                 width: 100%;
+                padding-left: 0;
+                padding-right: 0;
             }
 
             h5 {
-                margin-bottom: 50px;
                 margin: 0 auto;
             }
 
