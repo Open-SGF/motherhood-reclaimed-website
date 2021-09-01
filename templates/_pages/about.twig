@@ -1,7 +1,40 @@
 {% extends '_base.twig' %}
 
+{% set width400Transform = {
+    mode: 'crop',
+    width: 400,
+    position: 'center-center',
+    format: 'jpg',
+}%}
+
+{% set width800Transform = {
+    mode: 'crop',
+    width: 800,
+    position: 'center-center',
+    format: 'jpg',
+}%}
+
+{% set width1200Transform = {
+    mode: 'crop',
+    width: 1200,
+    position: 'center-center',
+    format: 'jpg'
+}%}
+
+{% set width1600Transform = {
+    mode: 'crop',
+    width: 1600,
+    position: 'center-center',
+    format: 'jpg'
+}%}
+
 {% block main %}
-    {% set imageTextCallout = entry.imageTextCallout.with(['image']).one() %}
+    {% set imageTextCallout = entry.imageTextCallout
+        .with([
+            ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
+        ])
+        .one() 
+    %}
     {% if imageTextCallout %}
         {% set image = imageTextCallout.image|first %}
         {% include '_modules/image-text-callout.twig' with {
@@ -10,15 +43,26 @@
             title: imageTextCallout.heading,
             text: imageTextCallout.text,
             link: imageTextCallout.customLink,
+            width400Transform: width400Transform,
+            width800Transform: width800Transform,
+            width1200Transform: width1200Transform
         } %}
     {% endif %}
 
     {% set iconCalloutSetTitle = entry.customTitle %}
-    {% set iconCalloutSet = entry.iconCalloutSet.with(['image']).all() %}
+    {% set iconCalloutSet = entry.iconCalloutSet
+        .with([
+            ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
+        ])
+        .all() 
+    %}
     {% if iconCalloutSet|length %}
         {% include '_modules/icon-callout-set.twig' with {
             title: iconCalloutSetTitle,
             icons: iconCalloutSet,
+            width400Transform: width400Transform,
+            width800Transform: width800Transform,
+            width1200Transform: width1200Transform
         } %}
     {% endif %}
 
@@ -30,11 +74,19 @@
     {% endif %}
 
     {% set photoGridTitle = entry.customTitle2 %}
-    {% set photoGrid = entry.photoGrid.with(['image']).all() %}
+    {% set photoGrid = entry.photoGrid
+        .with([
+            ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
+        ])
+        .all() 
+    %}
     {% if photoGrid|length %}
         {% include '_modules/photo-grid.twig' with {
             title: photoGridTitle,
             photos: photoGrid,
+            width400Transform: width400Transform,
+            width800Transform: width800Transform,
+            width1200Transform: width1200Transform
         } %}
     {% endif %}
 

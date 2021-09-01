@@ -9,27 +9,6 @@
  */
 #}
 
-{% set smallTransform = {
-    mode: 'crop',
-    width: 300,
-    position: 'center-center',
-    format: 'jpg'
-}%}
-
-{% set mediumTransform = {
-    mode: 'crop',
-    width: 600,
-    position: 'center-center',
-    format: 'jpg'
-}%}
-
-{% set largeTransform = {
-    mode: 'crop',
-    width: 1000,
-    position: 'center-center',
-    format: 'jpg'
-}%}
-
 {% set directionClass = style == 'imageRight' ? 'image-right' : 'image-left' %}
 {% autoescape false %}
 <section class="image-text-callout {{ directionClass }}">
@@ -37,11 +16,11 @@
         <div class="image-wrapper">
             <img 
                 class="image lazyload"
-                data-src="{{ image.getUrl(smallTransform) }}" 
+                data-src="{{ image.getUrl(width400Transform) }}" 
                 data-srcset="
-                    {{ image.getUrl(smallTransform) }} 300w,
-                    {{ image.getUrl(mediumTransform) }} 600w,
-                    {{ image.getUrl(largeTransform) }} 1000w,
+                    {{ image.getUrl(width400Transform) }} 300w,
+                    {{ image.getUrl(width800Transform) }} 600w,
+                    {{ image.getUrl(width1200Transform) }} 1000w,
                 "
             >
         </div>
