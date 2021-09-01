@@ -7,21 +7,6 @@
 #}
 
 {# The Icons will be between 250px and 600px #}
-{% set smallTransform = {
-    mode: 'crop',
-    width: 400,
-    height: 400,
-    position: 'center-center',
-    format: 'jpg'
-}%}
-
-{% set largeTransform = {
-    mode: 'crop',
-    width: 600,
-    height: 600,
-    position: 'center-center',
-    format: 'jpg'
-}%}
 
 {% autoescape false %}
 <section class="icon-callout-set container">
@@ -34,10 +19,10 @@
                     <div class="image-wrapper">
                         <img 
                             class="lazyload" 
-                            data-src="{{ image.getUrl(smallTransform) }}" 
+                            data-src="{{ image.getUrl(width400Transform) }}" 
                             data-srcset="
-                                {{ image.getUrl(smallTransform) }} 400w,
-                                {{ image.getUrl(largeTransform) }} 600w
+                                {{ image.getUrl(width400Transform) }} 400w,
+                                {{ image.getUrl(width800Transform) }} 600w
                             "
                         >
                     </div>

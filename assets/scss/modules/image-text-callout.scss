@@ -4,6 +4,11 @@
     margin-top: 140px;
     margin-bottom: 175px;
 
+    @include mq-below(mid-large) {
+        margin-top: 60px;
+        margin-bottom: 75px;
+    }
+
     .callout {
         display: flex;
         flex-direction: row;

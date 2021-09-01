@@ -1,7 +1,42 @@
 {% extends '_base.twig' %}
 
+{% set width400Transform = {
+    mode: 'crop',
+    width: 400,
+    position: 'center-center',
+    format: 'jpg',
+}%}
+
+{% set width800Transform = {
+    mode: 'crop',
+    width: 800,
+    position: 'center-center',
+    format: 'jpg',
+}%}
+
+{% set width1200Transform = {
+    mode: 'crop',
+    width: 1200,
+    position: 'center-center',
+    format: 'jpg'
+}%}
+
+{% set width1600Transform = {
+    mode: 'crop',
+    width: 1600,
+    position: 'center-center',
+    format: 'jpg'
+}%}
+
 {% block main %}
-    {% set header = entry.header.with(['image']).one() %}
+
+    {% set header = entry.header
+    .with([
+        ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
+    ])
+    .one()
+    %}
+
     {% if header %}
         {% if header.image %}
             {% set image = header.image|first %}
@@ -11,10 +46,18 @@
             image: image,
             title: header.customTitle,
             text: header.text,
+            width400Transform: width400Transform,
+            width800Transform: width800Transform,
+            width1200Transform: width1200Transform
         } %}
     {% endif %}
 
-    {% set imageTextCallout = entry.imageTextCallout.with(['image']).one() %}
+    {% set imageTextCallout = entry.imageTextCallout
+        .with([
+            ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
+        ])
+        .one() 
+    %}
     {% if imageTextCallout %}
         {% if imageTextCallout.image %}
             {% set image = imageTextCallout.image|first %}
@@ -25,22 +68,39 @@
             title: imageTextCallout.heading,
             text: imageTextCallout.text,
             link: imageTextCallout.customLink,
+            width400Transform: width400Transform,
+            width800Transform: width800Transform,
+            width1200Transform: width1200Transform
         } %}
     {% endif %}
 
     {% set quoteSlides = entry.quoteSlider.all() %}
     {% if quoteSlides|length %}
         {% if entry.simpleImage.one() %}
-            {% set quoteSliderBG = entry.simpleImage.one() %}
+            {% set quoteSliderBG = entry.simpleImage
+                .with([
+                    ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
+                ])
+                .one() 
+            %}
         {% endif %}
         {% include '_modules/slider.twig' with {
             image: quoteSliderBG,
             slides: quoteSlides,
+            width400Transform: width400Transform,
+            width800Transform: width800Transform,
+            width1200Transform: width1200Transform,
+            width1600Transform: width1600Transform
         } %}
     {% endif %}
 
 
-    {% set imageTextCallout2 = entry.imageTextCallout2.with(['image']).one() %}
+    {% set imageTextCallout2 = entry.imageTextCallout2
+        .with([
+            ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
+        ])
+        .one() 
+    %}
     {% if imageTextCallout2 %}
         {% if imageTextCallout2.image %}
             {% set image = imageTextCallout2.image|first %}
@@ -51,6 +111,9 @@
             title: imageTextCallout2.heading,
             text: imageTextCallout2.text,
             link: imageTextCallout2.customLink,
+            width400Transform: width400Transform,
+            width800Transform: width800Transform,
+            width1200Transform: width1200Transform
         } %}
     {% endif %}
 {% endblock %}

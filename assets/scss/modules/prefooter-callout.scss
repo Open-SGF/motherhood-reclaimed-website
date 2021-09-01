@@ -10,6 +10,10 @@
     position: relative;
     overflow: hidden;
 
+    @include mq-below(medium) {
+        height: 250px;
+    }
+
     .pfc-background {
         width: 100%;
         height: 200%;

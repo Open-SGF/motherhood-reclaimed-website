@@ -1,5 +1,33 @@
 {% extends '_base.twig' %}
 
+{% set width400Transform = {
+    mode: 'crop',
+    width: 400,
+    position: 'center-center',
+    format: 'jpg',
+}%}
+
+{% set width800Transform = {
+    mode: 'crop',
+    width: 800,
+    position: 'center-center',
+    format: 'jpg',
+}%}
+
+{% set width1200Transform = {
+    mode: 'crop',
+    width: 1200,
+    position: 'center-center',
+    format: 'jpg'
+}%}
+
+{% set width1600Transform = {
+    mode: 'crop',
+    width: 1600,
+    position: 'center-center',
+    format: 'jpg'
+}%}
+
 {% block main %}
 
     {# Code for header block #}
@@ -11,6 +39,9 @@
             image: image,
             title: header.customTitle,
             text: header.text,
+            width400Transform: width400Transform,
+            width800Transform: width800Transform,
+            width1200Transform: width1200Transform
         } %}
     {% endif %}
 
@@ -45,6 +76,9 @@
             title: imageTextCallout.heading,
             text: imageTextCallout.text,
             link: imageTextCallout.customLink,
+            width400Transform: width400Transform,
+            width800Transform: width800Transform,
+            width1200Transform: width1200Transform
         } %}
     {% endif %}
 

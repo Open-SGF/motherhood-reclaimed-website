@@ -6,41 +6,14 @@
  */
 #}
 
-{% set smallTransform = {
-    mode: 'crop',
-    width: 400,
-    position: 'center-center',
-    format: 'jpg',
-}%}
-
-{% set mediumTransform = {
-    mode: 'crop',
-    width: 800,
-    position: 'center-center',
-    format: 'jpg',
-}%}
-
-{% set largeTransform = {
-    mode: 'crop',
-    width: 1200,
-    position: 'center-center',
-    format: 'jpg',
-}%}
-
-{% set maxTransform = {
-    mode: 'crop',
-    position: 'center-center',
-    format: 'jpg',
-}%}
-
 <section 
     class="feature-slider lazyload" 
-    data-src="{{ image.getUrl(smallTransform) }}"
+    data-src="{{ image.getUrl(width400Transform) }}"
     data-bgset="
-        {{ image.getUrl(smallTransform) }} [(max-width: 400px)] |
-        {{ image.getUrl(mediumTransform) }} [(max-width: 800px)] |
-        {{ image.getUrl(largeTransform) }} [(max-width: 1200px)] |
-        {{ image.getUrl(maxTransform) }}
+        {{ image.getUrl(width400Transform) }} [(max-width: 400px)] |
+        {{ image.getUrl(width800Transform) }} [(max-width: 800px)] |
+        {{ image.getUrl(width1200Transform) }} [(max-width: 1200px)] |
+        {{ image.getUrl(width1600Transform) }}
     "
     data-sizes="auto"
 >
