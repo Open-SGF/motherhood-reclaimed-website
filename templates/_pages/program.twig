@@ -21,17 +21,15 @@
     format: 'jpg'
 } %}
 
-{% set width1600Transform = {
-    mode: 'crop',
-    width: 1600,
-    position: 'center-center',
-    format: 'jpg'
-} %}
-
 {% block main %}
 
     {# Code for header block #}
-    {% set header = entry.header.with(['image']).one() %}
+    {% set header = entry.header
+        .with([
+        ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
+        ])
+        .one() 
+    %}
     {% if header %}
         {% set image = header.image|first %}
         {% include '_modules/header.twig' with {
@@ -47,7 +45,12 @@
 
     {# Code for icon callout module #}
 
-    {% set icons = entry.iconCalloutSet.with(['image']).all() %}
+    {% set icons = entry.iconCalloutSet
+        .with([
+            ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
+        ])
+        .all() 
+    %}
     {% if icons|length or entry.customTitle %}
         {% include '_modules/icon-callout-set.twig' with {
             title: entry.customTitle,
@@ -67,7 +70,32 @@
     {% endif %}
 
     {# Code for image text callout module #}
-    {% set imageTextCallout = entry.imageTextCallout.with(['image']).one() %}
+    {% set imageTextCallout = entry.imageTextCallout
+        .with([
+            ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
+        ])
+        .one() 
+    %}
+    {% if imageTextCallout %}
+        {% set image = imageTextCallout.image|first %}
+        {% include '_modules/image-text-callout.twig' with {
+            style: imageTextCallout.style.value,
+            image: image,
+            title: imageTextCallout.heading,
+            text: imageTextCallout.text,
+            link: imageTextCallout.customLink,
+            width400Transform: width400Transform,
+            width800Transform: width800Transform,
+            width1200Transform: width1200Transform
+        } %}
+    {% endif %}
+
+    {# Code for image text callout module #}
+    {% set imageTextCallout = entry.imageTextCallout2
+        .with([
+            ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
+        ])
+        .one() %}
     {% if imageTextCallout %}
         {% set image = imageTextCallout.image|first %}
         {% include '_modules/image-text-callout.twig' with {
