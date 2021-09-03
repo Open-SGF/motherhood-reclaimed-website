@@ -37,7 +37,7 @@ export function throttleNav () {
     const isHiddenClass = 'is-hidden';
     const isOpenClass = 'is-open';
     const isMobileClass = 'is-mobile';
-    const mobileMq = window.matchMedia('(max-width: 768px)'); // True or false querry of ifWeAreOnMobile?
+    const mobileMq = window.matchMedia('(max-width: 960px)'); // True or false querry of ifWeAreOnMobile?
     let navigationHeight = $navigation.offsetHeight;
     let currentScrollPosition = 0;
     let lastScrollPosition = 0;
