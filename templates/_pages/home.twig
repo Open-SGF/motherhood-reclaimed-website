@@ -5,37 +5,36 @@
     width: 400,
     position: 'center-center',
     format: 'jpg',
-}%}
+} %}
 
 {% set width800Transform = {
     mode: 'crop',
     width: 800,
     position: 'center-center',
     format: 'jpg',
-}%}
+} %}
 
 {% set width1200Transform = {
     mode: 'crop',
     width: 1200,
     position: 'center-center',
     format: 'jpg'
-}%}
+} %}
 
 {% set width1600Transform = {
     mode: 'crop',
     width: 1600,
     position: 'center-center',
     format: 'jpg'
-}%}
+} %}
 
 {% block main %}
 
     {% set header = entry.header
-    .with([
-        ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
-    ])
-    .one()
-    %}
+        .with([
+            ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
+        ])
+        .one() %}
 
     {% if header %}
         {% if header.image %}
@@ -56,8 +55,7 @@
         .with([
             ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
         ])
-        .one() 
-    %}
+        .one() %}
     {% if imageTextCallout %}
         {% if imageTextCallout.image %}
             {% set image = imageTextCallout.image|first %}
@@ -76,14 +74,9 @@
 
     {% set quoteSlides = entry.quoteSlider.all() %}
     {% if quoteSlides|length %}
-        {% if entry.simpleImage.one() %}
-            {% set quoteSliderBG = entry.simpleImage
-                .with([
-                    ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
-                ])
-                .one() 
-            %}
-        {% endif %}
+        {% set quoteSliderBG = entry.image
+            .withTransforms([width400Transform, width800Transform, width1200Transform])
+            .one() %}
         {% include '_modules/slider.twig' with {
             image: quoteSliderBG,
             slides: quoteSlides,
@@ -99,8 +92,7 @@
         .with([
             ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
         ])
-        .one() 
-    %}
+        .one() %}
     {% if imageTextCallout2 %}
         {% if imageTextCallout2.image %}
             {% set image = imageTextCallout2.image|first %}

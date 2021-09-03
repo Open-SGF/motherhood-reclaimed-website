@@ -5,36 +5,35 @@
     width: 400,
     position: 'center-center',
     format: 'jpg',
-}%}
+} %}
 
 {% set width800Transform = {
     mode: 'crop',
     width: 800,
     position: 'center-center',
     format: 'jpg',
-}%}
+} %}
 
 {% set width1200Transform = {
     mode: 'crop',
     width: 1200,
     position: 'center-center',
     format: 'jpg'
-}%}
+} %}
 
 {% set width1600Transform = {
     mode: 'crop',
     width: 1600,
     position: 'center-center',
     format: 'jpg'
-}%}
+} %}
 
 {% block main %}
     {% set imageTextCallout = entry.imageTextCallout
         .with([
             ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
         ])
-        .one() 
-    %}
+        .one() %}
     {% if imageTextCallout %}
         {% set image = imageTextCallout.image|first %}
         {% include '_modules/image-text-callout.twig' with {
@@ -54,8 +53,7 @@
         .with([
             ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
         ])
-        .all() 
-    %}
+        .all() %}
     {% if iconCalloutSet|length %}
         {% include '_modules/icon-callout-set.twig' with {
             title: iconCalloutSetTitle,
@@ -78,8 +76,7 @@
         .with([
             ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
         ])
-        .all() 
-    %}
+        .all() %}
     {% if photoGrid|length %}
         {% include '_modules/photo-grid.twig' with {
             title: photoGridTitle,
