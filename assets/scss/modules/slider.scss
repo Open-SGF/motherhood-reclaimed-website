@@ -8,7 +8,10 @@
     height: 0;
     padding-bottom: 30%;
     @include mq-below(medium) {
-        padding-bottom: 45%;
+        padding-bottom: 50%;
+    }
+    @include mq-below(small) {
+        padding-bottom: 60%;
     }
     position: relative;
     z-index: 5;
