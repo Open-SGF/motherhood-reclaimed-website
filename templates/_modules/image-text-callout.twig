@@ -26,7 +26,9 @@
         </div>
 
         <div class="text-wrapper">
-            <h2 class="centered">{{ title }}</h2>
+            {% if title %}
+                <h2 class="centered">{{ title }}</h2>
+            {% endif %}
             <div>
                 {{ text|raw }}
             </div>

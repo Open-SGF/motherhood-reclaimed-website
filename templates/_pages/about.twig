@@ -64,6 +64,25 @@
         } %}
     {% endif %}
 
+    {% set imageTextCallout2 = entry.imageTextCallout2
+        .with([
+            ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
+        ])
+        .one() %}
+    {% if imageTextCallout2 %}
+        {% set image = imageTextCallout2.image|first %}
+        {% include '_modules/image-text-callout.twig' with {
+            style: imageTextCallout2.style.value,
+            image: image,
+            title: imageTextCallout2.heading,
+            text: imageTextCallout2.text,
+            link: imageTextCallout2.customLink,
+            width400Transform: width400Transform,
+            width800Transform: width800Transform,
+            width1200Transform: width1200Transform
+        } %}
+    {% endif %}
+
     {% set iconCalloutSetTitle = entry.customTitle %}
     {% set iconCalloutSet = entry.iconCalloutSet
         .with([
