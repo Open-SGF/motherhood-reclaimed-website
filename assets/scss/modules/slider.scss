@@ -45,6 +45,10 @@
         height: auto;
         width: 50%;
         margin: auto;
+
+        @include mq-below(small) {
+            width: 80%;
+        }
     }
 
     .quote {
