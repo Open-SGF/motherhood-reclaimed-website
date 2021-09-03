@@ -2,7 +2,7 @@
 
 {% set currentUrl = '/' ~ craft.app.request.pathInfo %}
 
-<nav class="navigation">
+<nav class="navigation js-navigation">
     <div class="container">
         <div class="nav-wrapper">
             <a href="/" class="logo">
@@ -10,7 +10,7 @@
             </a>
 
             <button
-                class="nav-toggle js-nav-toggle"
+                class="nav-toggle js-nav-toggle js-nav-open js-nav-close"
                 aria-label="Open menu"
                 aria-haspopup="true"
                 aria-expanded="false"

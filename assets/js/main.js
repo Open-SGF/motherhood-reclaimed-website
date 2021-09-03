@@ -7,11 +7,12 @@ import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 import slider from './slider';
 import accordion from './accordion';
-import navigation from './navigation';
+import { navToggle, throttleNav } from './navigation';
 
 
 $(document).ready(() => {
-    navigation();
+    navToggle();
+    throttleNav();
     slider();
     accordion();
 });
