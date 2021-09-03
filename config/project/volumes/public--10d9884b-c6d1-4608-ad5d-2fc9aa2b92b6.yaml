@@ -44,6 +44,6 @@ settings:
   path: '@webroot/assets'
 sortOrder: 1
 titleTranslationKeyFormat: null
-titleTranslationMethod: null
+titleTranslationMethod: site
 type: craft\volumes\Local
 url: '@web/assets'
