@@ -18,17 +18,17 @@
                         <div class="image-wrapper">
                             <img 
                                 class="lazyload" 
-                                data-src="{{ image.getUrl(width400Transform) }}" 
+                                data-src="{{ image.getUrl(square400Transform) }}" 
                                 data-srcset="
-                                    {{ image.getUrl(width400Transform) }} 400w,
-                                    {{ image.getUrl(width800Transform) }} 800w,
+                                    {{ image.getUrl(square400Transform) }} 400w,
+                                    {{ image.getUrl(square800Transform) }} 800w,
                                 "  
                                 data-sizes="auto"
                             >
                         </div>
                     {% endif %}
-                    <p class="text-wrapper">{{ photo.customTitle }}</p>
-                    <p class="h3">{{ photo.details }}</p>
+                    <p class="h3">{{ photo.customTitle }}</p>
+                    <p class="bio">{{ photo.details }}</p>
                 </div>
             {% endfor %}
         </div>

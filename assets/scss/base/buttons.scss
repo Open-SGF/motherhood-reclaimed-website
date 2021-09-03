@@ -46,7 +46,7 @@
 
     &.btn-outline {
         color: getColor(white);
-        background: transparent;
+        background: getColor(primary, mid-dark);
         border-color: getColor(white);
 
         &:hover,

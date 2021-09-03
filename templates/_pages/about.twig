@@ -7,8 +7,24 @@
     format: 'jpg',
 } %}
 
+{% set square400Transform = {
+    mode: 'crop',
+    height: 400,
+    width: 400,
+    position: 'center-center',
+    format: 'jpg',
+} %}
+
 {% set width800Transform = {
     mode: 'crop',
+    width: 800,
+    position: 'center-center',
+    format: 'jpg',
+} %}
+
+{% set square800Transform = {
+    mode: 'crop',
+    height: 800,
     width: 800,
     position: 'center-center',
     format: 'jpg',
@@ -17,6 +33,13 @@
 {% set width1200Transform = {
     mode: 'crop',
     width: 1200,
+    position: 'center-center',
+    format: 'jpg'
+} %}
+
+{% set width1600Transform = {
+    mode: 'crop',
+    width: 1600,
     position: 'center-center',
     format: 'jpg'
 } %}
@@ -51,9 +74,8 @@
         {% include '_modules/icon-callout-set.twig' with {
             title: iconCalloutSetTitle,
             icons: iconCalloutSet,
-            width400Transform: width400Transform,
-            width800Transform: width800Transform,
-            width1200Transform: width1200Transform
+            square400Transform: square400Transform,
+            square800Transform: square800Transform
         } %}
     {% endif %}
 
@@ -74,9 +96,8 @@
         {% include '_modules/photo-grid.twig' with {
             title: photoGridTitle,
             photos: photoGrid,
-            width400Transform: width400Transform,
-            width800Transform: width800Transform,
-            width1200Transform: width1200Transform
+            square400Transform: square400Transform,
+            square800Transform: square800Transform
         } %}
     {% endif %}
 

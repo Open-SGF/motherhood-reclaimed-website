@@ -1,6 +1,8 @@
 <a href="#content" class="skip-nav btn btn-outline">Skip to main content</a>
 
-<nav class="navigation">
+{% set currentUrl = '/' ~ craft.app.request.pathInfo %}
+
+<nav class="navigation js-navigation">
     <div class="container">
         <div class="nav-wrapper">
             <a href="/" class="logo">
@@ -8,7 +10,7 @@
             </a>
 
             <button
-                class="nav-toggle js-nav-toggle"
+                class="nav-toggle js-nav-toggle js-nav-open js-nav-close"
                 aria-label="Open menu"
                 aria-haspopup="true"
                 aria-expanded="false"
@@ -21,10 +23,10 @@
             <div class="nav-links js-nav-links">
                 <ul>
                     <li>
-                        <a href="/program" class="nav-link">Program</a>
+                        <a href="/program" class="nav-link {% if currentUrl == '/program' %}active{% endif %}">Program</a>
                     </li>
                     <li>
-                        <a href="/about" class="nav-link">About</a>
+                        <a href="/about" class="nav-link {% if currentUrl == '/about' %}active{% endif %}">About</a>
                     </li>
                     <li>
                         <a
