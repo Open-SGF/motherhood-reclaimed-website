@@ -23,7 +23,7 @@
             <div class="slide-text container">
                 <div class="text-wrapper">
                     <p class="quote h3">{{ slide.quote }}</p>
-                    <p class="person-quoted">-{{ slide.byline }}</p>
+                    {% if slide.byline %}<p class="person-quoted">-{{ slide.byline }}</p>{% endif %}
                 </div>
             </div>
         {% endfor %}
