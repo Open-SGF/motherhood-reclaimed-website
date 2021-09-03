@@ -35,6 +35,7 @@
             max-width: 45%;
         }
         padding-left: $image-shadow-size;
+        padding-right: $image-shadow-size;
         // Hotfix locking the image-wrapper and text-wrapper to identical widths
         flex: 1;
     }
@@ -45,12 +46,12 @@
     }
 
     h2 {
-        padding-top: 50px;
+        padding-top: 70px;
     }
 
     p {
         margin-bottom: 28px;
-        margin-top: 50px;
+        margin-top: 5px;
         text-align: center;
     }
 
