@@ -7,8 +7,24 @@
     format: 'jpg',
 } %}
 
+{% set square400Transform = {
+    mode: 'crop',
+    height: 400,
+    width: 400,
+    position: 'center-center',
+    format: 'jpg',
+} %}
+
 {% set width800Transform = {
     mode: 'crop',
+    width: 800,
+    position: 'center-center',
+    format: 'jpg',
+} %}
+
+{% set square800Transform = {
+    mode: 'crop',
+    height: 800,
     width: 800,
     position: 'center-center',
     format: 'jpg',
