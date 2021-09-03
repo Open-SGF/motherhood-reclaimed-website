@@ -21,13 +21,6 @@
     format: 'jpg'
 } %}
 
-{% set width1600Transform = {
-    mode: 'crop',
-    width: 1600,
-    position: 'center-center',
-    format: 'jpg'
-} %}
-
 {% block main %}
     {% set imageTextCallout = entry.imageTextCallout
         .with([

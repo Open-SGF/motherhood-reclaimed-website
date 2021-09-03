@@ -1,4 +1,4 @@
-dateModified: 1630629934
+dateModified: 1630630203
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: 'Motherhood Reclaimed'
@@ -110,7 +110,7 @@ system:
   edition: solo
   live: true
   name: 'Motherhood Reclaimed'
-  schemaVersion: 3.7.8
+  schemaVersion: 3.7.7
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
