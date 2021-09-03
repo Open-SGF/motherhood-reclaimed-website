@@ -22,8 +22,8 @@
     transition: border 250ms ease-in-out, color 250ms ease-in-out, background 250ms ease-in-out;
 
     @include responsive-font((
-        min-size: 2.4rem,
-        max-size: 3.6rem,
+        min-size: 2rem,
+        max-size: 2.6rem,
         upper-bound: breakpoint(large),
         lower-bound: breakpoint(x-small),
     ));

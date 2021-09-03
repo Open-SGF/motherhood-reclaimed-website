@@ -5,7 +5,7 @@ body {
 
     @include responsive-font((
         min-size: 1.6rem,
-        max-size: 2.4rem,
+        max-size: 2.2rem,
         upper-bound: breakpoint(large),
         lower-bound: breakpoint(x-small),
     ));
@@ -13,6 +13,17 @@ body {
 
 p {
     margin-top: 0;
+}
+
+a:not(.btn) {
+    color: getColor(primary, mid-dark);
+    text-decoration-color: transparent;
+    transition: text-decoration-color 250ms ease-in-out;
+
+    &:hover,
+    &:focus {
+        text-decoration-color: getColor(primary, mid-dark);
+    }
 }
 
 %heading {
@@ -28,7 +39,7 @@ p {
 
     @include responsive-font((
         min-size: 1.6rem,
-        max-size: 2.4rem,
+        max-size: 2.2rem,
         upper-bound: breakpoint(large),
         lower-bound: breakpoint(x-small),
     ));
@@ -41,7 +52,7 @@ h1, .h1 {
 
     @include responsive-font((
         min-size: 4rem,
-        max-size: 6.4rem,
+        max-size: 5rem,
         upper-bound: breakpoint(large),
         lower-bound: breakpoint(x-small),
     ));
@@ -53,7 +64,7 @@ h2, .h2 {
 
     @include responsive-font((
         min-size: 4rem,
-        max-size: 6.4rem,
+        max-size: 5rem,
         upper-bound: breakpoint(large),
         lower-bound: breakpoint(x-small),
     ));
@@ -64,8 +75,8 @@ h3, .h3 {
     line-height: 1.20;
 
     @include responsive-font((
-        min-size: 3rem,
-        max-size: 4.8rem,
+        min-size: 2.5rem,
+        max-size: 3.5rem,
         upper-bound: breakpoint(large),
         lower-bound: breakpoint(x-small),
     ));
@@ -76,8 +87,8 @@ h4, .h4 {
     line-height: 1.20;
 
     @include responsive-font((
-        min-size: 2.8rem,
-        max-size: 4.2rem,
+        min-size: 2.2rem,
+        max-size: 3rem,
         upper-bound: breakpoint(large),
         lower-bound: breakpoint(x-small),
     ));
@@ -88,8 +99,8 @@ h5, .h5 {
     line-height: 1.25;
 
     @include responsive-font((
-        min-size: 2.4rem,
-        max-size: 3.6rem,
+        min-size: 2.2rem,
+        max-size: 2.8rem,
         upper-bound: breakpoint(large),
         lower-bound: breakpoint(x-small),
     ));
@@ -100,8 +111,8 @@ h6, .h6 {
     line-height: 1.583;
 
     @include responsive-font((
-        min-size: 2rem,
-        max-size: 2.8rem,
+        min-size: 1.8rem,
+        max-size: 2.4rem,
         upper-bound: breakpoint(large),
         lower-bound: breakpoint(x-small),
     ));
