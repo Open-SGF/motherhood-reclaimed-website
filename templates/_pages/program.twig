@@ -26,10 +26,9 @@
     {# Code for header block #}
     {% set header = entry.header
         .with([
-        ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
+            ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
         ])
-        .one() 
-    %}
+        .one() %}
     {% if header %}
         {% set image = header.image|first %}
         {% include '_modules/header.twig' with {
@@ -49,8 +48,7 @@
         .with([
             ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
         ])
-        .all() 
-    %}
+        .all() %}
     {% if icons|length or entry.customTitle %}
         {% include '_modules/icon-callout-set.twig' with {
             title: entry.customTitle,
@@ -74,8 +72,7 @@
         .with([
             ['image', { withTransforms: [width400Transform, width800Transform, width1200Transform] }]
         ])
-        .one() 
-    %}
+        .one() %}
     {% if imageTextCallout %}
         {% set image = imageTextCallout.image|first %}
         {% include '_modules/image-text-callout.twig' with {
