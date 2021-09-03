@@ -7,30 +7,32 @@
     }
 
     font-family: $primary-font;
-    background-color: getColor(primary, mid-dark);
+    background-color: getColor(primary, light);
     padding-top: 75px;
     padding-bottom: 100px;
     overflow: hidden;
 
     .flower-img-one {
         position: absolute;
-        opacity: 50%;
+        opacity: 40%;
         top: -500px;
         left: -240px;
     }
 
     .flower-img-two {
         position: absolute;
-        opacity: 50%;
+        opacity: 40%;
         top: 40px;
         left: 1000px;
     }
 
     .accordion-title {
-        color: white;
+        color: black;
         font-family: $secondary-font;
         margin-bottom: 27px;
         text-align: center;
+        position: relative;
+        z-index: 3;
     }
 
     .badger-accordion {
@@ -44,7 +46,7 @@
         }
 
         &__trigger {
-            background-color: getColor(primary, light);
+            background-color: getColor(primary, base);
             color: getColor(black);
             font-family: $secondary-font;
             text-align: left;

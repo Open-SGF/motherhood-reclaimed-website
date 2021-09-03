@@ -2,7 +2,7 @@
     width: 100%;
     font-family: $secondary-font;
     color: getColor(white);
-    background-color: #7E55BE;
+    background-color: getColor(primary, light);
     display: flex;
     flex-direction: column;
     justify-content: center;
