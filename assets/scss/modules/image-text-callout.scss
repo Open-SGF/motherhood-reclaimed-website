@@ -32,7 +32,7 @@
 
     .image-wrapper {
         @include mq-above(mid-large){
-            max-width: 50%;
+            max-width: 45%;
         }
         padding-left: $image-shadow-size;
         // Hotfix locking the image-wrapper and text-wrapper to identical widths

@@ -12,11 +12,11 @@
 {% set directionClass = style == 'imageRight' ? 'image-right' : 'image-left' %}
 {% autoescape false %}
 <section class="image-text-callout {{ directionClass }}">
-    <div class="container callout">
+    <div class="container mid-large callout">
         <div class="image-wrapper">
-            <img 
+            <img
                 class="image lazyload"
-                data-src="{{ image.getUrl(width400Transform) }}" 
+                data-src="{{ image.getUrl(width400Transform) }}"
                 data-srcset="
                     {{ image.getUrl(width400Transform) }} 300w,
                     {{ image.getUrl(width800Transform) }} 600w,
