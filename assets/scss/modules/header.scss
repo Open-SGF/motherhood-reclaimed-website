@@ -52,8 +52,11 @@
     .flourish {
         position: absolute;
         top: 0;
-        width: 200px;
+        width: 220px;
         height: 100%;
+        background-position: center;
+        background-size: cover;
+        overflow: visible;
     }
 
     .background {
@@ -119,13 +122,13 @@
         }
 
         .flourish {
-            content: url('/img/text-left.svg');
+            background-image: url('/img/text-left.svg');
             right: calc(35% + 1px);
         }
 
         @include mq-below(medium) {
             .flourish {
-                content: url('/img/text-bottom-1.svg');
+                background-image: url('/img/text-bottom-1.svg');
                 right: auto;
             }
         }
@@ -145,13 +148,13 @@
         }
 
         .flourish {
-            content: url('/img/text-right.svg');
+            background-image: url('/img/text-right.svg');
             left: calc(35% + 1px);
         }
 
         @include mq-below(medium) {
             .flourish {
-                content: url('/img/text-bottom-2.svg');
+                background-image: url('/img/text-bottom-2.svg');
                 left: auto;
             }
         }
