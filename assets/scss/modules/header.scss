@@ -52,8 +52,10 @@
     .flourish {
         position: absolute;
         top: 0;
-        width: 200px;
+        width: 210px;
         height: 100%;
+        background-size: cover;
+        overflow: visible;
     }
 
     .background {
@@ -68,42 +70,40 @@
         display: flex;
         flex-direction: column;
 
-            .image {
-                position: relative;
-                height: 300px;
-                width: 100%;
-                min-width: auto;
-            }
-
-            .container {
-                height: auto;
-            }
-
-            .content {
-                justify-content: center;
-            }
-
-            .text-wrapper {
-                width: 100%;
-                height: 100%;
-            }
-
-            .flourish {
-                width: 100%;
-                height: 200px;
-                top: 100px;
-                bottom: 50%;
-                left: 0;
-            }
-
-            .background {
-                top: auto;
-                height: auto;
-                width: 100%;
-                bottom: 0;
-                left: 0;
-            }
+        .image {
+            position: relative;
+            height: 300px;
+            width: 100%;
+            min-width: auto;
         }
+
+        .container {
+            height: auto;
+        }
+
+        .content {
+            justify-content: center;
+        }
+
+        .text-wrapper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .flourish {
+            width: 100%;
+            top: 100px;
+            left: 0;
+        }
+
+        .background {
+            top: auto;
+            height: auto;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+    }
 
     &.text-left {
         .image {
@@ -119,14 +119,17 @@
         }
 
         .flourish {
-            content: url('/img/text-left.svg');
+            background-image: url('/img/text-left.svg');
+            background-position: left center;
             right: calc(35% + 1px);
         }
 
         @include mq-below(medium) {
             .flourish {
-                content: url('/img/text-bottom-1.svg');
+                background-image: url('/img/text-bottom-1.svg');
                 right: auto;
+                height: 200px;
+                top: 105px;
             }
         }
     }
@@ -145,14 +148,18 @@
         }
 
         .flourish {
-            content: url('/img/text-right.svg');
+            background-image: url('/img/text-right.svg');
+            background-position: right center;
             left: calc(35% + 1px);
+
         }
 
         @include mq-below(medium) {
             .flourish {
-                content: url('/img/text-bottom-2.svg');
+                background-image: url('/img/text-bottom-2.svg');
                 left: auto;
+                height: 200px;
+                top: 100px;
             }
         }
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    width="800"
-   height="250"
+   height="220"
    version="1.1"
    id="svg4053"
    sodipodi:docname="text-bottom-2.svg"
@@ -20,8 +20,8 @@
      inkscape:pagecheckerboard="1"
      showgrid="false"
      inkscape:zoom="0.84142065"
-     inkscape:cx="460.53065"
-     inkscape:cy="61.800242"
+     inkscape:cx="534.21556"
+     inkscape:cy="70.119506"
      inkscape:window-width="1640"
      inkscape:window-height="899"
      inkscape:window-x="0"
@@ -84,11 +84,24 @@
          in2="result1"
          id="feComposite4038" />
     </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath274">
+      <rect
+         style="fill:#0000ff;fill-rule:evenodd;stroke-width:0.927173"
+         id="rect276"
+         width="824.55566"
+         height="342.72006"
+         x="-812.1759"
+         y="-93.944107"
+         transform="rotate(-90)" />
+    </clipPath>
   </defs>
   <g
      data-name="Group 69"
      id="g4051"
-     transform="matrix(0,0.96554789,-1.2047711,0,926.53705,92.030629)">
+     transform="matrix(0,0.78564484,-1.2047711,0,926.53705,90.988631)"
+     clip-path="url(#clipPath274)">
     <g
        filter="url(#a)"
        transform="translate(-5.792,-31.12)"
@@ -113,4 +126,11 @@
          sodipodi:nodetypes="cccssc" />
     </g>
   </g>
+  <rect
+     style="fill:#0000ff;fill-opacity:0"
+     id="rect84"
+     width="993.40082"
+     height="330.91263"
+     x="-51.948971"
+     y="1.3230971" />
 </svg>
