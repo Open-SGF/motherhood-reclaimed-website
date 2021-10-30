@@ -32,7 +32,7 @@
     ],
     "post-install-cmd": [
       "npm install",
-      "npm run mix --production"
+      "npm run production"
       ]
   }
 }
