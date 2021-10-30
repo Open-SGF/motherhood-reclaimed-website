@@ -10,7 +10,7 @@
 
 use craft\helpers\App;
 
-preg_match('|mysql://([a-z0-9]*):([a-z0-9]*)@([^:]*):([0-9]*)/(.*)|i', getenv('DATABASE_URL'), $matches);
+preg_match('|mysql://([a-z0-9]*):([a-z0-9]*)@([^:]*):([0-9]*)/(.*)|i', getenv('JAWSDB_URL'), $matches);
 
 $user = $matches[1];
 $password = $matches[2];
