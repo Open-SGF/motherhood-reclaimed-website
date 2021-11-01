@@ -11,3 +11,4 @@ web/**
 !web/index.php
 !web/.htaccess
 !web/web.config
+!web/.user.ini
