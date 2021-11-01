@@ -5,7 +5,7 @@
     RewriteCond %{HTTP_HOST} ^www.417motherhood.org$ [OR]
     RewriteCond %{HTTP_HOST} ^staging.motherhoodreclaimed.org$ [OR]
     RewriteCond %{HTTP_HOST} ^motherhoodreclaimed.org$ [OR]
-    RewriteCond %{HTTP_HOST} ^motherhood.frb.io$
+    RewriteCond %{HTTP_HOST} ^motherhood-reclaimed.herokuapp.com$
     RewriteRule (.*)$ https://www.motherhoodreclaimed.org/$1 [R=301,L]
 
     # Send would-be 404 requests to Craft
