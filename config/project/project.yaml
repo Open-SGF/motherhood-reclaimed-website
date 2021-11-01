@@ -1,4 +1,4 @@
-dateModified: 1630639235
+dateModified: 1635730089
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: 'Motherhood Reclaimed'
@@ -71,6 +71,10 @@ meta:
     f7ac697b-127d-45a2-9dfe-01eabcb03860: Image # Image
     f12cc11a-ba0b-4b6c-bdc2-1e3c06b236e5: Program # Program
 plugins:
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.2'
   expanded-singles:
     edition: standard
     enabled: true

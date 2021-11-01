@@ -1,43 +1,44 @@
 {
-  "name": "motherhood-reclaimed-website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "mix",
-    "watch": "mix watch",
-    "production": "mix --production"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Open-SGF/motherhood-reclaimed-website.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/glitchedmob/motherhood-reclaimed-website/issues"
-  },
-  "homepage": "https://github.com/glitchedmob/motherhood-reclaimed-website#readme",
-  "devDependencies": {
-    "browser-sync": "^2.26.14",
-    "browser-sync-webpack-plugin": "^2.3.0",
-    "laravel-mix": "^6.0.19",
-    "postcss": "^8.3.4",
-    "resolve-url-loader": "^3.1.3",
-    "sass": "^1.34.1",
-    "sass-loader": "^11.1.1"
-  },
-  "dependencies": {
-    "badger-accordion": "^1.2.4",
-    "jquery": "^3.6.0",
-    "jquery-modal": "^0.9.2",
-    "lazysizes": "^5.3.2",
-    "normalize.css": "^8.0.1",
-    "slick-carousel": "^1.8.1",
-    "throttle-debounce": "^3.0.1"
-  },
-  "browserslist": [
-    "defaults",
-    "IE 11"
-  ]
+    "name": "motherhood-reclaimed-website",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "npm run production",
+        "dev": "mix",
+        "watch": "mix watch",
+        "production": "mix --production"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Open-SGF/motherhood-reclaimed-website.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/glitchedmob/motherhood-reclaimed-website/issues"
+    },
+    "homepage": "https://github.com/glitchedmob/motherhood-reclaimed-website#readme",
+    "devDependencies": {
+        "browser-sync": "^2.26.14",
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "laravel-mix": "^6.0.19",
+        "postcss": "^8.3.4",
+        "resolve-url-loader": "^3.1.3",
+        "sass": "^1.34.1",
+        "sass-loader": "^11.1.1"
+    },
+    "dependencies": {
+        "badger-accordion": "^1.2.4",
+        "jquery": "^3.6.0",
+        "jquery-modal": "^0.9.2",
+        "lazysizes": "^5.3.2",
+        "normalize.css": "^8.0.1",
+        "slick-carousel": "^1.8.1",
+        "throttle-debounce": "^3.0.1"
+    },
+    "browserslist": [
+        "defaults",
+        "IE 11"
+    ]
 }
