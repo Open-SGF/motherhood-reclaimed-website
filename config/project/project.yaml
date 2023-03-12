@@ -1,4 +1,4 @@
-dateModified: 1678657136
+dateModified: 1678658974
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: 'Motherhood Reclaimed'
@@ -9,6 +9,25 @@ email:
     timeout: '10'
     username: $GMAIL_USERNAME
   transportType: craft\mail\transportadapters\Gmail
+fs:
+  public:
+    hasUrls: true
+    name: Public
+    settings:
+      addSubfolderToRootUrl: '1'
+      autoFocalPoint: ''
+      bucket: $AWS_S3_ASSET_BUCKET_NAME
+      bucketSelectionMode: manual
+      cfDistributionId: ''
+      cfPrefix: ''
+      expires: ''
+      keyId: $AWS_ACCESS_KEY_ID
+      makeUploadsPublic: '1'
+      region: $AWS_S3_ASSET_BUCKET_REGION
+      secret: $AWS_SECRET_KEY_ID
+      subfolder: ''
+    type: craft\awss3\Fs
+    url: $AWS_S3_ASSET_BUCKET_PUBLIC_URL
 meta:
   __names__:
     0a090d84-ad48-43e7-b8de-dc9a80c73722: 'Quote Slider' # Quote Slider
@@ -74,7 +93,7 @@ plugins:
   aws-s3:
     edition: standard
     enabled: true
-    schemaVersion: '1.2'
+    schemaVersion: '2.0'
   expanded-singles:
     edition: standard
     enabled: true
@@ -105,19 +124,20 @@ plugins:
   super-table:
     edition: standard
     enabled: true
-    schemaVersion: 2.2.1
+    schemaVersion: 3.0.0
   typedlinkfield:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.0
+    schemaVersion: 2.0.0
 system:
   edition: solo
   live: true
   name: 'Motherhood Reclaimed'
-  schemaVersion: 3.8.0.1
+  schemaVersion: 4.4.0.4
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
+  deactivateByDefault: false
   defaultGroup: null
   photoSubpath: null
   photoVolumeUid: null

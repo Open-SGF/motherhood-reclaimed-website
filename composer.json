@@ -2,16 +2,16 @@
     "require": {
         "php": "^8.2.0",
         "ext-imagick": "*",
-        "craftcms/aws-s3": "1.3.0",
-        "craftcms/cms": "3.8.1",
-        "craftcms/redactor": "2.10.11",
-        "misterbk/mix": "1.5.2",
-        "nystudio107/craft-seomatic": "3.4.50",
-        "sebastianlenz/linkfield": "1.0.25",
-        "verbb/expanded-singles": "1.2.0",
-        "verbb/field-manager": "2.2.5",
-        "verbb/super-table": "2.7.4",
-        "vlucas/phpdotenv": "^3.4.0"
+        "craftcms/aws-s3": "2.0.1",
+        "craftcms/cms": "4.4.1",
+        "craftcms/redactor": "3.0.3",
+        "misterbk/mix": "1.6.0",
+        "nystudio107/craft-seomatic": "4.0.21",
+        "sebastianlenz/linkfield": "2.1.5",
+        "verbb/expanded-singles": "2.0.1",
+        "verbb/field-manager": "3.0.5",
+        "verbb/super-table": "3.0.7",
+        "vlucas/phpdotenv": "^5.4.0"
     },
     "require-dev": {
         "yiisoft/yii2-shell": "^2.0.3"
