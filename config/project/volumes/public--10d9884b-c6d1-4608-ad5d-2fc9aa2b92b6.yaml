@@ -56,6 +56,6 @@ settings:
   subfolder: ''
 sortOrder: 1
 titleTranslationKeyFormat: null
-titleTranslationMethod: null
+titleTranslationMethod: site
 type: craft\awss3\Volume
 url: $AWS_S3_ASSET_BUCKET_PUBLIC_URL

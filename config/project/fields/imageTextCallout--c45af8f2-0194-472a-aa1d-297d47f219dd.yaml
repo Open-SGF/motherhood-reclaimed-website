@@ -48,6 +48,7 @@ settings:
   maxRows: '1'
   minRows: ''
   placeholderKey: null
+  propagationKeyFormat: null
   propagationMethod: all
   selectionLabel: 'Add Image Text Callout'
   staticField: ''

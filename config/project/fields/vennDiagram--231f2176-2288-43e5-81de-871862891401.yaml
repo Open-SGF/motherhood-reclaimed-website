@@ -27,6 +27,7 @@ settings:
   maxRows: '2'
   minRows: ''
   placeholderKey: null
+  propagationKeyFormat: null
   propagationMethod: all
   selectionLabel: 'Add Circle'
   staticField: ''
