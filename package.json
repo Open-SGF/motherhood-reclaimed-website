@@ -1,6 +1,10 @@
 {
     "name": "motherhood-reclaimed-website",
     "version": "1.0.0",
+    "engines": {
+        "node": "18.x",
+        "npm": "9.x"
+    },
     "description": "",
     "main": "index.js",
     "scripts": {

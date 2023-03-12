@@ -8,8 +8,8 @@ A website for Motherhood Reclaimed built with Craft CMS
     - MySQL 5.7.x
     - php 8.2.x
     - Composer 2.x
-- NodeJS 14.x
-- npm 7.x
+- NodeJS 18.x
+- npm 9.x
 
 ## Setup
 
