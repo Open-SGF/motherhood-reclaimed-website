@@ -41,6 +41,7 @@ settings:
   maxRows: '1'
   minRows: ''
   placeholderKey: null
+  propagationKeyFormat: null
   propagationMethod: all
   selectionLabel: 'Add Header'
   staticField: ''
