@@ -66,5 +66,10 @@ services:
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
 
+networks:
+  default:
+    name: caddy
+    external: true
+
 volumes:
   db_data:
