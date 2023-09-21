@@ -2,15 +2,15 @@
     "require": {
         "php": "^8.2.0",
         "ext-imagick": "*",
-        "craftcms/aws-s3": "2.0.1",
-        "craftcms/cms": "4.4.1",
-        "craftcms/redactor": "3.0.3",
+        "craftcms/aws-s3": "2.0.3",
+        "craftcms/cms": "4.5.5",
+        "craftcms/redactor": "3.0.4",
         "misterbk/mix": "1.6.0",
-        "nystudio107/craft-seomatic": "4.0.21",
+        "nystudio107/craft-seomatic": "4.0.31",
         "sebastianlenz/linkfield": "2.1.5",
-        "verbb/expanded-singles": "2.0.1",
-        "verbb/field-manager": "3.0.5",
-        "verbb/super-table": "3.0.7",
+        "verbb/expanded-singles": "2.0.5",
+        "verbb/field-manager": "3.0.7",
+        "verbb/super-table": "3.0.9",
         "vlucas/phpdotenv": "^5.4.0"
     },
     "require-dev": {

@@ -1,4 +1,4 @@
-dateModified: 1678658974
+dateModified: 1695258947
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: 'Motherhood Reclaimed'
@@ -120,7 +120,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 3VWWKOVWBX5I7DSFFUFNV8A2
-    schemaVersion: 3.0.11
+    schemaVersion: 3.0.12
   super-table:
     edition: standard
     enabled: true
@@ -133,7 +133,7 @@ system:
   edition: solo
   live: true
   name: 'Motherhood Reclaimed'
-  schemaVersion: 4.4.0.4
+  schemaVersion: 4.5.3.0
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
