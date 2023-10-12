@@ -1,0 +1,75 @@
+version: "3.6"
+services:
+  console:
+    build:
+      context: ./docker
+      dockerfile: cli.Dockerfile
+      args:
+          WWWUSER: "${WWWUSER:-1000}"
+          WWWGROUP: "${WWWGROUP:-1000}"
+    image: craft-8.2/cli
+    env_file: .env
+    environment:
+      XDEBUG_CONFIG: client_host=host.docker.internal
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - .:/app
+    command: php craft queue/listen
+
+  web:
+    build:
+      context: ./docker
+      dockerfile: web.Dockerfile
+      args:
+          WWWUSER: "${WWWUSER:-1000}"
+          WWWGROUP: "${WWWGROUP:-1000}"
+    image: craft-8.2/app
+    ports:
+      - 8080:8080
+      - 5173:5173
+    env_file: .env
+    environment:
+      XDEBUG_CONFIG: client_host=host.docker.internal
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - .:/app
+
+  mysql:
+    image: mysql:8.0.32
+    ports:
+      - ${FORWARDED_DB_PORT:-3306}:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: '${CRAFT_DB_PASSWORD}'
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_DATABASE: '${CRAFT_DB_DATABASE}'
+      MYSQL_USER: '${CRAFT_DB_USER}'
+      MYSQL_PASSWORD: '${CRAFT_DB_PASSWORD}'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    volumes:
+      - 'db_data:/var/lib/mysql'
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-p${CRAFT_DB_PASSWORD}"]
+      interval: 5s
+
+  redis:
+    image: redis:5-alpine
+    ports:
+      - 6379:6379
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+
+networks:
+  default:
+    name: caddy
+    external: true
+
+volumes:
+  db_data:
